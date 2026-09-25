@@ -1,0 +1,15 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import NotFound from "@/views/NotFound.astro";
+import type { Locale } from "@/i18n";
+export const getStaticPaths = () =>
+  ["en", "de"].map((locale) => ({ params: { locale }, props: { locale } }));
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<BaseLayout {locale} page="home" title="404" noindex>
+  <NotFound {locale} />
+</BaseLayout>

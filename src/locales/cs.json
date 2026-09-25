@@ -1,0 +1,294 @@
+{
+  "langName": "Čeština",
+  "skip": "Přejít na obsah",
+  "menu": "Menu",
+  "close": "Zavřít",
+  "language": "Jazyk",
+  "back": "Zpět na úvod",
+  "nav": {
+    "solutions": "Řešení",
+    "process": "Jak pracujeme",
+    "about": "O Prasentace",
+    "contact": "Kontakt"
+  },
+  "routes": {
+    "home": "",
+    "solutions": "reseni",
+    "process": "jak-pracujeme",
+    "about": "o-prasentace",
+    "contact": "kontakt",
+    "privacy": "ochrana-soukromi"
+  },
+  "common": {
+    "cta": "Probrat projekt",
+    "learn": "Objevit řešení",
+    "allSolutions": "Všechna řešení",
+    "eyebrow": "TECHNOLOGIE S JASNÝM SMYSLEM",
+    "privacy": "Ochrana soukromí",
+    "registration": "IČO",
+    "address": "Sídlo",
+    "entity": "Podnikající fyzická osoba",
+    "rights": "S rozmyslem. Do posledního detailu.",
+    "detail": "Co pro vás vyřešíme",
+    "deliverables": "Co získáte",
+    "related": "Řešení, která na sebe navazují"
+  },
+  "seo": {
+    "home": {
+      "title": "Vývoj softwaru pro vaše podnikání",
+      "description": "Webové a mobilní aplikace, firemní systémy a automatizace. Prasentace propojuje více než 10 let zkušeností s promyšleným vývojem na míru."
+    },
+    "solutions": {
+      "title": "Digitální řešení pro firmy",
+      "description": "Vývoj firemních systémů, webových a mobilních aplikací, integrace a dlouhodobý rozvoj. Řešení podle potřeb vašeho podnikání."
+    },
+    "process": {
+      "title": "Od prvního rozhovoru k fungujícímu řešení",
+      "description": "Zjistěte, jak probíhá analýza, návrh, vývoj a následná péče o váš software. Přehledně a s jasnými prioritami."
+    },
+    "about": {
+      "title": "Zkušenosti, na kterých můžete stavět",
+      "description": "Prasentace propojuje technické zkušenosti s porozuměním firemním procesům. Přes 10 let praxe ve vývoji aplikací."
+    },
+    "contact": {
+      "title": "Pojďme probrat váš projekt",
+      "description": "Napište nám, co potřebujete zjednodušit, propojit nebo vytvořit. Kontaktujte Prasentace na info@prasentace.cz."
+    },
+    "privacy": {
+      "title": "Ochrana soukromí",
+      "description": "Informace o údajích z kontaktního formuláře webu Prasentace."
+    }
+  },
+  "hero": {
+    "tag": "Digitální řešení. Skutečný posun.",
+    "line1": "Vaše vize.",
+    "line2": "Náš kód.",
+    "line3": "Společný posun.",
+    "text": "Proměňujeme složité procesy v přehledná digitální řešení. Od první myšlenky po software, na který se vaše firma může spolehnout.",
+    "secondary": "Jak vám pomůžeme",
+    "note": "Od prvního návrhu po dlouhodobý rozvoj",
+    "visualLabel": "Propojení firemních systémů, aplikací a automatizací",
+    "system": "Firemní systém",
+    "systemSub": "Vše na jednom místě",
+    "mobile": "Mobilní aplikace",
+    "mobileSub": "Vždy po ruce",
+    "automation": "Automatizace",
+    "automationSub": "Méně rutiny. Více prostoru.",
+    "connected": "Všechno spolu funguje.",
+    "core": "Váš byznys",
+    "coreSub": "V centru řešení",
+    "flow": "Nápad → Řešení → Posun"
+  },
+  "proof": [
+    {
+      "value": "10+",
+      "label": "let zkušeností s vývojem"
+    },
+    {
+      "value": "Od A do Z",
+      "label": "od analýzy po nasazení"
+    },
+    {
+      "value": "Na míru",
+      "label": "vašim procesům a potřebám"
+    }
+  ],
+  "solutions": {
+    "tag": "CO SPOLU VYTVOŘÍME",
+    "title": "Dobrý software začíná\npochopením vašeho byznysu.",
+    "text": "Ať potřebujete propojit existující nástroje, nebo postavit úplně nový systém. Najdeme cestu, která dává smysl dnes i za několik let.",
+    "intro": "Technologie jsou prostředek. Fungující firma je cíl.",
+    "items": [
+      {
+        "id": "systems",
+        "slug": "firemni-systemy",
+        "title": "Firemní systémy",
+        "short": "Méně tabulek. Více přehledu.",
+        "description": "CRM, zákaznické portály a interní nástroje, které respektují způsob, jakým vaše firma pracuje.",
+        "detail": "Informace roztříštěné mezi tabulky, e-maily a různé aplikace zpomalují každodenní práci. Navrhneme společné prostředí pro vaše data, procesy a lidi.",
+        "features": [
+          "CRM a interní informační systémy",
+          "Zákaznické a partnerské portály",
+          "Uživatelské role a přístupová práva",
+          "Přehledy, reporty a exporty"
+        ],
+        "outcome": "Přehled o důležitých informacích, méně ruční práce a systém připravený na další rozvoj.",
+        "tags": ["CRM & portály", "Data & procesy"]
+      },
+      {
+        "id": "web",
+        "slug": "webove-aplikace",
+        "title": "Weby a webové aplikace",
+        "short": "Promyšlené do posledního kliknutí.",
+        "description": "Rychlé firemní weby a propracované aplikace. Srozumitelné pro uživatele, připravené růst s vámi.",
+        "detail": "Od reprezentativního vícejazyčného webu po komplexní aplikaci s formuláři a datovými přehledy. Propojujeme design, funkčnost a technický základ.",
+        "features": [
+          "Firemní a vícejazyčné weby",
+          "Aplikace ve Vue.js a Nuxtu",
+          "Rychlé obsahové weby v Astro",
+          "Responzivní rozhraní a technické SEO"
+        ],
+        "outcome": "Rychlé a srozumitelné prostředí, ve kterém zákazníci i zaměstnanci snadno najdou to podstatné.",
+        "tags": ["Webové aplikace", "Firemní weby"]
+      },
+      {
+        "id": "mobile",
+        "slug": "mobilni-aplikace",
+        "title": "Mobilní aplikace",
+        "short": "Vaše služby. Vždy na dosah.",
+        "description": "Aplikace pro iOS a Android propojené s vašimi službami. Od jednoduchého úkonu po každodenní pracovní nástroj.",
+        "detail": "Pomůžeme přenést vaše služby do telefonu. Navrhneme ovládání pro malé obrazovky a propojíme aplikaci s backendem i funkcemi zařízení.",
+        "features": [
+          "Multiplatformní vývoj v React Native",
+          "Napojení na firemní systémy",
+          "Push notifikace a komunikace",
+          "Využití kamery, mikrofonu a polohy"
+        ],
+        "outcome": "Jednotné mobilní řešení pro zákazníky nebo pracovníky v terénu, s návazností na vaše existující služby.",
+        "tags": ["iOS & Android", "React Native"]
+      },
+      {
+        "id": "automation",
+        "slug": "integrace-a-ai",
+        "title": "Integrace, automatizace & AI",
+        "short": "Nechte technologie spolupracovat.",
+        "description": "Propojená data, automatické procesy a smysluplné využití AI. Více prostoru pro práci, na které záleží.",
+        "detail": "Najdeme opakující se činnosti, které může převzít software. Propojíme externí služby a zapojíme hlasové či AI funkce tam, kde přinášejí konkrétní užitek.",
+        "features": [
+          "REST API a integrace externích služeb",
+          "Automatické importy a zpracování dat",
+          "AI asistence a hlasové funkce",
+          "Notifikace, dokumenty a automatizace"
+        ],
+        "outcome": "Plynulý tok informací mezi nástroji a méně opakujících se úkolů pro vaše lidi.",
+        "tags": ["API & integrace", "AI & automatizace"]
+      },
+      {
+        "id": "support",
+        "slug": "rozvoj-a-podpora",
+        "title": "Rozvoj & dlouhodobá péče",
+        "short": "Nasazením naše práce nekončí.",
+        "description": "Stabilní provoz, nové funkce a promyšlený rozvoj. Technické zázemí pro další etapu vašeho podnikání.",
+        "detail": "Zorientujeme se i v existujícím projektu. Pojmenujeme priority, technické souvislosti a navrhneme postupný rozvoj podle skutečných potřeb.",
+        "features": [
+          "Převzetí a analýza existujících aplikací",
+          "Optimalizace a řešení chyb",
+          "Nové funkce a průběžné aktualizace",
+          "Dokumentace a plán dalšího rozvoje"
+        ],
+        "outcome": "Srozumitelný plán, udržovatelný kód a kontinuita při rozvoji vašeho softwaru.",
+        "tags": ["Údržba & podpora", "Další rozvoj"]
+      }
+    ]
+  },
+  "process": {
+    "tag": "OD MYŠLENKY K VÝSLEDKU",
+    "title": "Jasný postup.\nŽádné černé skříňky.",
+    "text": "Víte, co vzniká, proč to vzniká a co bude následovat. Důležitá rozhodnutí děláme společně.",
+    "items": [
+      {
+        "title": "Nejdřív nasloucháme",
+        "text": "Probereme vaše fungování, cíle a to, co vás dnes brzdí. Ujasníme si priority i hranice projektu.",
+        "output": "Společné zadání a jasné priority"
+      },
+      {
+        "title": "Navrhneme cestu",
+        "text": "Připravíme strukturu řešení, uživatelské postupy a technický návrh. Domluvíme rozsah, etapy a rozpočet.",
+        "output": "Návrh řešení a plán realizace"
+      },
+      {
+        "title": "Tvoříme a ověřujeme",
+        "text": "Vyvíjíme po smysluplných částech. Průběžně ukazujeme výsledky a ověřujeme je v reálných scénářích.",
+        "output": "Funkční řešení a průběžná zpětná vazba"
+      },
+      {
+        "title": "Spouštíme a rozvíjíme",
+        "text": "Zajistíme nasazení, předání a domluvenou následnou péči. Další rozvoj vychází ze zkušeností s provozem.",
+        "output": "Nasazení, předání a další rozvoj"
+      }
+    ]
+  },
+  "about": {
+    "tag": "O PRASENTACE",
+    "title": "Technické zkušenosti.\nLidský přístup.",
+    "text": "Za dobrým softwarem stojí víc než jen kód. Porozumění souvislostem, promyšlená rozhodnutí a odpovědnost za výsledek.",
+    "body": "Prasentace staví na více než deseti letech zkušeností s vývojem webových aplikací a podnikových systémů. Propojujeme frontend, backend i mobilní prostředí v jeden funkční celek.",
+    "body2": "Rozumíme tomu, že každá firma má vlastní způsob práce. Umíme se zorientovat v existujícím řešení, vysvětlit technické možnosti srozumitelně a dovést projekt od úvodní konzultace k nasazení.",
+    "values": [
+      {
+        "title": "Souvislosti před zkratkami",
+        "text": "Hledáme skutečnou příčinu problému a řešení, které zapadne do vašeho provozu."
+      },
+      {
+        "title": "Otevřená komunikace",
+        "text": "Mluvíme srozumitelně. O možnostech, prioritách i technických omezeních."
+      },
+      {
+        "title": "Prostor pro budoucnost",
+        "text": "Modulární architektura a udržovatelný kód umožňují další rozvoj bez zbytečných překážek."
+      }
+    ],
+    "technology": "Pevný základ. Správné nástroje.",
+    "technologyText": "Technologie vybíráme podle projektu, jeho potřeb a budoucího provozu."
+  },
+  "cta": {
+    "tag": "DALŠÍ KROK JE JEDNODUCHÝ",
+    "title": "Co můžeme posunout\nve vaší firmě?",
+    "text": "Stačí nápad, konkrétní problém nebo chuť dělat věci lépe. Pojďme společně najít správný začátek."
+  },
+  "contact": {
+    "tag": "POJĎME TO PROBRAT",
+    "title": "Dobrý projekt začíná\njedním rozhovorem.",
+    "text": "Napište nám, co chcete vytvořit, zjednodušit nebo propojit. Technické zadání mít nemusíte.",
+    "emailLabel": "Napište nám",
+    "formTitle": "Prostor pro váš nápad",
+    "name": "Vaše jméno",
+    "email": "Pracovní e-mail",
+    "company": "Firma",
+    "optional": "nepovinné",
+    "interest": "Co potřebujete řešit?",
+    "choose": "Vyberte oblast",
+    "message": "Povězte nám o svém projektu",
+    "placeholder": "Co by mělo řešení umět? Co vás dnes brzdí?",
+    "submit": "Odeslat poptávku",
+    "sending": "Odesíláme…",
+    "notice": "Údaje použijeme k vyřízení vaší poptávky.",
+    "success": "Děkujeme. Vaše zpráva dorazila, ozveme se vám na uvedený e-mail.",
+    "error": "Zprávu se nepodařilo odeslat. Zkuste to později nebo napište na info@prasentace.cz.",
+    "invalid": "Zkontrolujte prosím vyznačená pole.",
+    "captcha": "Dokončete prosím ověření proti spamu.",
+    "unavailable": "Formulář nyní není dostupný. Napište nám prosím přímo na info@prasentace.cz.",
+    "nojs": "Pro odeslání formuláře zapněte JavaScript nebo nám napište e-mailem.",
+    "required": "Vyplňte prosím toto pole.",
+    "invalidEmail": "Zadejte platnou e-mailovou adresu.",
+    "messageLength": "Napište alespoň 10 znaků.",
+    "website": "Webová stránka",
+    "phoneLabel": "Zavolejte nám"
+  },
+  "privacy": {
+    "title": "Vaše soukromí",
+    "intro": "S údaji, které nám svěříte, pracujeme pouze v souvislosti s vaší poptávkou.",
+    "sections": [
+      {
+        "title": "Kontaktní údaje",
+        "text": "Provozovatele webu Prasentace identifikují údaje uvedené níže. S dotazy k osobním údajům se můžete obrátit na info@prasentace.cz."
+      },
+      {
+        "title": "Kontaktní formulář",
+        "text": "Zpracováváme jméno, e-mail, případně název firmy a obsah zprávy, abychom mohli odpovědět a domluvit další postup. Do zprávy nevkládejte citlivé údaje ani přístupová hesla."
+      },
+      {
+        "title": "Technické služby",
+        "text": "K provozu webu, doručení zprávy a ochraně formuláře slouží hosting, e-mailový server a Cloudflare Turnstile. Web sám nepřidává marketingové ani analytické sledování."
+      },
+      {
+        "title": "Vaše požadavky",
+        "text": "Pokud chcete zjistit, jaké údaje jsme v souvislosti s vaší poptávkou obdrželi, opravit je nebo požádat o jejich odstranění, napište nám na kontaktní e-mail."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Tady příběh nepokračuje.",
+    "text": "Tato stránka neexistuje nebo se její adresa změnila."
+  }
+}

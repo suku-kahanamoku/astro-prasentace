@@ -1,0 +1,294 @@
+{
+  "langName": "Deutsch",
+  "skip": "Zum Inhalt springen",
+  "menu": "Menü",
+  "close": "Schließen",
+  "language": "Sprache",
+  "back": "Zur Startseite",
+  "nav": {
+    "solutions": "Lösungen",
+    "process": "Unser Vorgehen",
+    "about": "Über Prasentace",
+    "contact": "Kontakt"
+  },
+  "routes": {
+    "home": "",
+    "solutions": "loesungen",
+    "process": "unser-vorgehen",
+    "about": "ueber-uns",
+    "contact": "kontakt",
+    "privacy": "datenschutz"
+  },
+  "common": {
+    "cta": "Projekt besprechen",
+    "learn": "Lösung entdecken",
+    "allSolutions": "Alle Lösungen",
+    "eyebrow": "TECHNOLOGIE MIT KLAREM ZIEL",
+    "privacy": "Datenschutz",
+    "registration": "Identifikationsnummer",
+    "address": "Geschäftssitz",
+    "entity": "Einzelunternehmer",
+    "rights": "Durchdacht. Bis ins letzte Detail.",
+    "detail": "Was wir für Sie lösen",
+    "deliverables": "Ihr Ergebnis",
+    "related": "Lösungen, die zusammenspielen"
+  },
+  "seo": {
+    "home": {
+      "title": "Software, die Ihr Unternehmen voranbringt",
+      "description": "Web- und mobile Anwendungen, Unternehmenssysteme und Automatisierung. Prasentace verbindet über 10 Jahre Entwicklungserfahrung mit durchdachten Lösungen."
+    },
+    "solutions": {
+      "title": "Digitale Lösungen für Unternehmen",
+      "description": "Unternehmenssysteme, Web- und mobile Anwendungen, Integrationen und Weiterentwicklung. Software passend zu Ihrem Unternehmen."
+    },
+    "process": {
+      "title": "Vom ersten Gespräch zur fertigen Lösung",
+      "description": "Unser Vorgehen bei Analyse, Konzeption, Entwicklung und Betreuung. Transparent und mit klaren Prioritäten."
+    },
+    "about": {
+      "title": "Erfahrung, auf die Sie bauen können",
+      "description": "Prasentace verbindet technische Erfahrung mit Verständnis für Geschäftsprozesse. Mehr als 10 Jahre Erfahrung in der Anwendungsentwicklung."
+    },
+    "contact": {
+      "title": "Sprechen wir über Ihr Projekt",
+      "description": "Was möchten Sie vereinfachen, verbinden oder entwickeln? Kontaktieren Sie Prasentace unter info@prasentace.cz."
+    },
+    "privacy": {
+      "title": "Datenschutz",
+      "description": "Informationen zum Umgang mit Angaben aus dem Kontaktformular von Prasentace."
+    }
+  },
+  "hero": {
+    "tag": "Digitale Lösungen. Echter Fortschritt.",
+    "line1": "Ihre Vision.",
+    "line2": "Unser Code.",
+    "line3": "Gemeinsam weiter.",
+    "text": "Wir machen aus komplexen Prozessen klare digitale Lösungen. Von der ersten Idee bis zur Software, auf die sich Ihr Unternehmen verlassen kann.",
+    "secondary": "Unsere Lösungen entdecken",
+    "note": "Vom ersten Entwurf bis zur Weiterentwicklung",
+    "visualLabel": "Verbindung von Unternehmenssystemen, mobilen Anwendungen und Automatisierung",
+    "system": "Unternehmenssystem",
+    "systemSub": "Alles an einem Ort",
+    "mobile": "Mobile Anwendung",
+    "mobileSub": "Immer griffbereit",
+    "automation": "Automatisierung",
+    "automationSub": "Weniger Routine. Mehr Freiraum.",
+    "connected": "Alles funktioniert zusammen.",
+    "core": "Ihr Unternehmen",
+    "coreSub": "Im Mittelpunkt der Lösung",
+    "flow": "Idee → Lösung → Fortschritt"
+  },
+  "proof": [
+    {
+      "value": "10+",
+      "label": "Jahre Entwicklungserfahrung"
+    },
+    {
+      "value": "Von A bis Z",
+      "label": "von der Analyse bis zum Start"
+    },
+    {
+      "value": "Nach Maß",
+      "label": "für Ihre Prozesse und Anforderungen"
+    }
+  ],
+  "solutions": {
+    "tag": "WAS WIR GEMEINSAM SCHAFFEN",
+    "title": "Gute Software beginnt\nmit Verständnis für Ihr Geschäft.",
+    "text": "Bestehende Werkzeuge verbinden oder ein neues System entwickeln: Wir finden einen Weg, der heute und in Zukunft sinnvoll ist.",
+    "intro": "Technologie ist das Mittel. Ein funktionierendes Unternehmen das Ziel.",
+    "items": [
+      {
+        "id": "systems",
+        "slug": "unternehmenssysteme",
+        "title": "Unternehmenssysteme",
+        "short": "Weniger Tabellen. Mehr Überblick.",
+        "description": "CRM, Kundenportale und interne Werkzeuge, die sich an Ihrer Arbeitsweise orientieren.",
+        "detail": "Informationen in verschiedenen Tabellen, E-Mails und Anwendungen bremsen den Alltag. Wir schaffen eine gemeinsame Umgebung für Ihre Daten, Prozesse und Mitarbeitenden.",
+        "features": [
+          "CRM und interne Informationssysteme",
+          "Kunden- und Partnerportale",
+          "Benutzerrollen und Zugriffsrechte",
+          "Übersichten, Berichte und Exporte"
+        ],
+        "outcome": "Wichtige Informationen im Blick, weniger Handarbeit und ein System mit Raum für Weiterentwicklung.",
+        "tags": ["CRM & Portale", "Daten & Prozesse"]
+      },
+      {
+        "id": "web",
+        "slug": "webanwendungen",
+        "title": "Websites & Webanwendungen",
+        "short": "Durchdacht bis zum letzten Klick.",
+        "description": "Schnelle Unternehmenswebsites und leistungsfähige Anwendungen. Verständlich für Nutzer und bereit für Wachstum.",
+        "detail": "Von der mehrsprachigen Unternehmenswebsite bis zur komplexen Anwendung mit Formularen und Datenübersichten. Wir verbinden Design, Funktionalität und eine solide technische Basis.",
+        "features": [
+          "Unternehmens- und mehrsprachige Websites",
+          "Anwendungen mit Vue.js und Nuxt",
+          "Schnelle Inhaltswebsites mit Astro",
+          "Responsive Oberflächen und technisches SEO"
+        ],
+        "outcome": "Eine schnelle, übersichtliche Oberfläche, auf der Kunden und Mitarbeitende das Wesentliche finden.",
+        "tags": ["Webanwendungen", "Unternehmenswebsites"]
+      },
+      {
+        "id": "mobile",
+        "slug": "mobile-anwendungen",
+        "title": "Mobile Anwendungen",
+        "short": "Ihre Leistungen. Immer erreichbar.",
+        "description": "iOS- und Android-Anwendungen, verbunden mit Ihren Diensten. Vom einfachen Vorgang zum täglichen Arbeitswerkzeug.",
+        "detail": "Wir bringen Ihre Leistungen aufs Smartphone. Wir gestalten die Bedienung für kleine Bildschirme und verbinden die Anwendung mit Backend und Gerätefunktionen.",
+        "features": [
+          "Plattformübergreifende Entwicklung mit React Native",
+          "Anbindung an Unternehmenssysteme",
+          "Push-Benachrichtigungen und Kommunikation",
+          "Kamera, Mikrofon und Standortfunktionen"
+        ],
+        "outcome": "Eine einheitliche mobile Lösung für Kunden oder den Außendienst, angebunden an Ihre bestehenden Dienste.",
+        "tags": ["iOS & Android", "React Native"]
+      },
+      {
+        "id": "automation",
+        "slug": "integrationen-und-ki",
+        "title": "Integrationen, Automatisierung & KI",
+        "short": "Lassen Sie Technologien zusammenspielen.",
+        "description": "Verbundene Daten, automatische Abläufe und sinnvoll eingesetzte KI. Mehr Raum für die wesentliche Arbeit.",
+        "detail": "Wir erkennen wiederkehrende Aufgaben, die Software übernehmen kann. Wir verbinden externe Dienste und ergänzen Sprach- oder KI-Funktionen mit praktischem Nutzen.",
+        "features": [
+          "REST-APIs und externe Integrationen",
+          "Automatische Importe und Datenverarbeitung",
+          "KI-Assistenz und Sprachfunktionen",
+          "Benachrichtigungen, Dokumente und Automatisierung"
+        ],
+        "outcome": "Ein reibungsloser Informationsfluss zwischen Werkzeugen und weniger Routineaufgaben für Ihre Mitarbeitenden.",
+        "tags": ["APIs & Integrationen", "KI & Automatisierung"]
+      },
+      {
+        "id": "support",
+        "slug": "entwicklung-und-betreuung",
+        "title": "Weiterentwicklung & Betreuung",
+        "short": "Mit dem Start ist es nicht vorbei.",
+        "description": "Stabiler Betrieb, neue Funktionen und durchdachte Weiterentwicklung. Eine technische Basis für Ihren nächsten Schritt.",
+        "detail": "Wir arbeiten uns auch in bestehende Projekte ein. Wir klären Prioritäten und technische Abhängigkeiten und planen Verbesserungen nach dem tatsächlichen Bedarf.",
+        "features": [
+          "Analyse und Übernahme bestehender Anwendungen",
+          "Optimierung und Fehlerbehebung",
+          "Neue Funktionen und laufende Aktualisierungen",
+          "Dokumentation und Entwicklungsplanung"
+        ],
+        "outcome": "Ein klarer Plan, wartbarer Code und Kontinuität bei der Weiterentwicklung Ihrer Software.",
+        "tags": ["Wartung & Betreuung", "Weiterentwicklung"]
+      }
+    ]
+  },
+  "process": {
+    "tag": "VON DER IDEE ZUM ERGEBNIS",
+    "title": "Ein klarer Weg.\nKeine Blackbox.",
+    "text": "Sie wissen, was entsteht, warum und was als Nächstes kommt. Wichtige Entscheidungen treffen wir gemeinsam.",
+    "items": [
+      {
+        "title": "Zuerst hören wir zu",
+        "text": "Wir sprechen über Ihre Abläufe, Ziele und Hindernisse. Gemeinsam klären wir Prioritäten und Projektgrenzen.",
+        "output": "Gemeinsames Verständnis und klare Prioritäten"
+      },
+      {
+        "title": "Wir planen den Weg",
+        "text": "Wir entwerfen Lösung, Nutzerabläufe und technische Architektur. Umfang, Etappen und Budget stimmen wir ab.",
+        "output": "Lösungskonzept und Umsetzungsplan"
+      },
+      {
+        "title": "Wir entwickeln und prüfen",
+        "text": "Wir arbeiten in sinnvollen Schritten. Sie sehen regelmäßig Ergebnisse, die wir anhand realer Szenarien prüfen.",
+        "output": "Funktionierende Software und regelmäßiges Feedback"
+      },
+      {
+        "title": "Wir starten und begleiten",
+        "text": "Wir übernehmen Bereitstellung, Übergabe und vereinbarte Betreuung. Der weitere Ausbau folgt den Erfahrungen im Betrieb.",
+        "output": "Start, Übergabe und Weiterentwicklung"
+      }
+    ]
+  },
+  "about": {
+    "tag": "ÜBER PRASENTACE",
+    "title": "Technische Erfahrung.\nMenschliche Zusammenarbeit.",
+    "text": "Gute Software braucht mehr als Code: Verständnis für Zusammenhänge, durchdachte Entscheidungen und Verantwortung für das Ergebnis.",
+    "body": "Prasentace baut auf mehr als zehn Jahren Erfahrung in der Entwicklung von Webanwendungen und Unternehmenssystemen auf. Wir verbinden Frontend, Backend und mobile Anwendungen zu einem funktionierenden Ganzen.",
+    "body2": "Jedes Unternehmen hat seine eigene Arbeitsweise. Wir finden uns in bestehenden Systemen zurecht, erklären technische Möglichkeiten verständlich und begleiten Projekte vom ersten Gespräch bis zum Start.",
+    "values": [
+      {
+        "title": "Zusammenhänge statt Abkürzungen",
+        "text": "Wir suchen die tatsächliche Ursache und eine Lösung, die zu Ihrem Betrieb passt."
+      },
+      {
+        "title": "Offene Kommunikation",
+        "text": "Wir sprechen verständlich über Möglichkeiten, Prioritäten und technische Grenzen."
+      },
+      {
+        "title": "Raum für die Zukunft",
+        "text": "Modulare Architektur und wartbarer Code erleichtern die spätere Weiterentwicklung."
+      }
+    ],
+    "technology": "Solide Basis. Passende Werkzeuge.",
+    "technologyText": "Wir wählen Technologien nach dem Projekt, seinen Anforderungen und dem künftigen Betrieb aus."
+  },
+  "cta": {
+    "tag": "DER NÄCHSTE SCHRITT IST EINFACH",
+    "title": "Was bringt Ihr\nUnternehmen weiter?",
+    "text": "Eine Idee, eine konkrete Herausforderung oder der Wunsch, besser zu arbeiten. Finden wir gemeinsam den richtigen Anfang."
+  },
+  "contact": {
+    "tag": "SPRECHEN WIR DARÜBER",
+    "title": "Ein gutes Projekt beginnt\nmit einem Gespräch.",
+    "text": "Was möchten Sie entwickeln, vereinfachen oder verbinden? Ein technisches Pflichtenheft brauchen Sie noch nicht.",
+    "emailLabel": "Schreiben Sie uns",
+    "formTitle": "Raum für Ihre Idee",
+    "name": "Ihr Name",
+    "email": "Geschäftliche E-Mail",
+    "company": "Unternehmen",
+    "optional": "optional",
+    "interest": "Wobei können wir helfen?",
+    "choose": "Bereich auswählen",
+    "message": "Erzählen Sie uns von Ihrem Projekt",
+    "placeholder": "Was soll die Lösung können? Was bremst Sie heute?",
+    "submit": "Anfrage senden",
+    "sending": "Wird gesendet…",
+    "notice": "Wir verwenden Ihre Angaben, um Ihre Anfrage zu bearbeiten.",
+    "success": "Vielen Dank. Ihre Nachricht ist angekommen. Wir melden uns unter der angegebenen E-Mail-Adresse.",
+    "error": "Die Nachricht konnte nicht gesendet werden. Versuchen Sie es später erneut oder schreiben Sie an info@prasentace.cz.",
+    "invalid": "Bitte prüfen Sie die markierten Felder.",
+    "captcha": "Bitte schließen Sie die Spam-Schutz-Prüfung ab.",
+    "unavailable": "Das Formular ist derzeit nicht verfügbar. Schreiben Sie bitte direkt an info@prasentace.cz.",
+    "nojs": "Aktivieren Sie JavaScript für das Formular oder kontaktieren Sie uns per E-Mail.",
+    "required": "Bitte füllen Sie dieses Feld aus.",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "messageLength": "Bitte schreiben Sie mindestens 10 Zeichen.",
+    "website": "Website",
+    "phoneLabel": "Rufen Sie uns an"
+  },
+  "privacy": {
+    "title": "Ihre Privatsphäre",
+    "intro": "Wir verwenden Ihre Angaben ausschließlich im Zusammenhang mit Ihrer Anfrage.",
+    "sections": [
+      {
+        "title": "Kontaktdaten",
+        "text": "Der Betreiber von Prasentace wird durch die unten aufgeführten Unternehmensdaten identifiziert. Bei Fragen zu personenbezogenen Daten schreiben Sie an info@prasentace.cz."
+      },
+      {
+        "title": "Kontaktformular",
+        "text": "Wir verarbeiten Ihren Namen, Ihre E-Mail-Adresse, optional den Firmennamen und Ihre Nachricht, um zu antworten und das weitere Vorgehen zu besprechen. Bitte übermitteln Sie keine sensiblen Daten oder Passwörter."
+      },
+      {
+        "title": "Technische Dienste",
+        "text": "Hosting, E-Mail-Server und Cloudflare Turnstile dienen dem Betrieb, dem Nachrichtenversand und dem Schutz des Formulars. Die Website selbst setzt kein Marketing- oder Analyse-Tracking ein."
+      },
+      {
+        "title": "Ihre Anliegen",
+        "text": "Wenn Sie Auskunft zu den Angaben Ihrer Anfrage wünschen, diese korrigieren oder ihre Löschung beantragen möchten, schreiben Sie uns bitte eine E-Mail."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Hier geht die Geschichte nicht weiter.",
+    "text": "Diese Seite existiert nicht oder ihre Adresse hat sich geändert."
+  }
+}

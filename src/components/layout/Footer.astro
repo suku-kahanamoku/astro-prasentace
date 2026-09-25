@@ -1,0 +1,39 @@
+---
+import { dictionary, url, type Locale, type PageId } from "@/i18n";
+import { site } from "@/config/site";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href={url(locale)} class="wordmark">
+          Prasentace<span class="logo-dot">.</span>
+        </a>
+        <p>{t.common.rights}</p>
+      </div>
+      <nav aria-label={t.menu}>
+        {Object.entries(t.nav).map(([id, label]) => (
+          <a href={url(locale, id as PageId)}>{label}</a>
+        ))}
+      </nav>
+      <a class="footer-email" href={`mailto:${site.email}`}>
+        {site.email} <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <p>
+        © {new Date().getFullYear()} {site.name}{" "}
+        <span class="footer-separator">/</span> {t.common.registration}:{" "}
+        {site.registrationId}
+      </p>
+      <p>Brno, CZ</p>
+      <a href={url(locale, "privacy")}>{t.common.privacy}</a>
+    </div>
+  </div>
+</footer>

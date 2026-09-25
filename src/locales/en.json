@@ -1,0 +1,294 @@
+{
+  "langName": "English",
+  "skip": "Skip to content",
+  "menu": "Menu",
+  "close": "Close",
+  "language": "Language",
+  "back": "Back to home",
+  "nav": {
+    "solutions": "Solutions",
+    "process": "Our process",
+    "about": "About Prasentace",
+    "contact": "Contact"
+  },
+  "routes": {
+    "home": "",
+    "solutions": "solutions",
+    "process": "our-process",
+    "about": "about",
+    "contact": "contact",
+    "privacy": "privacy"
+  },
+  "common": {
+    "cta": "Discuss your project",
+    "learn": "Explore solution",
+    "allSolutions": "All solutions",
+    "eyebrow": "TECHNOLOGY WITH PURPOSE",
+    "privacy": "Privacy",
+    "registration": "Business ID",
+    "address": "Registered address",
+    "entity": "Sole trader",
+    "rights": "Considered. Down to the last detail.",
+    "detail": "What we can solve for you",
+    "deliverables": "What you get",
+    "related": "Solutions that work together"
+  },
+  "seo": {
+    "home": {
+      "title": "Software that moves your business forward",
+      "description": "Web and mobile applications, business systems and automation. Prasentace combines over 10 years of development experience with thoughtful custom solutions."
+    },
+    "solutions": {
+      "title": "Digital solutions for your business",
+      "description": "Business systems, web and mobile applications, integrations and ongoing development. Software designed around your business."
+    },
+    "process": {
+      "title": "From first conversation to working software",
+      "description": "Discover our approach to analysis, design, development and ongoing support. A clear process with shared priorities."
+    },
+    "about": {
+      "title": "Experience you can build on",
+      "description": "Prasentace brings technical experience and an understanding of business processes together. More than 10 years in application development."
+    },
+    "contact": {
+      "title": "Let’s talk about your project",
+      "description": "Tell us what you want to simplify, connect or create. Contact Prasentace at info@prasentace.cz."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "description": "How Prasentace handles information submitted through the contact form."
+    }
+  },
+  "hero": {
+    "tag": "Digital solutions. Real progress.",
+    "line1": "Your vision.",
+    "line2": "Our code.",
+    "line3": "Shared progress.",
+    "text": "We turn complex processes into clear digital solutions. From the first idea to software your business can rely on.",
+    "secondary": "Explore our solutions",
+    "note": "From the first sketch to ongoing development",
+    "visualLabel": "Connecting business systems, mobile applications and automation",
+    "system": "Business system",
+    "systemSub": "Everything in one place",
+    "mobile": "Mobile application",
+    "mobileSub": "Always within reach",
+    "automation": "Automation",
+    "automationSub": "Less routine. More possibilities.",
+    "connected": "Everything works together.",
+    "core": "Your business",
+    "coreSub": "At the heart of it all",
+    "flow": "Idea → Solution → Progress"
+  },
+  "proof": [
+    {
+      "value": "10+",
+      "label": "years of development experience"
+    },
+    {
+      "value": "End to end",
+      "label": "from analysis to launch"
+    },
+    {
+      "value": "Tailor-made",
+      "label": "for your processes and needs"
+    }
+  ],
+  "solutions": {
+    "tag": "WHAT WE CAN BUILD TOGETHER",
+    "title": "Great software starts with\nunderstanding your business.",
+    "text": "Whether you need to connect existing tools or build an entirely new system. We find an approach that makes sense today and for years to come.",
+    "intro": "Technology is the means. A thriving business is the goal.",
+    "items": [
+      {
+        "id": "systems",
+        "slug": "business-systems",
+        "title": "Business systems",
+        "short": "Fewer spreadsheets. More clarity.",
+        "description": "CRM, customer portals and internal tools designed around the way your business works.",
+        "detail": "Information scattered across spreadsheets, emails and applications slows down everyday work. We design a shared environment for your data, processes and people.",
+        "features": [
+          "CRM and internal business systems",
+          "Customer and partner portals",
+          "User roles and access permissions",
+          "Dashboards, reports and exports"
+        ],
+        "outcome": "A clear view of essential information, less manual work and a system ready to evolve.",
+        "tags": ["CRM & portals", "Data & processes"]
+      },
+      {
+        "id": "web",
+        "slug": "web-applications",
+        "title": "Websites & web applications",
+        "short": "Thoughtful down to the last click.",
+        "description": "Fast business websites and capable applications. Intuitive for users and ready to grow with you.",
+        "detail": "From a multilingual company website to a complex application with forms and dashboards. We bring design, functionality and a solid technical foundation together.",
+        "features": [
+          "Business and multilingual websites",
+          "Vue.js and Nuxt applications",
+          "Fast content websites with Astro",
+          "Responsive interfaces and technical SEO"
+        ],
+        "outcome": "A fast, clear experience that helps customers and employees find what matters.",
+        "tags": ["Web applications", "Business websites"]
+      },
+      {
+        "id": "mobile",
+        "slug": "mobile-applications",
+        "title": "Mobile applications",
+        "short": "Your services. Always within reach.",
+        "description": "iOS and Android applications connected to your services. From a simple task to an everyday work tool.",
+        "detail": "We help bring your services to mobile. We design for smaller screens and connect the application to your backend and device capabilities.",
+        "features": [
+          "Cross-platform React Native development",
+          "Integration with business systems",
+          "Push notifications and communication",
+          "Camera, microphone and location features"
+        ],
+        "outcome": "A unified mobile solution for customers or field staff, connected to your existing services.",
+        "tags": ["iOS & Android", "React Native"]
+      },
+      {
+        "id": "automation",
+        "slug": "integrations-and-ai",
+        "title": "Integrations, automation & AI",
+        "short": "Let your technology work together.",
+        "description": "Connected data, automated processes and practical AI. More room for the work that matters.",
+        "detail": "We identify repetitive work that software can take over. We connect external services and introduce voice or AI features where they deliver practical value.",
+        "features": [
+          "REST APIs and external integrations",
+          "Automated imports and data processing",
+          "AI assistance and voice features",
+          "Notifications, documents and automation"
+        ],
+        "outcome": "A smooth flow of information between tools and fewer repetitive tasks for your people.",
+        "tags": ["APIs & integrations", "AI & automation"]
+      },
+      {
+        "id": "support",
+        "slug": "development-and-support",
+        "title": "Development & ongoing care",
+        "short": "Launch is just the beginning.",
+        "description": "Stable operations, new features and considered improvements. Technical foundations for your next chapter.",
+        "detail": "We can work with existing projects too. We identify priorities and technical dependencies, then plan gradual improvements around real needs.",
+        "features": [
+          "Existing application review and takeover",
+          "Optimisation and troubleshooting",
+          "New features and ongoing updates",
+          "Documentation and development planning"
+        ],
+        "outcome": "A clear plan, maintainable code and continuity as your software evolves.",
+        "tags": ["Maintenance & support", "Ongoing development"]
+      }
+    ]
+  },
+  "process": {
+    "tag": "FROM IDEA TO IMPACT",
+    "title": "A clear process.\nNo black boxes.",
+    "text": "You know what is being built, why it matters and what comes next. We make important decisions together.",
+    "items": [
+      {
+        "title": "We listen first",
+        "text": "We discuss your operations, goals and current bottlenecks. Together we define priorities and project boundaries.",
+        "output": "A shared brief and clear priorities"
+      },
+      {
+        "title": "We map the way",
+        "text": "We design the solution, user journeys and technical approach. We agree on scope, milestones and budget.",
+        "output": "A solution design and delivery plan"
+      },
+      {
+        "title": "We build and validate",
+        "text": "We develop in meaningful stages. You see progress regularly and we test against real scenarios.",
+        "output": "Working software and regular feedback"
+      },
+      {
+        "title": "We launch and evolve",
+        "text": "We handle deployment, handover and agreed support. Further development is guided by real use.",
+        "output": "Launch, handover and ongoing development"
+      }
+    ]
+  },
+  "about": {
+    "tag": "ABOUT PRASENTACE",
+    "title": "Technical experience.\nA human approach.",
+    "text": "Great software takes more than code. It takes understanding, thoughtful decisions and responsibility for the result.",
+    "body": "Prasentace builds on more than ten years of experience in web application and business system development. We connect frontend, backend and mobile into one working whole.",
+    "body2": "Every business has its own way of working. We can navigate existing systems, explain technical options clearly and take a project from the first conversation to launch.",
+    "values": [
+      {
+        "title": "Context before shortcuts",
+        "text": "We look for the real cause of a problem and a solution that fits your operations."
+      },
+      {
+        "title": "Open communication",
+        "text": "We speak clearly about possibilities, priorities and technical constraints."
+      },
+      {
+        "title": "Room to grow",
+        "text": "Modular architecture and maintainable code make future development easier."
+      }
+    ],
+    "technology": "Solid foundations. The right tools.",
+    "technologyText": "We choose technologies around the project, its needs and its future operation."
+  },
+  "cta": {
+    "tag": "THE NEXT STEP IS SIMPLE",
+    "title": "What could move\nyour business forward?",
+    "text": "An idea, a specific challenge or a desire to work better. Let’s find the right place to start."
+  },
+  "contact": {
+    "tag": "LET’S TALK",
+    "title": "A great project starts\nwith one conversation.",
+    "text": "Tell us what you want to build, simplify or connect. You do not need a technical specification.",
+    "emailLabel": "Write to us",
+    "formTitle": "A space for your idea",
+    "name": "Your name",
+    "email": "Work email",
+    "company": "Company",
+    "optional": "optional",
+    "interest": "What can we help with?",
+    "choose": "Choose an area",
+    "message": "Tell us about your project",
+    "placeholder": "What should the solution do? What is slowing you down today?",
+    "submit": "Send enquiry",
+    "sending": "Sending…",
+    "notice": "We will use your details to respond to your enquiry.",
+    "success": "Thank you. Your message has arrived. We will reply to the email address you provided.",
+    "error": "Your message could not be sent. Please try again later or email info@prasentace.cz.",
+    "invalid": "Please check the highlighted fields.",
+    "captcha": "Please complete the spam protection check.",
+    "unavailable": "The form is currently unavailable. Please email us directly at info@prasentace.cz.",
+    "nojs": "Enable JavaScript to use the form, or contact us by email.",
+    "required": "Please fill in this field.",
+    "invalidEmail": "Please enter a valid email address.",
+    "messageLength": "Please enter at least 10 characters.",
+    "website": "Website",
+    "phoneLabel": "Call us"
+  },
+  "privacy": {
+    "title": "Your privacy",
+    "intro": "We use the information you share with us only in connection with your enquiry.",
+    "sections": [
+      {
+        "title": "Contact details",
+        "text": "The operator of Prasentace is identified by the business details below. For questions about personal data, contact info@prasentace.cz."
+      },
+      {
+        "title": "Contact form",
+        "text": "We process your name, email, optional company name and message to reply and discuss next steps. Please do not include sensitive information or passwords."
+      },
+      {
+        "title": "Technical services",
+        "text": "Hosting, an email server and Cloudflare Turnstile support website operation, message delivery and form protection. The website itself does not add marketing or analytics tracking."
+      },
+      {
+        "title": "Your requests",
+        "text": "To ask what information we received with your enquiry, correct it or request its removal, please contact us by email."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "This is not where the story continues.",
+    "text": "This page does not exist or its address has changed."
+  }
+}

@@ -1,0 +1,53 @@
+---
+import { dictionary, type Locale } from "@/i18n";
+import { site } from "@/config/site";
+import ContactForm from "@/components/forms/ContactForm.astro";
+import Icon from "@/components/ui/Icon.astro";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<section class="container page-intro">
+  <p class="eyebrow">{t.contact.tag}</p>
+  <h1>{t.contact.title}</h1>
+  <p class="lead">{t.contact.text}</p>
+</section>
+<section class="container contact-grid">
+  <div class="contact-details">
+    <p class="eyebrow contact-label">
+      <Icon name="mail" size={20} />
+      {t.contact.emailLabel}
+    </p>
+    <a class="contact-link" href={`mailto:${site.email}`}>
+      {site.email}
+    </a>
+    <p class="eyebrow contact-label">
+      <Icon name="mobile" size={20} />
+      {t.contact.phoneLabel}
+    </p>
+    <a class="contact-link" href={`tel:${site.phone.replaceAll(" ", "")}`}>
+      {site.phone}
+    </a>
+    <p class="eyebrow contact-label">
+      <Icon name="globe" size={20} />
+      {t.common.address}
+    </p>
+    <address>
+      {site.address.street}
+      <br />
+      {site.address.postalCode} {site.address.city}
+    </address>
+    <div class="business-details">
+      <p>
+        {site.name} · {t.common.entity}
+      </p>
+      <p>
+        {t.common.registration}: {site.registrationId}
+      </p>
+    </div>
+  </div>
+  <ContactForm {locale} />
+</section>

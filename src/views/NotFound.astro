@@ -1,0 +1,21 @@
+---
+import { dictionary, locales, url, type Locale } from "@/i18n";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<section class="container page-intro not-found">
+  <p class="eyebrow">404</p>
+  <h1>{t.notFound.title}</h1>
+  <p class="lead">{t.notFound.text}</p>
+  <div class="hero-buttons">
+    {locales.map((code) => (
+      <a class="button button-secondary" href={url(code)} lang={code}>
+        {dictionary(code).back} ↗
+      </a>
+    ))}
+  </div>
+</section>

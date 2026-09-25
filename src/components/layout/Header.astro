@@ -1,0 +1,96 @@
+---
+import { dictionary, locales, url, type Locale, type PageId } from "@/i18n";
+import Button from "@/components/ui/Button.astro";
+interface Props {
+  locale: Locale;
+  page: PageId;
+  solutionId?: string;
+}
+const { locale, page, solutionId } = Astro.props;
+const t = dictionary(locale);
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href={url(locale)} aria-label="Prasentace">
+      Prasentace
+      <span class="logo-dot" aria-hidden="true">
+        .
+      </span>
+    </a>
+    <nav class="desktop-nav" aria-label={t.menu}>
+      {Object.entries(t.nav).map(([id, label]) => (
+        <a
+          href={url(locale, id as PageId)}
+          aria-current={page === id ? "page" : undefined}
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+    <div class="header-actions">
+      <details class="language-picker">
+        <summary aria-label={t.language}>
+          {locale === "cs" ? "CZ" : locale.toUpperCase()}
+          <span aria-hidden="true">⌄</span>
+        </summary>
+        <div class="language-options">
+          {locales.map((code) => (
+            <a
+              href={url(code, page, solutionId)}
+              lang={code}
+              hreflang={code}
+              aria-current={code === locale ? "true" : undefined}
+            >
+              {dictionary(code).langName}
+            </a>
+          ))}
+        </div>
+      </details>
+      <Button href={url(locale, "contact")} class="header-cta">
+        {t.common.cta}
+      </Button>
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-navigation"
+        aria-label={t.menu}
+        data-menu-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-navigation" class="mobile-nav" aria-label={t.menu} hidden>
+    {Object.entries(t.nav).map(([id, label]) => (
+      <a
+        href={url(locale, id as PageId)}
+        aria-current={page === id ? "page" : undefined}
+      >
+        {label}
+        <span aria-hidden="true">↗</span>
+      </a>
+    ))}
+  </nav>
+</header>
+
+<noscript>
+  <style is:global>
+    @media (max-width: 1100px) {
+      .menu-toggle {
+        display: none;
+      }
+      .mobile-nav[hidden] {
+        display: block;
+      }
+      .site-header {
+        position: relative;
+        height: auto;
+      }
+      .header-inner {
+        min-height: 75px;
+      }
+    }
+  </style>
+</noscript>

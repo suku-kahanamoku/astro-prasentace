@@ -1,0 +1,32 @@
+---
+import { dictionary, type Locale } from "@/i18n";
+import { site } from "@/config/site";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<article class="container legal-page">
+  <p class="eyebrow">Prasentace</p>
+  <h1>{t.privacy.title}</h1>
+  <p class="lead">{t.privacy.intro}</p>
+  {t.privacy.sections.map((section) => (
+    <section>
+      <h2>{section.title}</h2>
+      <p>{section.text}</p>
+    </section>
+  ))}
+  <address>
+    {site.name} · {t.common.entity}
+    <br />
+    {t.common.registration}: {site.registrationId}
+    <br />
+    {site.address.street}
+    <br />
+    {site.address.postalCode} {site.address.city}
+    <br />
+    <a href={`mailto:${site.email}`}>{site.email}</a>
+  </address>
+</article>

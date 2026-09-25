@@ -1,0 +1,35 @@
+---
+import { dictionary, type Locale } from "@/i18n";
+import SectionHeading from "@/components/ui/SectionHeading.astro";
+interface Props {
+  locale: Locale;
+  detailed?: boolean;
+}
+const { locale, detailed = false } = Astro.props;
+const t = dictionary(locale);
+---
+
+<section class="section process-section">
+  <div class="container">
+    {!detailed && (
+      <SectionHeading
+        tag={t.process.tag}
+        title={t.process.title}
+        text={t.process.text}
+      />
+    )}
+    <div class:list={["process-grid", { "process-detailed": detailed }]}>
+      {t.process.items.map((item, i) => (
+        <article class="process-step" data-reveal>
+          <div class="step-track">
+            <span>0{i + 1}</span>
+            <i></i>
+          </div>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+          {detailed && <div class="step-output">↳ {item.output}</div>}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

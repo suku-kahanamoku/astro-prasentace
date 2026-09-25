@@ -1,0 +1,37 @@
+---
+import { allRoutes, dictionary, type Locale, type PageId } from "@/i18n";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Home from "@/views/Home.astro";
+import ContentPage from "@/views/ContentPage.astro";
+import Contact from "@/views/Contact.astro";
+import Privacy from "@/views/Privacy.astro";
+export const prerender = true;
+export const getStaticPaths = allRoutes;
+interface Props {
+  locale: Locale;
+  page: PageId;
+  solutionId?: string;
+}
+const { locale, page, solutionId } = Astro.props;
+const solution = dictionary(locale).solutions.items.find(
+  (item) => item.id === solutionId,
+);
+---
+
+<BaseLayout
+  {locale}
+  {page}
+  {solutionId}
+  title={solution?.title}
+  description={solution?.description}
+>
+  {page === "home" ? (
+    <Home {locale} />
+  ) : page === "contact" ? (
+    <Contact {locale} />
+  ) : page === "privacy" ? (
+    <Privacy {locale} />
+  ) : (
+    <ContentPage {locale} {page} {solutionId} />
+  )}
+</BaseLayout>
