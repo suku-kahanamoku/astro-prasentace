@@ -105,6 +105,7 @@
         "id": "systems",
         "slug": "unternehmenssysteme",
         "title": "Unternehmenssysteme",
+        "seoTitle": "Individuelle Unternehmenssoftware entwickeln",
         "short": "Weniger Tabellen. Mehr Überblick.",
         "description": "CRM, Kundenportale und interne Werkzeuge, die sich an Ihrer Arbeitsweise orientieren.",
         "detail": "Informationen in verschiedenen Tabellen, E-Mails und Anwendungen bremsen den Alltag. Wir schaffen eine gemeinsame Umgebung für Ihre Daten, Prozesse und Mitarbeitenden.",
@@ -115,7 +116,10 @@
           "Übersichten, Berichte und Exporte"
         ],
         "outcome": "Wichtige Informationen im Blick, weniger Handarbeit und ein System mit Raum für Weiterentwicklung.",
-        "tags": ["CRM & Portale", "Daten & Prozesse"],
+        "tags": [
+          "CRM & Portale",
+          "Daten & Prozesse"
+        ],
         "sections": [
           {
             "title": "Wann sich ein eigenes System lohnt",
@@ -135,6 +139,7 @@
         "id": "web",
         "slug": "webanwendungen",
         "title": "Websites & Webanwendungen",
+        "seoTitle": "Websites und Webanwendungen entwickeln",
         "short": "Durchdacht bis zum letzten Klick.",
         "description": "Schnelle Unternehmenswebsites und leistungsfähige Anwendungen. Verständlich für Nutzer und bereit für Wachstum.",
         "detail": "Von der mehrsprachigen Unternehmenswebsite bis zur komplexen Anwendung mit Formularen und Datenübersichten. Wir verbinden Design, Funktionalität und eine solide technische Basis.",
@@ -145,7 +150,10 @@
           "Responsive Oberflächen und technisches SEO"
         ],
         "outcome": "Eine schnelle, übersichtliche Oberfläche, auf der Kunden und Mitarbeitende das Wesentliche finden.",
-        "tags": ["Webanwendungen", "Unternehmenswebsites"],
+        "tags": [
+          "Webanwendungen",
+          "Unternehmenswebsites"
+        ],
         "sections": [
           {
             "title": "Unternehmenswebsite oder Arbeitsanwendung?",
@@ -165,6 +173,7 @@
         "id": "mobile",
         "slug": "mobile-anwendungen",
         "title": "Mobile Anwendungen",
+        "seoTitle": "Individuelle mobile Apps entwickeln",
         "short": "Ihre Leistungen. Immer erreichbar.",
         "description": "iOS- und Android-Anwendungen, verbunden mit Ihren Diensten. Vom einfachen Vorgang zum täglichen Arbeitswerkzeug.",
         "detail": "Wir bringen Ihre Leistungen aufs Smartphone. Wir gestalten die Bedienung für kleine Bildschirme und verbinden die Anwendung mit Backend und Gerätefunktionen.",
@@ -175,7 +184,10 @@
           "Kamera, Mikrofon und Standortfunktionen"
         ],
         "outcome": "Eine einheitliche mobile Lösung für Kunden oder den Außendienst, angebunden an Ihre bestehenden Dienste.",
-        "tags": ["iOS & Android", "React Native"],
+        "tags": [
+          "iOS & Android",
+          "React Native"
+        ],
         "sections": [
           {
             "title": "Wenn das Smartphone den Alltag erleichtert",
@@ -195,6 +207,7 @@
         "id": "automation",
         "slug": "integrationen-und-ki",
         "title": "Integrationen, Automatisierung & KI",
+        "seoTitle": "Systemintegration und Automatisierung mit KI",
         "short": "Lassen Sie Technologien zusammenspielen.",
         "description": "Verbundene Daten, automatische Abläufe und sinnvoll eingesetzte KI. Mehr Raum für die wesentliche Arbeit.",
         "detail": "Wir erkennen wiederkehrende Aufgaben, die Software übernehmen kann. Wir verbinden externe Dienste und ergänzen Sprach- oder KI-Funktionen mit praktischem Nutzen.",
@@ -205,7 +218,10 @@
           "Benachrichtigungen, Dokumente und Automatisierung"
         ],
         "outcome": "Ein reibungsloser Informationsfluss zwischen Werkzeugen und weniger Routineaufgaben für Ihre Mitarbeitenden.",
-        "tags": ["APIs & Integrationen", "KI & Automatisierung"],
+        "tags": [
+          "APIs & Integrationen",
+          "KI & Automatisierung"
+        ],
         "sections": [
           {
             "title": "Mit einer wiederkehrenden Aufgabe beginnen",
@@ -225,6 +241,7 @@
         "id": "support",
         "slug": "entwicklung-und-betreuung",
         "title": "Weiterentwicklung & Betreuung",
+        "seoTitle": "Software weiterentwickeln und betreuen",
         "short": "Mit dem Start ist es nicht vorbei.",
         "description": "Stabiler Betrieb, neue Funktionen und durchdachte Weiterentwicklung. Eine technische Basis für Ihren nächsten Schritt.",
         "detail": "Wir arbeiten uns auch in bestehende Projekte ein. Wir klären Prioritäten und technische Abhängigkeiten und planen Verbesserungen nach dem tatsächlichen Bedarf.",
@@ -235,7 +252,10 @@
           "Dokumentation und Entwicklungsplanung"
         ],
         "outcome": "Ein klarer Plan, wartbarer Code und Kontinuität bei der Weiterentwicklung Ihrer Software.",
-        "tags": ["Wartung & Betreuung", "Weiterentwicklung"],
+        "tags": [
+          "Wartung & Betreuung",
+          "Weiterentwicklung"
+        ],
         "sections": [
           {
             "title": "Zuerst die vorhandene Lösung verstehen",

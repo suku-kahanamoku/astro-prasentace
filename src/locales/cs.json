@@ -105,6 +105,7 @@
         "id": "systems",
         "slug": "firemni-systemy",
         "title": "Firemní systémy",
+        "seoTitle": "Vývoj firemních systémů na míru",
         "short": "Méně tabulek. Více přehledu.",
         "description": "CRM, zákaznické portály a interní nástroje, které respektují způsob, jakým vaše firma pracuje.",
         "detail": "Informace roztříštěné mezi tabulky, e-maily a různé aplikace zpomalují každodenní práci. Navrhneme společné prostředí pro vaše data, procesy a lidi.",
@@ -115,7 +116,10 @@
           "Přehledy, reporty a exporty"
         ],
         "outcome": "Přehled o důležitých informacích, méně ruční práce a systém připravený na další rozvoj.",
-        "tags": ["CRM & portály", "Data & procesy"],
+        "tags": [
+          "CRM & portály",
+          "Data & procesy"
+        ],
         "sections": [
           {
             "title": "Kdy má vlastní systém smysl",
@@ -135,6 +139,7 @@
         "id": "web",
         "slug": "webove-aplikace",
         "title": "Weby a webové aplikace",
+        "seoTitle": "Tvorba webů a vývoj webových aplikací",
         "short": "Promyšlené do posledního kliknutí.",
         "description": "Rychlé firemní weby a propracované aplikace. Srozumitelné pro uživatele, připravené růst s vámi.",
         "detail": "Od reprezentativního vícejazyčného webu po komplexní aplikaci s formuláři a datovými přehledy. Propojujeme design, funkčnost a technický základ.",
@@ -145,7 +150,10 @@
           "Responzivní rozhraní a technické SEO"
         ],
         "outcome": "Rychlé a srozumitelné prostředí, ve kterém zákazníci i zaměstnanci snadno najdou to podstatné.",
-        "tags": ["Webové aplikace", "Firemní weby"],
+        "tags": [
+          "Webové aplikace",
+          "Firemní weby"
+        ],
         "sections": [
           {
             "title": "Firemní web, nebo pracovní aplikace?",
@@ -165,6 +173,7 @@
         "id": "mobile",
         "slug": "mobilni-aplikace",
         "title": "Mobilní aplikace",
+        "seoTitle": "Vývoj mobilních aplikací na míru",
         "short": "Vaše služby. Vždy na dosah.",
         "description": "Aplikace pro iOS a Android propojené s vašimi službami. Od jednoduchého úkonu po každodenní pracovní nástroj.",
         "detail": "Pomůžeme přenést vaše služby do telefonu. Navrhneme ovládání pro malé obrazovky a propojíme aplikaci s backendem i funkcemi zařízení.",
@@ -175,7 +184,10 @@
           "Využití kamery, mikrofonu a polohy"
         ],
         "outcome": "Jednotné mobilní řešení pro zákazníky nebo pracovníky v terénu, s návazností na vaše existující služby.",
-        "tags": ["iOS & Android", "React Native"],
+        "tags": [
+          "iOS & Android",
+          "React Native"
+        ],
         "sections": [
           {
             "title": "Když telefon zjednoduší každodenní práci",
@@ -195,6 +207,7 @@
         "id": "automation",
         "slug": "integrace-a-ai",
         "title": "Integrace, automatizace & AI",
+        "seoTitle": "Integrace systémů a automatizace s AI",
         "short": "Nechte technologie spolupracovat.",
         "description": "Propojená data, automatické procesy a smysluplné využití AI. Více prostoru pro práci, na které záleží.",
         "detail": "Najdeme opakující se činnosti, které může převzít software. Propojíme externí služby a zapojíme hlasové či AI funkce tam, kde přinášejí konkrétní užitek.",
@@ -205,7 +218,10 @@
           "Notifikace, dokumenty a automatizace"
         ],
         "outcome": "Plynulý tok informací mezi nástroji a méně opakujících se úkolů pro vaše lidi.",
-        "tags": ["API & integrace", "AI & automatizace"],
+        "tags": [
+          "API & integrace",
+          "AI & automatizace"
+        ],
         "sections": [
           {
             "title": "Začněme konkrétní opakující se činností",
@@ -225,6 +241,7 @@
         "id": "support",
         "slug": "rozvoj-a-podpora",
         "title": "Rozvoj & dlouhodobá péče",
+        "seoTitle": "Rozvoj a dlouhodobá podpora softwaru",
         "short": "Nasazením naše práce nekončí.",
         "description": "Stabilní provoz, nové funkce a promyšlený rozvoj. Technické zázemí pro další etapu vašeho podnikání.",
         "detail": "Zorientujeme se i v existujícím projektu. Pojmenujeme priority, technické souvislosti a navrhneme postupný rozvoj podle skutečných potřeb.",
@@ -235,7 +252,10 @@
           "Dokumentace a plán dalšího rozvoje"
         ],
         "outcome": "Srozumitelný plán, udržovatelný kód a kontinuita při rozvoji vašeho softwaru.",
-        "tags": ["Údržba & podpora", "Další rozvoj"],
+        "tags": [
+          "Údržba & podpora",
+          "Další rozvoj"
+        ],
         "sections": [
           {
             "title": "Nejdřív porozumět současnému řešení",

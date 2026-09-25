@@ -202,3 +202,43 @@ Karty jsou typografické, bez fotografií. Po změně textu homepage nebo design
 znovu vytvořit příkazem `corepack pnpm generate:social` (vyžaduje lokální Chrome).
 Generátor používá lokální font Manrope a překlady; žádné externí obrázky ani síťové
 požadavky. PNG jsou součástí repozitáře, běžný build prohlížeč nepotřebuje.
+
+### Produkční doména a titulky služeb
+
+`netlify.toml` trvale přesměrovává HTTP i HTTPS adresy na přesném hostu
+`prasentace.netlify.app` na `https://prasentace.cz` pomocí 301. Pravidla zachovávají
+cestu i parametry dotazu a mají přednost před existujícími soubory a jazykovými
+404 fallbacky. Deploy preview adres se netýkají. Změna se projeví až po nasazení.
+
+Každá služba má v `src/locales/{cs,en,de}.json` vlastní `seoTitle`. Společná
+stránková šablona jej předává do layoutu pro HTML title a sociální metadata.
+Krátký `title` se nadále používá pro viditelné nadpisy, navigaci a formulář.
+
+### Ověření v Google Search Console
+
+Pro kontrolu je nutný přístup k ověřené službě `prasentace.cz` v Search Console.
+Pokud služba ještě není založená, na https://search.google.com/search-console/
+zvolte **Přidat službu → Doména**, zadejte `prasentace.cz` bez protokolu a ověřte
+vlastnictví. Pokud Google nabídne TXT záznam, přidejte jeho přesnou hodnotu do DNS
+u FORPSI pro kořen domény. Existující Google ověřovací záznamy ponechte; starší
+záznam může patřit jinému účtu. Nameservery se nemění. Po propsání TXT klikněte
+na **Ověřit**. [Postup Google](https://support.google.com/webmasters/answer/9008080?hl=cs).
+
+Veřejně dostupná sitemap ani DNS ověřovací TXT nepotvrzují přijetí sitemapy
+nebo skutečnou indexaci v účtu Google.
+
+1. V **Soubory Sitemap** ověřte nebo odešlete
+   `https://prasentace.cz/sitemap-index.xml`. Zaznamenejte stav, poslední načtení
+   a počet objevených stránek (aktuální web má 33 obsahových URL).
+2. V **Indexování stránek** ověřte počty indexovaných a neindexovaných URL
+   a konkrétní důvody vyloučení. Počet indexovaných stránek se může lišit
+   od počtu URL v sitemapě a ne každé vyloučení je chyba.
+3. V **Kontrola adresy URL** prověřte homepage a stránky služeb v CS/EN/DE:
+   indexaci, poslední procházení, uživatelem deklarovanou kanonickou adresu
+   a kanonickou adresu vybranou Googlem. Očekávaná canonical je vlastní
+   adresa dané stránky na `https://prasentace.cz/`.
+4. Živý test potvrzuje aktuální dostupnost pro Google, nikoli zařazení do indexu
+   ani canonical vybranou Googlem. Ty kontrolujte v datech indexované verze.
+
+Výsledky z účtu Search Console zatím nejsou ověřené. Změny v projektu samy
+neodešlou sitemapu do Search Console ani nevyvolají indexaci.

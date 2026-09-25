@@ -105,6 +105,7 @@
         "id": "systems",
         "slug": "business-systems",
         "title": "Business systems",
+        "seoTitle": "Custom Business Software Development",
         "short": "Fewer spreadsheets. More clarity.",
         "description": "CRM, customer portals and internal tools designed around the way your business works.",
         "detail": "Information scattered across spreadsheets, emails and applications slows down everyday work. We design a shared environment for your data, processes and people.",
@@ -115,7 +116,10 @@
           "Dashboards, reports and exports"
         ],
         "outcome": "A clear view of essential information, less manual work and a system ready to evolve.",
-        "tags": ["CRM & portals", "Data & processes"],
+        "tags": [
+          "CRM & portals",
+          "Data & processes"
+        ],
         "sections": [
           {
             "title": "When a custom system makes sense",
@@ -135,6 +139,7 @@
         "id": "web",
         "slug": "web-applications",
         "title": "Websites & web applications",
+        "seoTitle": "Website and Web Application Development",
         "short": "Thoughtful down to the last click.",
         "description": "Fast business websites and capable applications. Intuitive for users and ready to grow with you.",
         "detail": "From a multilingual company website to a complex application with forms and dashboards. We bring design, functionality and a solid technical foundation together.",
@@ -145,7 +150,10 @@
           "Responsive interfaces and technical SEO"
         ],
         "outcome": "A fast, clear experience that helps customers and employees find what matters.",
-        "tags": ["Web applications", "Business websites"],
+        "tags": [
+          "Web applications",
+          "Business websites"
+        ],
         "sections": [
           {
             "title": "A company website or a working application?",
@@ -165,6 +173,7 @@
         "id": "mobile",
         "slug": "mobile-applications",
         "title": "Mobile applications",
+        "seoTitle": "Custom Mobile App Development",
         "short": "Your services. Always within reach.",
         "description": "iOS and Android applications connected to your services. From a simple task to an everyday work tool.",
         "detail": "We help bring your services to mobile. We design for smaller screens and connect the application to your backend and device capabilities.",
@@ -175,7 +184,10 @@
           "Camera, microphone and location features"
         ],
         "outcome": "A unified mobile solution for customers or field staff, connected to your existing services.",
-        "tags": ["iOS & Android", "React Native"],
+        "tags": [
+          "iOS & Android",
+          "React Native"
+        ],
         "sections": [
           {
             "title": "When a phone makes daily work easier",
@@ -195,6 +207,7 @@
         "id": "automation",
         "slug": "integrations-and-ai",
         "title": "Integrations, automation & AI",
+        "seoTitle": "System Integration and AI Automation",
         "short": "Let your technology work together.",
         "description": "Connected data, automated processes and practical AI. More room for the work that matters.",
         "detail": "We identify repetitive work that software can take over. We connect external services and introduce voice or AI features where they deliver practical value.",
@@ -205,7 +218,10 @@
           "Notifications, documents and automation"
         ],
         "outcome": "A smooth flow of information between tools and fewer repetitive tasks for your people.",
-        "tags": ["APIs & integrations", "AI & automation"],
+        "tags": [
+          "APIs & integrations",
+          "AI & automation"
+        ],
         "sections": [
           {
             "title": "Start with one recurring task",
@@ -225,6 +241,7 @@
         "id": "support",
         "slug": "development-and-support",
         "title": "Development & ongoing care",
+        "seoTitle": "Software Development and Ongoing Support",
         "short": "Launch is just the beginning.",
         "description": "Stable operations, new features and considered improvements. Technical foundations for your next chapter.",
         "detail": "We can work with existing projects too. We identify priorities and technical dependencies, then plan gradual improvements around real needs.",
@@ -235,7 +252,10 @@
           "Documentation and development planning"
         ],
         "outcome": "A clear plan, maintainable code and continuity as your software evolves.",
-        "tags": ["Maintenance & support", "Ongoing development"],
+        "tags": [
+          "Maintenance & support",
+          "Ongoing development"
+        ],
         "sections": [
           {
             "title": "Understand the existing solution first",

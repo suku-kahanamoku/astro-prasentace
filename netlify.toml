@@ -18,6 +18,19 @@ for = "/_astro/*"
 [headers.values]
 Cache-Control = "public, max-age=31536000, immutable"
 
+# Canonical production hostname; preserve paths and query parameters.
+[[redirects]]
+from = "https://prasentace.netlify.app/*"
+to = "https://prasentace.cz/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "http://prasentace.netlify.app/*"
+to = "https://prasentace.cz/:splat"
+status = 301
+force = true
+
 # Existing generated pages take precedence over these non-forced fallbacks.
 [[redirects]]
 from = "/en/*"
