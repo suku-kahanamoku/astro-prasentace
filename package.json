@@ -14,7 +14,8 @@
     "test": "node --test tests/*.test.mjs",
     "test:browser": "playwright test",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "generate:social": "node scripts/generate-social-images.mjs"
   },
   "dependencies": {
     "@astrojs/netlify": "^8.2.6",

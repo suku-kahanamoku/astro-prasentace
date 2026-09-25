@@ -8,6 +8,7 @@ interface Props {
 }
 const { locale, heading = true } = Astro.props;
 const t = dictionary(locale);
+const CardHeading = heading ? "h3" : "h2";
 ---
 
 <section class="section container" id="solutions">
@@ -32,7 +33,7 @@ const t = dictionary(locale);
           <span class="card-number">0{i + 1}</span>
         </div>
         <div class="card-copy">
-          <h3>{item.title}</h3>
+          <CardHeading class="card-title">{item.title}</CardHeading>
           <p>{item.description}</p>
         </div>
         <div class="card-bottom">

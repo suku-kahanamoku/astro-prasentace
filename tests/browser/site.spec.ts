@@ -37,6 +37,70 @@ test("all 33 localized pages have a unique title, canonical and matching languag
         `https://prasentace.cz${url}`,
       );
       await expect(page.locator("link[rel=alternate]")).toHaveCount(4);
+      const headingLevels = await page
+        .locator("main h1, main h2, main h3, main h4")
+        .evaluateAll((headings) =>
+          headings.map((heading) => Number(heading.tagName.slice(1))),
+        );
+      for (let index = 1; index < headingLevels.length; index++) {
+        expect(
+          headingLevels[index],
+          `${url}: heading hierarchy`,
+        ).toBeLessThanOrEqual(headingLevels[index - 1] + 1);
+      }
+      await expect(
+        page.locator(".language-picker summary"),
+      ).toHaveAccessibleName(
+        `${t.language}: ${locale === "cs" ? "CZ" : locale.toUpperCase()}`,
+      );
+      const graph = JSON.parse(
+        await page.locator('script[type="application/ld+json"]').innerText(),
+      );
+      const organization = graph.find(
+        (node: any) => node["@type"] === "Organization",
+      );
+      expect(organization.name).toBe("Prasentace");
+      if (!path) {
+        const website = graph.find((node: any) => node["@type"] === "WebSite");
+        expect(website.name).toBe("Prasentace");
+        expect(website.publisher["@id"]).toBe(organization["@id"]);
+        await expect(page.locator(".breadcrumbs")).toHaveCount(0);
+      } else {
+        const breadcrumb = graph.find(
+          (node: any) => node["@type"] === "BreadcrumbList",
+        );
+        const visibleNames = await page
+          .locator(".breadcrumbs li")
+          .allTextContents();
+        expect(
+          breadcrumb.itemListElement.map((item: any) => item.name),
+        ).toEqual(visibleNames.map((name) => name.trim()));
+        expect(breadcrumb.itemListElement.at(-1).item).toBe(
+          `https://prasentace.cz${url}`,
+        );
+        expect(
+          breadcrumb.itemListElement.map((item: any) => item.position),
+        ).toEqual(visibleNames.map((_, index) => index + 1));
+        await expect(
+          page.locator('.breadcrumbs [aria-current="page"]'),
+        ).toHaveCount(1);
+      }
+      await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+        "content",
+        `https://prasentace.cz/social/og-${locale}.png`,
+      );
+      await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(
+        "content",
+        "summary_large_image",
+      );
+      if (
+        t.solutions.items.some(
+          (item: { slug: string }) =>
+            path === `${t.routes.solutions}/${item.slug}`,
+        )
+      ) {
+        await expect(page.locator(".service-detail")).toHaveCount(3);
+      }
       titles.add(await page.title());
     }
   }
@@ -78,6 +142,7 @@ test("mobile menu opens, closes with Escape and follows navigation", async ({
 test("home, services and contact do not overflow on mobile, including German", async ({
   page,
 }) => {
+  test.setTimeout(90000);
   for (const width of [360, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     for (const path of [
@@ -86,9 +151,19 @@ test("home, services and contact do not overflow on mobile, including German", a
       "/de/loesungen/",
       "/de/kontakt/",
       "/reseni/",
+      ...Object.entries(dictionaries).flatMap(([locale, t]) =>
+        t.solutions.items.map(
+          (item: { slug: string }) =>
+            `/${locale === "cs" ? "" : `${locale}/`}${t.routes.solutions}/${item.slug}/`,
+        ),
+      ),
     ]) {
       await page.goto(path);
       await page.evaluate(() => document.fonts.ready);
+      expect(
+        await page.evaluate(() => getComputedStyle(document.body).fontFamily),
+        `${path}: stylesheet loaded`,
+      ).toContain("Manrope");
       expect(
         await page.evaluate(
           () => document.documentElement.scrollWidth <= innerWidth + 1,
@@ -222,4 +297,49 @@ test("missing pages preserve HTTP 404 and the requested language", async ({
       "noindex, follow",
     );
   }
+});
+
+test("social images are real 1200 by 630 PNG files", async ({ request }) => {
+  for (const locale of ["cs", "en", "de"]) {
+    const response = await request.get(`/social/og-${locale}.png`);
+    expect(response.status()).toBe(200);
+    expect(response.headers()["content-type"]).toContain("image/png");
+    const bytes = await response.body();
+    expect(bytes.subarray(1, 4).toString()).toBe("PNG");
+    expect(bytes.readUInt32BE(16)).toBe(1200);
+    expect(bytes.readUInt32BE(20)).toBe(630);
+  }
+});
+
+test("process step numbers have sufficient contrast", async ({ page }) => {
+  await page.goto("/jak-pracujeme/");
+  const contrast = await page
+    .locator(".step-track span")
+    .first()
+    .evaluate((element) => {
+      const luminance = (color: string) => {
+        const channels = color
+          .match(/[\d.]+/g)!
+          .slice(0, 3)
+          .map(Number)
+          .map((value) => {
+            const channel = value / 255;
+            return channel <= 0.04045
+              ? channel / 12.92
+              : ((channel + 0.055) / 1.055) ** 2.4;
+          });
+        return (
+          channels[0] * 0.2126 + channels[1] * 0.7152 + channels[2] * 0.0722
+        );
+      };
+      const foreground = luminance(getComputedStyle(element).color);
+      const background = luminance(
+        getComputedStyle(element.closest(".process-section")!).backgroundColor,
+      );
+      return (
+        (Math.max(foreground, background) + 0.05) /
+        (Math.min(foreground, background) + 0.05)
+      );
+    });
+  expect(contrast).toBeGreaterThanOrEqual(4.5);
 });

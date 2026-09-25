@@ -31,7 +31,9 @@
     "rights": "Considered. Down to the last detail.",
     "detail": "What we can solve for you",
     "deliverables": "What you get",
-    "related": "Solutions that work together"
+    "related": "Solutions that work together",
+    "home": "Home",
+    "breadcrumbs": "Breadcrumb navigation"
   },
   "seo": {
     "home": {
@@ -113,7 +115,21 @@
           "Dashboards, reports and exports"
         ],
         "outcome": "A clear view of essential information, less manual work and a system ready to evolve.",
-        "tags": ["CRM & portals", "Data & processes"]
+        "tags": ["CRM & portals", "Data & processes"],
+        "sections": [
+          {
+            "title": "When a custom system makes sense",
+            "text": "When sales, operations and management work with different versions of the same data, another spreadsheet may no longer help. A custom system can support processes that standard tools do not cover: order approvals, customer care or work coordination. Together, we first identify what needs to be built and what can be solved by connecting your existing applications."
+          },
+          {
+            "title": "From workflows to connected data",
+            "text": "We map user roles, information flows and the decisions your system needs to support. We design screens, permissions and connections to accounting or other services according to their interfaces. Any data migration starts with a quality check and trial import. Features are verified against concrete scenarios, such as moving a request from submission through approval to reporting."
+          },
+          {
+            "title": "A rollout that fits your operations",
+            "text": "Together, we define the first useful release, acceptance criteria and handover conditions. The agreed scope may include documentation, training and a transition plan from existing tools. Before launch, we clarify responsibility for operations, access and backups. Further development is then informed by feedback from the people who actually use the system."
+          }
+        ]
       },
       {
         "id": "web",
@@ -129,7 +145,21 @@
           "Responsive interfaces and technical SEO"
         ],
         "outcome": "A fast, clear experience that helps customers and employees find what matters.",
-        "tags": ["Web applications", "Business websites"]
+        "tags": ["Web applications", "Business websites"],
+        "sections": [
+          {
+            "title": "A company website or a working application?",
+            "text": "A company website should explain your offer clearly and make the first contact easy. A web application also handles specific tasks: customer self-service, bookings, forms or reporting. We begin by identifying your audience, goals and key user journeys. These guide the scope, content structure and technical foundation, rather than applying the same template to every project."
+          },
+          {
+            "title": "Design connected to functionality",
+            "text": "We design for phones and larger screens and verify important steps from sign-in to task completion. Content websites need speed, search engine access and clear language versions. For applications, we add user roles, form validation and data connections as required. Error states and understandable feedback are part of the interface design, so people know what happened and how to proceed."
+          },
+          {
+            "title": "Handover and room for change",
+            "text": "Before deployment, we check agreed scenarios, links and behaviour across screen sizes. We agree on content management, the hosting environment, access and documentation handover. If the website replaces an older version, the plan includes content migration and redirects for important addresses. Subsequent improvements can be delivered in stages based on real needs and experience after launch."
+          }
+        ]
       },
       {
         "id": "mobile",
@@ -145,7 +175,21 @@
           "Camera, microphone and location features"
         ],
         "outcome": "A unified mobile solution for customers or field staff, connected to your existing services.",
-        "tags": ["iOS & Android", "React Native"]
+        "tags": ["iOS & Android", "React Native"],
+        "sections": [
+          {
+            "title": "When a phone makes daily work easier",
+            "text": "A mobile application is useful when people work away from a desk, need to respond quickly or benefit from device features. It can simplify recording visits, submitting requests or accessing customer services. Together, we assess whether a dedicated application is appropriate or a well-designed mobile website is sufficient. The choice follows how people will use it, not the technology alone."
+          },
+          {
+            "title": "A shared foundation for iOS and Android",
+            "text": "With React Native, we build a common foundation for both platforms while respecting their interaction conventions. We plan authentication, backend connections and device permissions. Notifications, the camera, location or voice features belong where they support a specific task. If offline work and later synchronisation are needed, we agree on their behaviour early in the design process."
+          },
+          {
+            "title": "From device testing to release",
+            "text": "We verify key scenarios on agreed devices, including lost connectivity and denied permissions. Before release, we clarify the distribution method, app owner accounts and store submission materials. Store approval also depends on the operators’ policies. After launch, agreed maintenance, updates and further development can build on user feedback and changes to the platforms."
+          }
+        ]
       },
       {
         "id": "automation",
@@ -161,7 +205,21 @@
           "Notifications, documents and automation"
         ],
         "outcome": "A smooth flow of information between tools and fewer repetitive tasks for your people.",
-        "tags": ["APIs & integrations", "AI & automation"]
+        "tags": ["APIs & integrations", "AI & automation"],
+        "sections": [
+          {
+            "title": "Start with one recurring task",
+            "text": "Copying data between systems, preparing documents manually or repeating the same checks can slow down your work. We select a process with a clear input and expected result and map its exceptions. Not every automation needs AI: a direct integration is often better for predictable data transfers. We consider AI where text, voice or less structured material makes it useful."
+          },
+          {
+            "title": "Connections need to handle failures too",
+            "text": "We review available APIs, permissions, data formats and third-party service limits. We define what happens when a service fails, a request arrives twice or an input is incomplete. Depending on the process, we add retries, result logs or alerts for an operator. For AI features, we clarify what data may reach the provider and where a person should review a result before it is used."
+          },
+          {
+            "title": "Verify the benefit before expanding",
+            "text": "We begin with a limited scenario and agree how to assess its value, such as the number of manual steps or processing time. A data sample helps verify correctness, exceptions and external service costs. Before handover, we define operational responsibility and failure handling. Further systems and workflows are connected gradually, guided by what the initial evaluation shows."
+          }
+        ]
       },
       {
         "id": "support",
@@ -177,7 +235,21 @@
           "Documentation and development planning"
         ],
         "outcome": "A clear plan, maintainable code and continuity as your software evolves.",
-        "tags": ["Maintenance & support", "Ongoing development"]
+        "tags": ["Maintenance & support", "Ongoing development"],
+        "sections": [
+          {
+            "title": "Understand the existing solution first",
+            "text": "Taking over an application starts with reviewing its code, dependencies, environments and deployment process. We discuss known problems and the changes your operations need. The result is an overview of priorities and risks to help choose between a focused fix, gradual modernisation or a larger change. A complete rewrite is not the automatic starting point."
+          },
+          {
+            "title": "Development in verifiable steps",
+            "text": "We divide fixes and new features into smaller stages with a clear purpose. For affected areas, we verify important user scenarios and impacts on connected systems. Library updates and infrastructure changes are planned around compatibility and operational needs. We add documentation along the way so that decisions and procedures do not remain only in individual people’s heads."
+          },
+          {
+            "title": "A clear agreement on ongoing care",
+            "text": "We agree on the support scope, how requests are reported and how they are prioritised. Response times and availability depend on the specific agreement; around-the-clock service is not assumed. We also clarify responsibility for hosting, backups and third-party services. Regular priority reviews help distinguish essential maintenance from new features with the greatest value for your business."
+          }
+        ]
       }
     ]
   },

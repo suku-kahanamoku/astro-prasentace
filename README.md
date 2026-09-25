@@ -181,3 +181,24 @@ Popisky e-mailu, telefonu a sídla používají existující společnou komponen
 Popisky e-mailu, telefonu a sídla sdílejí styl `eyebrow contact-label`, včetně barvy a typografie.
 
 E-mail a telefon mají stejnou velikost písma a barvu jako adresa, včetně mobilního zobrazení; odkazy `mailto:` a `tel:` zůstávají aktivní a zobrazují se bez šipek napravo.
+
+## SEO a přístupnost (opravy auditu 25. 9. 2026)
+
+Detaily všech pěti služeb obsahují tři další tematické sekce ve všech jazycích.
+Texty jsou v `solutions.items[].sections` v locale JSON; sdílená šablona je vykresluje
+bez duplikace stránek. Nadpisy karet řešení a kroků mění úroveň podle kontextu.
+Nadpisy detailů dovolují dělení dlouhých slov, čísla kroků mají vyšší kontrast a
+přístupný název přepínače jazyků obsahuje viditelný kód jazyka. Formulář dovoluje
+zmenšení v gridu, takže ani delší německé volby neroztahují mobilní stránku.
+
+`src/utils/breadcrumbs.ts` je společný zdroj viditelné drobečkové navigace a
+`BreadcrumbList` JSON-LD. Navigace se nezobrazuje na homepage ani chybových stránkách.
+Homepage přidává `WebSite` propojený s `Organization`. Všechny absolutní SEO URL
+nadále vycházejí z `PUBLIC_SITE_URL`; před produkčním přechodem je třeba tuto
+proměnnou a domény hostingu správně nastavit.
+
+Open Graph a Twitter používají lokalizované PNG karty 1200 × 630 z `public/social`.
+Karty jsou typografické, bez fotografií. Po změně textu homepage nebo designu je lze
+znovu vytvořit příkazem `corepack pnpm generate:social` (vyžaduje lokální Chrome).
+Generátor používá lokální font Manrope a překlady; žádné externí obrázky ani síťové
+požadavky. PNG jsou součástí repozitáře, běžný build prohlížeč nepotřebuje.

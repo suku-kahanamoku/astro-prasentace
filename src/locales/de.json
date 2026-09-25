@@ -31,7 +31,9 @@
     "rights": "Durchdacht. Bis ins letzte Detail.",
     "detail": "Was wir für Sie lösen",
     "deliverables": "Ihr Ergebnis",
-    "related": "Lösungen, die zusammenspielen"
+    "related": "Lösungen, die zusammenspielen",
+    "home": "Startseite",
+    "breadcrumbs": "Brotkrumennavigation"
   },
   "seo": {
     "home": {
@@ -113,7 +115,21 @@
           "Übersichten, Berichte und Exporte"
         ],
         "outcome": "Wichtige Informationen im Blick, weniger Handarbeit und ein System mit Raum für Weiterentwicklung.",
-        "tags": ["CRM & Portale", "Daten & Prozesse"]
+        "tags": ["CRM & Portale", "Daten & Prozesse"],
+        "sections": [
+          {
+            "title": "Wann sich ein eigenes System lohnt",
+            "text": "Wenn Vertrieb, Betrieb und Geschäftsführung mit unterschiedlichen Versionen derselben Daten arbeiten, hilft eine weitere Tabelle oft nicht mehr. Ein eigenes System kann Abläufe abbilden, die Standardwerkzeuge nicht ausreichend unterstützen: Auftragsfreigaben, Kundenbetreuung oder die Koordination von Aufgaben. Gemeinsam klären wir zunächst, was entwickelt werden muss und was sich durch die Verbindung bestehender Anwendungen lösen lässt."
+          },
+          {
+            "title": "Von Arbeitsabläufen zu verbundenen Daten",
+            "text": "Wir erfassen Benutzerrollen, Informationsflüsse und die Entscheidungen, die das System unterstützen soll. Darauf bauen Oberflächen, Berechtigungen und Anbindungen an Buchhaltung oder weitere Dienste auf, abhängig von deren Schnittstellen. Eine Datenübernahme beginnt mit einer Qualitätsprüfung und einem Testimport. Funktionen prüfen wir anhand konkreter Abläufe, etwa von der Anfrage über die Freigabe bis zur Auswertung."
+          },
+          {
+            "title": "Eine Einführung, die zum Betrieb passt",
+            "text": "Gemeinsam legen wir die erste nutzbare Etappe, Abnahmekriterien und die Übergabe fest. Zum vereinbarten Umfang können Dokumentation, Einweisung und der Wechsel von bisherigen Werkzeugen gehören. Vor dem Start klären wir die Verantwortung für Betrieb, Zugänge und Sicherungen. Die weitere Entwicklung orientiert sich anschließend an den Rückmeldungen der Menschen, die das System tatsächlich verwenden."
+          }
+        ]
       },
       {
         "id": "web",
@@ -129,7 +145,21 @@
           "Responsive Oberflächen und technisches SEO"
         ],
         "outcome": "Eine schnelle, übersichtliche Oberfläche, auf der Kunden und Mitarbeitende das Wesentliche finden.",
-        "tags": ["Webanwendungen", "Unternehmenswebsites"]
+        "tags": ["Webanwendungen", "Unternehmenswebsites"],
+        "sections": [
+          {
+            "title": "Unternehmenswebsite oder Arbeitsanwendung?",
+            "text": "Eine Unternehmenswebsite soll Ihr Angebot verständlich erklären und den ersten Kontakt erleichtern. Eine Webanwendung unterstützt zusätzlich konkrete Aufgaben: Kundenservice, Buchungen, Formulare oder Auswertungen. Zu Beginn klären wir Zielgruppen, Ziele und wichtige Nutzerwege. Daraus ergeben sich Umfang, Inhaltsstruktur und technische Grundlage, statt jedem Projekt dieselbe Vorlage überzustülpen. Entscheidend ist, was Besucher oder Mitarbeitende zuverlässig erledigen sollen."
+          },
+          {
+            "title": "Gestaltung und Funktion gehören zusammen",
+            "text": "Wir gestalten Oberflächen für Smartphones und große Bildschirme und prüfen wichtige Schritte von der Anmeldung bis zum Abschluss einer Aufgabe. Bei Inhaltswebsites berücksichtigen wir Geschwindigkeit, Zugänglichkeit für Suchmaschinen und Sprachversionen. Bei Anwendungen ergänzen wir nach Bedarf Benutzerrollen, Formularprüfung und Datenanbindungen. Auch Fehlerfälle und verständliche Rückmeldungen gehören zum Entwurf, damit Nutzer wissen, wie es weitergeht."
+          },
+          {
+            "title": "Übergabe mit Raum für Weiterentwicklung",
+            "text": "Vor der Veröffentlichung prüfen wir vereinbarte Abläufe, Links und das Verhalten auf unterschiedlichen Bildschirmgrößen. Wir stimmen Inhaltspflege, Betriebsumgebung sowie die Übergabe von Zugängen und Dokumentation ab. Ersetzt die Website eine ältere Lösung, planen wir die Übernahme von Inhalten und Weiterleitungen wichtiger Adressen. Weitere Anpassungen können schrittweise nach tatsächlichem Bedarf und Erfahrungen aus dem Betrieb erfolgen."
+          }
+        ]
       },
       {
         "id": "mobile",
@@ -145,7 +175,21 @@
           "Kamera, Mikrofon und Standortfunktionen"
         ],
         "outcome": "Eine einheitliche mobile Lösung für Kunden oder den Außendienst, angebunden an Ihre bestehenden Dienste.",
-        "tags": ["iOS & Android", "React Native"]
+        "tags": ["iOS & Android", "React Native"],
+        "sections": [
+          {
+            "title": "Wenn das Smartphone den Alltag erleichtert",
+            "text": "Eine mobile Anwendung ist sinnvoll, wenn Menschen außerhalb des Büros arbeiten, schnell reagieren müssen oder Gerätefunktionen benötigen. Sie kann Besuchsberichte, das Erfassen von Anfragen oder den Zugang zu Kundenservices vereinfachen. Gemeinsam prüfen wir, ob eine eigene App sinnvoll ist oder eine gut gestaltete mobile Website ausreicht. Maßgeblich ist die Nutzung, nicht allein die Technologie."
+          },
+          {
+            "title": "Eine gemeinsame Basis für iOS und Android",
+            "text": "Mit React Native entwickeln wir eine gemeinsame Grundlage für beide Plattformen und berücksichtigen deren Bediengewohnheiten. Wir planen Anmeldung, Backend-Anbindung und Geräteberechtigungen. Benachrichtigungen, Kamera, Standort oder Sprachfunktionen setzen wir dort ein, wo sie eine konkrete Aufgabe unterstützen. Falls Arbeiten ohne Verbindung und eine spätere Synchronisierung nötig sind, stimmen wir das Verhalten bereits beim Entwurf ab."
+          },
+          {
+            "title": "Vom Gerätetest bis zur Veröffentlichung",
+            "text": "Wichtige Abläufe prüfen wir auf vereinbarten Geräten, auch bei Verbindungsabbrüchen und verweigerten Berechtigungen. Vor der Veröffentlichung klären wir den Vertriebsweg, die Konten des App-Eigentümers und die Unterlagen für die Stores. Die Freigabe hängt auch von den Regeln der Store-Betreiber ab. Nach dem Start können vereinbarte Wartung, Updates und Weiterentwicklung an Nutzerfeedback und Plattformänderungen anknüpfen."
+          }
+        ]
       },
       {
         "id": "automation",
@@ -161,7 +205,21 @@
           "Benachrichtigungen, Dokumente und Automatisierung"
         ],
         "outcome": "Ein reibungsloser Informationsfluss zwischen Werkzeugen und weniger Routineaufgaben für Ihre Mitarbeitenden.",
-        "tags": ["APIs & Integrationen", "KI & Automatisierung"]
+        "tags": ["APIs & Integrationen", "KI & Automatisierung"],
+        "sections": [
+          {
+            "title": "Mit einer wiederkehrenden Aufgabe beginnen",
+            "text": "Daten zwischen Systemen abzuschreiben, Dokumente manuell zu erstellen oder Prüfungen ständig zu wiederholen, kostet Zeit. Wir wählen einen Ablauf mit klarem Eingang und erwartetem Ergebnis und erfassen seine Ausnahmen. Nicht jede Automatisierung braucht KI: Für vorhersehbare Datenübertragungen ist eine direkte Verbindung oft geeigneter. KI prüfen wir dort, wo Texte, Sprache oder weniger strukturierte Unterlagen einen sinnvollen Einsatz ermöglichen."
+          },
+          {
+            "title": "Verbindungen müssen auch Fehler beherrschen",
+            "text": "Wir prüfen verfügbare APIs, Berechtigungen, Datenformate und Grenzen externer Dienste. Dabei legen wir fest, was bei Ausfällen, doppelten Anfragen oder unvollständigen Eingaben geschehen soll. Je nach Ablauf ergänzen wir Wiederholungen, Ergebnisprotokolle oder Hinweise an die zuständige Person. Bei KI-Funktionen klären wir, welche Daten an den Anbieter übermittelt werden dürfen und wo Menschen Ergebnisse vor der Verwendung prüfen sollen."
+          },
+          {
+            "title": "Den Nutzen prüfen, dann erweitern",
+            "text": "Wir beginnen mit einem begrenzten Szenario und vereinbaren, wie sich sein Nutzen bewerten lässt, etwa anhand manueller Schritte oder der Bearbeitungszeit. Mit Beispieldaten prüfen wir Richtigkeit, Ausnahmen und Kosten externer Dienste. Vor der Übergabe legen wir Betriebsverantwortung und Vorgehen bei Fehlern fest. Weitere Systeme und Abläufe verbinden wir schrittweise auf Grundlage dieser Ergebnisse."
+          }
+        ]
       },
       {
         "id": "support",
@@ -177,7 +235,21 @@
           "Dokumentation und Entwicklungsplanung"
         ],
         "outcome": "Ein klarer Plan, wartbarer Code und Kontinuität bei der Weiterentwicklung Ihrer Software.",
-        "tags": ["Wartung & Betreuung", "Weiterentwicklung"]
+        "tags": ["Wartung & Betreuung", "Weiterentwicklung"],
+        "sections": [
+          {
+            "title": "Zuerst die vorhandene Lösung verstehen",
+            "text": "Die Übernahme einer Anwendung beginnt mit einem Überblick über Code, Abhängigkeiten, Umgebungen und die Bereitstellung. Wir besprechen bekannte Probleme und die Änderungen, die Ihr Betrieb benötigt. Daraus entsteht eine Übersicht von Prioritäten und Risiken. Sie hilft bei der Entscheidung zwischen einer gezielten Korrektur, schrittweiser Modernisierung und größeren Anpassungen. Eine vollständige Neuentwicklung ist nicht automatisch der Ausgangspunkt."
+          },
+          {
+            "title": "Weiterentwicklung in überprüfbaren Schritten",
+            "text": "Fehlerbehebungen und neue Funktionen teilen wir in kleinere Etappen mit einem klaren Zweck auf. Für betroffene Bereiche prüfen wir wichtige Nutzerszenarien und Auswirkungen auf verbundene Systeme. Bibliotheksupdates und Infrastrukturänderungen planen wir nach Kompatibilität und betrieblichen Anforderungen. Begleitend ergänzen wir die Dokumentation, damit Entscheidungen und Abläufe nicht nur im Wissen einzelner Personen verbleiben."
+          },
+          {
+            "title": "Klare Vereinbarungen für die Betreuung",
+            "text": "Wir vereinbaren den Umfang der Unterstützung, die Meldung von Anforderungen und deren Priorisierung. Reaktionszeiten und Verfügbarkeit richten sich nach der konkreten Absprache; ein Rund-um-die-Uhr-Service wird nicht vorausgesetzt. Ebenso klären wir die Verantwortung für Hosting, Sicherungen und Drittanbieter. Regelmäßige Prioritätsprüfungen helfen, notwendige Wartung von neuen Funktionen mit dem größten Nutzen für Ihr Unternehmen zu unterscheiden."
+          }
+        ]
       }
     ]
   },

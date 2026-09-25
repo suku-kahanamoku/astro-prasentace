@@ -49,6 +49,16 @@ const content =
     </div>
   </section>
 )}
+{solution && (
+  <div class="container service-details">
+    {solution.sections.map((section) => (
+      <section class="service-detail" data-reveal>
+        <h2>{section.title}</h2>
+        <p>{section.text}</p>
+      </section>
+    ))}
+  </div>
+)}
 {page === "process" && <Process {locale} detailed />}
 {page === "about" && (
   <>
@@ -66,7 +76,7 @@ const content =
       {t.about.values.map((item, i) => (
         <article data-reveal>
           <span class="eyebrow">0{i + 1}</span>
-          <h3>{item.title}</h3>
+          <h2>{item.title}</h2>
           <p>{item.text}</p>
         </article>
       ))}

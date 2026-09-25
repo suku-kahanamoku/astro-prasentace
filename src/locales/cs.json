@@ -31,7 +31,9 @@
     "rights": "S rozmyslem. Do posledního detailu.",
     "detail": "Co pro vás vyřešíme",
     "deliverables": "Co získáte",
-    "related": "Řešení, která na sebe navazují"
+    "related": "Řešení, která na sebe navazují",
+    "home": "Úvod",
+    "breadcrumbs": "Drobečková navigace"
   },
   "seo": {
     "home": {
@@ -113,7 +115,21 @@
           "Přehledy, reporty a exporty"
         ],
         "outcome": "Přehled o důležitých informacích, méně ruční práce a systém připravený na další rozvoj.",
-        "tags": ["CRM & portály", "Data & procesy"]
+        "tags": ["CRM & portály", "Data & procesy"],
+        "sections": [
+          {
+            "title": "Kdy má vlastní systém smysl",
+            "text": "Když obchod, provoz a vedení pracují s různými verzemi stejných dat, další tabulka už nemusí pomoci. Vlastní systém dává smysl pro procesy, které běžný nástroj nepokrývá: schvalování objednávek, péči o zákazníky nebo koordinaci práce. Nejprve společně rozlišíme, co je potřeba vyvinout a co lze vyřešit propojením stávajících aplikací."
+          },
+          {
+            "title": "Od pracovního postupu k propojeným datům",
+            "text": "Zmapujeme role uživatelů, tok informací a rozhodnutí, která má systém podporovat. Navrhneme obrazovky, oprávnění i vazby na účetnictví nebo další služby podle možností jejich rozhraní. Případný převod dat začíná kontrolou kvality a zkušebním importem. Funkce ověřujeme na konkrétních scénářích, například od přijetí požadavku přes schválení až po report."
+          },
+          {
+            "title": "Nasazení, které zapadne do provozu",
+            "text": "Společně určíme první použitelnou etapu, způsob ověření a podmínky předání. Součástí domluveného rozsahu může být dokumentace, zaškolení a postup přechodu z původních nástrojů. Před spuštěním si vyjasníme odpovědnost za provoz, přístupy a zálohování. Další rozvoj pak vychází ze zpětné vazby lidí, kteří systém skutečně používají."
+          }
+        ]
       },
       {
         "id": "web",
@@ -129,7 +145,21 @@
           "Responzivní rozhraní a technické SEO"
         ],
         "outcome": "Rychlé a srozumitelné prostředí, ve kterém zákazníci i zaměstnanci snadno najdou to podstatné.",
-        "tags": ["Webové aplikace", "Firemní weby"]
+        "tags": ["Webové aplikace", "Firemní weby"],
+        "sections": [
+          {
+            "title": "Firemní web, nebo pracovní aplikace?",
+            "text": "Prezentační web má srozumitelně vysvětlit nabídku a usnadnit první kontakt. Webová aplikace navíc řeší konkrétní práci: zákaznickou samoobsluhu, rezervace, formuláře či datové přehledy. Na začátku si ujasníme publikum, cíle a klíčové uživatelské cesty. Podle toho volíme rozsah, strukturu obsahu a vhodný technický základ místo univerzální šablony pro každý projekt."
+          },
+          {
+            "title": "Design propojený s funkčností",
+            "text": "Navrhneme rozhraní pro mobil i velkou obrazovku a ověříme důležité kroky od přihlášení po dokončení úkolu. U obsahových webů řešíme rychlost, dostupnost pro vyhledávače a jazykové verze. U aplikací doplníme podle zadání uživatelské role, validaci formulářů a napojení na vaše data. Součástí návrhu jsou i chybové stavy a srozumitelná odezva pro uživatele."
+          },
+          {
+            "title": "Předání a prostor pro další změny",
+            "text": "Před nasazením ověřujeme dohodnuté scénáře, odkazy a chování na různých velikostech obrazovky. Domluvíme způsob správy obsahu, provozní prostředí a předání přístupů i dokumentace. Pokud web nahrazuje starší řešení, zahrneme do plánu přesun obsahu a přesměrování důležitých adres. Následné úpravy lze rozdělit do etap podle reálných potřeb a výsledků provozu."
+          }
+        ]
       },
       {
         "id": "mobile",
@@ -145,7 +175,21 @@
           "Využití kamery, mikrofonu a polohy"
         ],
         "outcome": "Jednotné mobilní řešení pro zákazníky nebo pracovníky v terénu, s návazností na vaše existující služby.",
-        "tags": ["iOS & Android", "React Native"]
+        "tags": ["iOS & Android", "React Native"],
+        "sections": [
+          {
+            "title": "Když telefon zjednoduší každodenní práci",
+            "text": "Mobilní aplikace dává smysl tam, kde lidé pracují mimo kancelář, potřebují rychle reagovat nebo využívat funkce telefonu. Může usnadnit evidenci návštěv, zadávání požadavků či přístup k zákaznickým službám. Společně ověříme, zda je vhodná samostatná aplikace, nebo postačí dobře navržený mobilní web. Rozhoduje způsob použití, ne samotná technologie."
+          },
+          {
+            "title": "Jedno řešení pro iOS a Android",
+            "text": "V React Native vytváříme společný základ pro obě platformy a přizpůsobujeme ovládání jejich zvyklostem. Navrhneme přihlášení, vazby na backend a práci s oprávněními telefonu. Notifikace, kamera, poloha nebo hlasové funkce mají své místo jen tam, kde pomáhají konkrétnímu úkolu. Případnou práci bez připojení a následnou synchronizaci je potřeba domluvit už při návrhu."
+          },
+          {
+            "title": "Od testování na zařízení k vydání",
+            "text": "Klíčové scénáře ověřujeme na dohodnutých zařízeních, včetně ztráty připojení a zamítnutých oprávnění. Před vydáním si vyjasníme distribuční cestu, účty vlastníka aplikace a podklady pro obchody. Schválení v obchodech závisí také na pravidlech jejich provozovatelů. Po spuštění lze navázat domluvenou údržbou, aktualizacemi a rozvojem podle zpětné vazby uživatelů."
+          }
+        ]
       },
       {
         "id": "automation",
@@ -161,7 +205,21 @@
           "Notifikace, dokumenty a automatizace"
         ],
         "outcome": "Plynulý tok informací mezi nástroji a méně opakujících se úkolů pro vaše lidi.",
-        "tags": ["API & integrace", "AI & automatizace"]
+        "tags": ["API & integrace", "AI & automatizace"],
+        "sections": [
+          {
+            "title": "Začněme konkrétní opakující se činností",
+            "text": "Přepisování údajů mezi systémy, ruční tvorba dokumentů nebo opakované kontroly mohou zbytečně zpomalovat práci. Vybereme proces s jasným vstupem a očekávaným výsledkem a zmapujeme jeho výjimky. Ne každá automatizace potřebuje AI: pro pravidelný přenos dat bývá vhodnější přímé propojení. Umělou inteligenci zvažujeme tam, kde má smysl práce s textem, hlasem nebo méně strukturovanými podklady."
+          },
+          {
+            "title": "Propojení musí zvládat i chyby",
+            "text": "Prověříme dostupná API, přístupová oprávnění, formáty dat a limity externích služeb. Navrhneme, co se stane při výpadku, duplicitním požadavku nebo neúplném vstupu. Podle procesu doplníme opakování, záznam výsledků či upozornění obsluze. U AI funkcí si vyjasníme, jaká data lze předávat poskytovateli a kde má výsledek před použitím posoudit člověk."
+          },
+          {
+            "title": "Nejdřív ověřit přínos, potom rozšiřovat",
+            "text": "Začneme omezeným scénářem a domluvíme, podle čeho vyhodnotíme jeho užitek: například počet ručních kroků nebo čas zpracování. Na vzorku dat ověříme správnost, výjimky i náklady externích služeb. Před předáním určíme odpovědnost za provoz a postup při chybě. Další systémy a procesy připojujeme postupně, podle výsledků ověření."
+          }
+        ]
       },
       {
         "id": "support",
@@ -177,7 +235,21 @@
           "Dokumentace a plán dalšího rozvoje"
         ],
         "outcome": "Srozumitelný plán, udržovatelný kód a kontinuita při rozvoji vašeho softwaru.",
-        "tags": ["Údržba & podpora", "Další rozvoj"]
+        "tags": ["Údržba & podpora", "Další rozvoj"],
+        "sections": [
+          {
+            "title": "Nejdřív porozumět současnému řešení",
+            "text": "Převzetí aplikace začíná zmapováním kódu, závislostí, prostředí a způsobu nasazování. Probereme známé problémy i změny, které potřebuje váš provoz. Výsledkem je přehled priorit a rizik, podle kterého lze rozhodnout mezi dílčí opravou, postupnou modernizací a větší změnou. Kompletní přepis není automatický výchozí bod."
+          },
+          {
+            "title": "Rozvoj po ověřitelných krocích",
+            "text": "Opravy a nové funkce rozdělujeme do menších etap s jasným účelem. U dotčených částí ověřujeme důležité uživatelské scénáře a dopady na navazující systémy. Aktualizace knihoven či změny infrastruktury plánujeme podle kompatibility a potřeb provozu. Průběžně doplňujeme dokumentaci, aby rozhodnutí a postupy nezůstávaly jen v hlavách jednotlivých lidí."
+          },
+          {
+            "title": "Jasná dohoda o následné péči",
+            "text": "Domluvíme rozsah podpory, způsob hlášení požadavků a pořadí řešení. Reakční dobu a dostupnost stanovíme podle konkrétní dohody; nepředpokládáme automaticky nepřetržitou službu. Vyjasníme také odpovědnost za hosting, zálohy a služby třetích stran. Pravidelná revize priorit pomáhá oddělit nutnou údržbu od nových funkcí, které mají pro firmu největší přínos."
+          }
+        ]
       }
     ]
   },
