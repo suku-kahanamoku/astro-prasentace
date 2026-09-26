@@ -1,6 +1,7 @@
 ---
 import { dictionary, url, type Locale } from "@/i18n";
 import { TURNSTILE_SITE_KEY } from "astro:env/client";
+import DisclosureChevron from "@/components/ui/DisclosureChevron.astro";
 import Icon from "@/components/ui/Icon.astro";
 interface Props {
   locale: Locale;
@@ -65,12 +66,15 @@ const siteKey = TURNSTILE_SITE_KEY || "";
     <label for="interest">
       {t.contact.interest} <span>({t.contact.optional})</span>
     </label>
-    <select id="interest" name="interest" aria-describedby="interest-error">
-      <option value="">{t.contact.choose}</option>
-      {t.solutions.items.map((item) => (
-        <option value={item.id}>{item.title}</option>
-      ))}
-    </select>
+    <div class="select-control">
+      <select id="interest" name="interest" aria-describedby="interest-error">
+        <option value="">{t.contact.choose}</option>
+        {t.solutions.items.map((item) => (
+          <option value={item.id}>{item.title}</option>
+        ))}
+      </select>
+      <DisclosureChevron />
+    </div>
     <p class="field-error" id="interest-error"></p>
   </div>
   <div class="field">

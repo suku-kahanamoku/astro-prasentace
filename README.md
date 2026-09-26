@@ -264,3 +264,30 @@ to není kaňka. To je design.“ Má odpovídající anglickou a německou verz
 Při `prefers-reduced-motion: reduce` zůstává statická.
 
 Úvodní ilustrace ekosystému nezobrazuje stavový popisek „Všechno spolu funguje.“
+
+Sešit s údajem 10+ má jemně potrhaný horní okraj vytvořený pomocí CSS `clip-path`.
+
+Přepínač jazyků zobrazuje lokální SVG vlajky z `public/flags` (CZ, GB pro angličtinu,
+DE), bez knihovny a externích požadavků. Odkazy mají přístupné názvy jazyků a tooltipy.
+
+Vybraná vlajka má kruhový rámeček; SVG šipka je s ní svisle vycentrovaná.
+
+Pořadí akcí hlavičky: Probrat projekt → přepínač jazyků → mobilní menu.
+
+Kontaktní formulář připomíná linkovaný sešit s červeným okrajem, perforací a vrstvami
+papíru. Pole mají psací linky, zpráva více řádků; zachovány jsou popisky, focus
+i chybové stavy. Na mobilu se okraj a odsazení zmenšují.
+
+Hamburger má dvě shodné čárky a přes `aria-expanded` se plynule mění na křížek;
+respektuje omezený pohyb. Šikmé šipky jsou vyhrazené odkazům na cizí weby,
+proto nejsou v interní navigaci, kartách služeb ani dekorativních popiscích.
+
+Přepínač jazyků i selecty sdílejí `DisclosureChevron.astro`: zavřené míří doprava,
+otevřené dolů s přechodem 280 ms. Select používá skutečný stav CSS `:open`,
+nikoliv pouhý focus. `prefers-reduced-motion` přechod vypíná.
+
+Focus formulářových polí zvýrazňuje pouze spodní linku bez obdélníkového rámečku.
+Chybová pole zachovávají červené zvýraznění i při focusu.
+
+Kontaktní formulář je do šířky 767 px (včetně sm) pod kontaktními údaji a sídlem.
+Od 768 px zůstává rozložení ve dvou sloupcích.

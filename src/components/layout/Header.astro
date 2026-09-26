@@ -1,6 +1,7 @@
 ---
 import { dictionary, locales, url, type Locale, type PageId } from "@/i18n";
 import Button from "@/components/ui/Button.astro";
+import DisclosureChevron from "@/components/ui/DisclosureChevron.astro";
 import BrandLogo from "@/components/ui/BrandLogo.astro";
 interface Props {
   locale: Locale;
@@ -26,10 +27,21 @@ const languageCode = locale === "cs" ? "CZ" : locale.toUpperCase();
       ))}
     </nav>
     <div class="header-actions">
+      <Button href={url(locale, "contact")} class="header-cta">
+        {t.common.cta}
+      </Button>
       <details class="language-picker">
         <summary aria-label={`${t.language}: ${languageCode}`}>
-          {languageCode}
-          <span aria-hidden="true">⌄</span>
+          <span class="language-current">
+            <img
+              class="language-flag"
+              src={`/flags/${locale}.svg`}
+              width="27"
+              height="18"
+              alt=""
+            />
+          </span>
+          <DisclosureChevron class="language-chevron" />
         </summary>
         <div class="language-options">
           {locales.map((code) => (
@@ -38,15 +50,20 @@ const languageCode = locale === "cs" ? "CZ" : locale.toUpperCase();
               lang={code}
               hreflang={code}
               aria-current={code === locale ? "true" : undefined}
+              aria-label={dictionary(code).langName}
+              title={dictionary(code).langName}
             >
-              {dictionary(code).langName}
+              <img
+                class="language-flag"
+                src={`/flags/${code}.svg`}
+                width="27"
+                height="18"
+                alt=""
+              />
             </a>
           ))}
         </div>
       </details>
-      <Button href={url(locale, "contact")} class="header-cta">
-        {t.common.cta}
-      </Button>
       <button
         class="menu-toggle"
         aria-expanded="false"
@@ -66,7 +83,6 @@ const languageCode = locale === "cs" ? "CZ" : locale.toUpperCase();
         aria-current={page === id ? "page" : undefined}
       >
         {label}
-        <span aria-hidden="true">↗</span>
       </a>
     ))}
   </nav>

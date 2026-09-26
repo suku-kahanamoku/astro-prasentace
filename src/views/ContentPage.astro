@@ -99,10 +99,7 @@ const content =
       {t.solutions.items
         .filter((item) => item.id !== solution.id)
         .map((item) => (
-          <a href={url(locale, "solutions", item.id)}>
-            {item.title}
-            <Icon name="diagonal" size={20} />
-          </a>
+          <a href={url(locale, "solutions", item.id)}>{item.title}</a>
         ))}
     </div>
   </section>

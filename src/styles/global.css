@@ -242,8 +242,55 @@ p {
   list-style: none;
   min-height: 44px;
 }
+.language-current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fffdf6;
+}
+.language-current .language-flag {
+  width: 24px;
+  height: 16px;
+}
+.disclosure-chevron {
+  display: block;
+  flex-shrink: 0;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: transform 280ms ease-in-out;
+  pointer-events: none;
+}
+.language-picker[open] .language-chevron {
+  transform: rotate(0deg);
+}
+.select-control {
+  position: relative;
+  min-width: 0;
+}
+.select-control > .disclosure-chevron {
+  position: absolute;
+  top: calc(50% - 8px);
+  right: 8px;
+  color: var(--blue);
+}
+.select-control > select:open + .disclosure-chevron {
+  transform: rotate(0deg);
+}
 .language-picker summary::-webkit-details-marker {
   display: none;
+}
+.language-flag {
+  display: block;
+  width: 27px;
+  height: 18px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px #202b491a;
 }
 .language-options {
   position: absolute;
@@ -254,11 +301,15 @@ p {
   border: 1px solid var(--line);
   border-radius: 12px;
   box-shadow: 0 12px 40px #16295613;
-  min-width: 140px;
+  min-width: 60px;
 }
 .language-options a {
-  display: block;
-  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
   border-radius: 6px;
 }
 .language-options a:hover,
@@ -268,18 +319,34 @@ p {
 }
 .menu-toggle {
   display: none;
+  position: relative;
   background: transparent;
   border: 0;
   width: 44px;
   height: 44px;
-  padding: 12px 8px;
+  padding: 0;
 }
 .menu-toggle span {
-  height: 1.5px;
+  position: absolute;
+  top: 21px;
+  left: 10px;
+  height: 2px;
   width: 24px;
   display: block;
   background: var(--ink);
-  margin: 6px 0;
+  border-radius: 1px;
+  transform-origin: center;
+  transition: transform 280ms ease-in-out;
+  transform: translateY(-4px);
+}
+.menu-toggle span:nth-child(2) {
+  transform: translateY(4px);
+}
+.menu-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(0) rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  transform: translateY(0) rotate(-45deg);
 }
 .mobile-nav {
   background: #fff;
@@ -2086,6 +2153,10 @@ p {
   line-height: 1.8;
 }
 @media (max-width: 767px) {
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 35px;
+  }
   .service-detail {
     grid-template-columns: minmax(0, 1fr);
     gap: 18px;
