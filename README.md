@@ -314,3 +314,19 @@ Rozbalené mobilní menu se zavře po odjetí myši mimo tlačítko i nabídku.
 Prodleva 180 ms umožní překonat mezeru mezi nimi; dotykové pohyby menu nezavírají.
 
 Menu se zavírá také kliknutím nebo klepnutím mimo nabídku a hamburger, bez blokování cílového odkazu.
+
+### Produkční Turnstile pro Prasentace
+
+Widget `Prasentace` je spravovaný v Cloudflare účtu profilu Wrangler
+`prasentace` (účet `7c9935c0654d95b8ffc10467d3b0d75f`). Používá režim
+`managed` a povolené domény `prasentace.cz`, `www.prasentace.cz` a
+`prasentace.netlify.app`. Formulář jej vykresluje s `appearance: interaction-only`.
+
+Produkční konfigurace je lokálně uložená v ignorovaném `.env.production`.
+Stejné proměnné jsou nastavené také v Netlify projektu `prasentace`
+(`7f6216a5-a79e-4f06-82f9-90f4cd56b1f6`):
+`TURNSTILE_SITE_KEY` pro build, `TURNSTILE_SECRET_KEY` a nastavení PHP maileru
+pro serverové funkce. Samotný lokální soubor prostředí do Netlify přes Git
+neputuje. Po změně veřejného klíče je nutné nové sestavení webu.
+Lokální `.env.development` nadále používá testovací CAPTCHA klíče a lokální PHP.
+Tajné klíče nikdy nekopírovat do repozitáře nebo veřejného klientského kódu.
