@@ -248,7 +248,7 @@ neodešlou sitemapu do Search Console ani nevyvolají indexaci.
 Značka propojuje prezentaci a prase: znak v `public/brand/mark.svg` kombinuje
 prezentační snímek s předsazenou dlaždicí P. Lososový detail uvnitř snímku
 připomíná rypáček, dvě modré tečky o poloměru 3,4 těsně nad ním tvoří oči; prasátko je až druhou, nenápadnou vrstvou znaku. `BrandLogo.astro` je společné logo hlavičky a patičky.
-Favicon vychází ze stejného znaku. Vektorové soubory jsou vlastní kresba bez
+Favicon používá pouze světlé písmeno P na modré zaoblené dlaždici převzaté z loga. Vektorové soubory jsou vlastní kresba bez
 externích obrázků a lze je škálovat i upravovat.
 
 `src/styles/brand.css` definuje teplý papír, modrý inkoust, lososový akcent,
