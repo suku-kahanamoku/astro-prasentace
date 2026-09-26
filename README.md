@@ -10,19 +10,19 @@ Vyžaduje Node.js >= 22.12 a Corepack. Autoritativní lockfile je `pnpm-lock.yam
 
 ```bash
 corepack pnpm install --frozen-lockfile
-corepack pnpm dev --port 4322
+corepack pnpm dev --port 4321
 ```
 
 Pro server na pozadí:
 
 ```bash
-corepack pnpm exec astro dev --host 127.0.0.1 --port 4322 --background
+corepack pnpm exec astro dev --host 127.0.0.1 --port 4321 --background
 corepack pnpm exec astro dev status
 corepack pnpm exec astro dev logs
 corepack pnpm exec astro dev stop
 ```
 
-Lokální adresa: http://127.0.0.1:4322/. Bez nastavení e-mailu a CAPTCHA lze celý web
+Lokální adresa: http://127.0.0.1:4321/. Bez nastavení e-mailu a CAPTCHA lze celý web
 prohlížet; formulář s chybějícím veřejným klíčem je vypnutý a nabízí přímý e-mail.
 
 Patička má jemné šedomodré pozadí přes celou šířku a dvouvrstvý horní stín bez
@@ -136,7 +136,7 @@ pokusů o vložení e-mailových hlaviček, CAPTCHA a SMTP výpadků, cizího Or
 honeypotu a příliš velkého těla požadavku.
 
 Playwright používá lokálně instalovaný Google Chrome (`channel: chrome`) a spustí
-server na portu 4322, pokud již neběží. Kontroluje obsahové routy, SEO, jazykové
+server na portu 4321, pokud již neběží. Kontroluje obsahové routy, SEO, jazykové
 přepnutí, mobilní menu, horizontální přetékání při 360/390/768/1440 px, omezený
 pohyb, obsah bez JavaScriptu a formulář s testovacími odpověďmi. Obrázky z kontroly
 se ukládají do ignorovaného adresáře `test-results/`.

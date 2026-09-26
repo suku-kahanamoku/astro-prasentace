@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+  server: { port: 4321 },
   site: process.env.PUBLIC_SITE_URL || "https://prasentace.cz",
   output: "static",
   adapter: netlify({ devFeatures: { edgeFunctions: false } }),

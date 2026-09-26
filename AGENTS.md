@@ -7,4 +7,4 @@
 - Zachovejte přístupnost, použitelnost bez animací a jasné chybové stavy formuláře.
 - Produkční SMTP ani CAPTCHA tajemství nevkládejte do klientských proměnných nebo repozitáře.
 - Změny dokumentujte v README. Před dokončením spusťte `corepack pnpm build`, relevantní testy a formátování.
-- Vývojový server spouštějte pomocí `corepack pnpm exec astro dev --host 127.0.0.1 --port 4322 --background` a spravujte přes `astro dev status/logs/stop`.
+- Vývojový server spouštějte pomocí `corepack pnpm exec astro dev --host 127.0.0.1 --port 4321 --background` a spravujte přes `astro dev status/logs/stop`.

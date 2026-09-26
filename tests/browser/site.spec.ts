@@ -234,7 +234,7 @@ test("reduced motion and no-JavaScript content remain usable", async ({
     reducedMotion: "reduce",
   });
   const page = await context.newPage();
-  await page.goto("http://127.0.0.1:4322/de/");
+  await page.goto("http://127.0.0.1:4321/de/");
   await expect(page.locator("main h1")).toContainText("Ihre Vision.");
   await expect(page.locator(".solution-card")).toHaveCount(5);
   expect(
@@ -260,7 +260,7 @@ test("invalid contact submissions are rejected before sending", async ({
   if (key) await expect(page.locator("button[type=submit]")).toBeEnabled();
   else await expect(page.locator("button[type=submit]")).toBeDisabled();
   const response = await request.post("/api/contact/", {
-    headers: { origin: "http://127.0.0.1:4322" },
+    headers: { origin: "http://127.0.0.1:4321" },
     data: { name: "", email: "invalid", message: "short", locale: "cs" },
   });
   expect(response.status()).toBe(422);
