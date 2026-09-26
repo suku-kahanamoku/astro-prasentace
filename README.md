@@ -309,3 +309,6 @@ nikoliv utajení: roboti schopní parsovat DOM nebo spouštět JavaScript je zí
 
 Čumáček z loga je samostatně v `public/brand/snout.svg` a nahrazuje hvězdičku
 v pruhu se sloganem na homepage. Zachovává původní tvar i barvy loga.
+
+Rozbalené mobilní menu se zavře po odjetí myši mimo tlačítko i nabídku.
+Prodleva 180 ms umožní překonat mezeru mezi nimi; dotykové pohyby menu nezavírají.

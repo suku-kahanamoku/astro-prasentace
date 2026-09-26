@@ -139,6 +139,38 @@ test("mobile menu opens, closes with Escape and follows navigation", async ({
   await expect(page).toHaveURL(/\/kontakt\/$/);
 });
 
+test("menu closes outside its hover area but allows crossing to the dropdown", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 900, height: 900 });
+  await page.goto("/");
+  const toggle = page.locator("[data-menu-toggle]");
+  const nav = page.locator("#mobile-navigation");
+  await toggle.click();
+  const buttonBox = (await toggle.boundingBox())!;
+  const menuBox = (await nav.boundingBox())!;
+  await page.mouse.move(
+    buttonBox.x + buttonBox.width / 2,
+    buttonBox.y + buttonBox.height + 2,
+  );
+  await page.mouse.move(buttonBox.x + buttonBox.width / 2, menuBox.y + 10);
+  await page.waitForTimeout(250);
+  await expect(toggle).toHaveAttribute("aria-expanded", "true");
+  await toggle.hover();
+  await page.waitForTimeout(250);
+  await expect(nav).toBeVisible();
+  await page.mouse.move(10, menuBox.y + menuBox.height + 30);
+  await expect(nav).toBeHidden();
+  await expect(toggle).toHaveAttribute("aria-expanded", "false");
+  await toggle.focus();
+  await page.keyboard.press("Enter");
+  await page.dispatchEvent("main", "pointermove", { pointerType: "touch" });
+  await page.waitForTimeout(250);
+  await expect(nav).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(nav).toBeHidden();
+});
+
 test("home, services and contact do not overflow on mobile, including German", async ({
   page,
 }) => {
