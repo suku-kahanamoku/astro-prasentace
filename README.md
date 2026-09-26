@@ -312,3 +312,5 @@ v pruhu se sloganem na homepage. Zachovává původní tvar i barvy loga.
 
 Rozbalené mobilní menu se zavře po odjetí myši mimo tlačítko i nabídku.
 Prodleva 180 ms umožní překonat mezeru mezi nimi; dotykové pohyby menu nezavírají.
+
+Menu se zavírá také kliknutím nebo klepnutím mimo nabídku a hamburger, bez blokování cílového odkazu.

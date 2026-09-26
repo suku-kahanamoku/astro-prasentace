@@ -57,6 +57,14 @@ document.addEventListener("keydown", (event) => {
   }
 });
 document.addEventListener("click", (event) => {
+  const target = event.target;
+  if (
+    target instanceof Node &&
+    toggle?.getAttribute("aria-expanded") === "true" &&
+    !toggle.contains(target) &&
+    !mobileNav?.contains(target)
+  )
+    closeMenu();
   document
     .querySelectorAll<HTMLDetailsElement>(".language-picker[open]")
     .forEach((el) => {

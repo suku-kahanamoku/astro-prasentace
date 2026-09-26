@@ -171,6 +171,26 @@ test("menu closes outside its hover area but allows crossing to the dropdown", a
   await expect(nav).toBeHidden();
 });
 
+test("touch tap outside closes the menu without swallowing the tap", async ({
+  browser,
+}) => {
+  const context = await browser.newContext({
+    viewport: { width: 390, height: 844 },
+    hasTouch: true,
+    isMobile: true,
+  });
+  const page = await context.newPage();
+  await page.goto("/");
+  const toggle = page.locator("[data-menu-toggle]");
+  await toggle.tap();
+  await expect(toggle).toHaveAttribute("aria-expanded", "true");
+  const menuBox = (await page.locator("#mobile-navigation").boundingBox())!;
+  await page.touchscreen.tap(10, menuBox.y + menuBox.height + 20);
+  await expect(toggle).toHaveAttribute("aria-expanded", "false");
+  await expect(page.locator("#mobile-navigation")).toBeHidden();
+  await context.close();
+});
+
 test("home, services and contact do not overflow on mobile, including German", async ({
   page,
 }) => {
