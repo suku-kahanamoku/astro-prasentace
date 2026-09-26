@@ -1,4 +1,5 @@
 ---
+import ProtectedContact from "@/components/ui/ProtectedContact.astro";
 import { dictionary, type Locale } from "@/i18n";
 import { site } from "@/config/site";
 import ContactForm from "@/components/forms/ContactForm.astro";
@@ -21,16 +22,12 @@ const t = dictionary(locale);
       <Icon name="mail" size={20} />
       {t.contact.emailLabel}
     </p>
-    <a class="contact-link" href={`mailto:${site.email}`}>
-      {site.email}
-    </a>
+    <ProtectedContact kind="email" class="contact-link" />
     <p class="eyebrow contact-label">
       <Icon name="mobile" size={20} />
       {t.contact.phoneLabel}
     </p>
-    <a class="contact-link" href={`tel:${site.phone.replaceAll(" ", "")}`}>
-      {site.phone}
-    </a>
+    <ProtectedContact kind="phone" class="contact-link" />
     <p class="eyebrow contact-label">
       <Icon name="globe" size={20} />
       {t.common.address}

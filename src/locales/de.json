@@ -54,7 +54,7 @@
     },
     "contact": {
       "title": "Sprechen wir über Ihr Projekt",
-      "description": "Was möchten Sie vereinfachen, verbinden oder entwickeln? Kontaktieren Sie Prasentace unter info@prasentace.cz."
+      "description": "Was möchten Sie vereinfachen, verbinden oder entwickeln? Besprechen Sie Ihr Projekt mit Prasentace."
     },
     "privacy": {
       "title": "Datenschutz",
@@ -330,10 +330,10 @@
     "sending": "Wird gesendet…",
     "notice": "Wir verwenden Ihre Angaben, um Ihre Anfrage zu bearbeiten.",
     "success": "Vielen Dank. Ihre Nachricht ist angekommen. Wir melden uns unter der angegebenen E-Mail-Adresse.",
-    "error": "Die Nachricht konnte nicht gesendet werden. Versuchen Sie es später erneut oder schreiben Sie an info@prasentace.cz.",
+    "error": "Die Nachricht konnte nicht gesendet werden. Versuchen Sie es später erneut oder nutzen Sie die auf dieser Seite angegebene E-Mail-Adresse.",
     "invalid": "Bitte prüfen Sie die markierten Felder.",
     "captcha": "Bitte schließen Sie die Spam-Schutz-Prüfung ab.",
-    "unavailable": "Das Formular ist derzeit nicht verfügbar. Schreiben Sie bitte direkt an info@prasentace.cz.",
+    "unavailable": "Das Formular ist derzeit nicht verfügbar. Nutzen Sie bitte die auf dieser Seite angegebene E-Mail-Adresse.",
     "nojs": "Aktivieren Sie JavaScript für das Formular oder kontaktieren Sie uns per E-Mail.",
     "required": "Bitte füllen Sie dieses Feld aus.",
     "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
@@ -347,7 +347,7 @@
     "sections": [
       {
         "title": "Kontaktdaten",
-        "text": "Der Betreiber von Prasentace wird durch die unten aufgeführten Unternehmensdaten identifiziert. Bei Fragen zu personenbezogenen Daten schreiben Sie an info@prasentace.cz."
+        "text": "Der Betreiber von Prasentace wird durch die unten aufgeführten Unternehmensdaten identifiziert. Bei Fragen zu personenbezogenen Daten nutzen Sie die darunter angegebene E-Mail-Adresse."
       },
       {
         "title": "Kontaktformular",

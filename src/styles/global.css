@@ -238,24 +238,43 @@ p {
 .language-picker summary {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 4px;
   list-style: none;
   min-height: 44px;
 }
 .language-current {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
   border: 1px solid var(--line);
   border-radius: 50%;
   background: #fffdf6;
+  box-shadow: 0 2px 3px #202b4926;
+}
+.language-current::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(ellipse at 32% 22%, #ffffff80, #ffffff00 58%),
+    radial-gradient(circle at 40% 32%, #202b4900 45%, #202b493d 100%);
+  box-shadow:
+    inset 0 1px 1px #ffffff80,
+    inset 0 -1px 2px #202b4926;
+  pointer-events: none;
 }
 .language-current .language-flag {
-  width: 24px;
-  height: 16px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
 }
 .disclosure-chevron {
   display: block;
@@ -1157,9 +1176,6 @@ p {
 .footer-email {
   font-size: var(--text-small);
 }
-.footer-email span {
-  margin-left: 10px;
-}
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -1350,9 +1366,7 @@ p {
   font-size: var(--text-body);
 }
 .contact-details .contact-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 20px;
+  display: inline-block;
   margin-bottom: 40px;
 }
 .contact-details .contact-link:hover {

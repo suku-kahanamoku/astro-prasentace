@@ -32,8 +32,6 @@ const schema = {
   name: site.name,
   logo: new URL("/brand/mark.svg", Astro.site).href,
   url: Astro.site?.href,
-  email: site.email,
-  telephone: site.phone.replaceAll(" ", ""),
   identifier: site.registrationId,
   address: {
     "@type": "PostalAddress",

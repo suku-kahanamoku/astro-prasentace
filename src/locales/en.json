@@ -54,7 +54,7 @@
     },
     "contact": {
       "title": "Let’s talk about your project",
-      "description": "Tell us what you want to simplify, connect or create. Contact Prasentace at info@prasentace.cz."
+      "description": "Tell us what you want to simplify, connect or create. Discuss your project with Prasentace."
     },
     "privacy": {
       "title": "Privacy",
@@ -330,10 +330,10 @@
     "sending": "Sending…",
     "notice": "We will use your details to respond to your enquiry.",
     "success": "Thank you. Your message has arrived. We will reply to the email address you provided.",
-    "error": "Your message could not be sent. Please try again later or email info@prasentace.cz.",
+    "error": "Your message could not be sent. Please try again later or use the contact email shown on this page.",
     "invalid": "Please check the highlighted fields.",
     "captcha": "Please complete the spam protection check.",
-    "unavailable": "The form is currently unavailable. Please email us directly at info@prasentace.cz.",
+    "unavailable": "The form is currently unavailable. Please use the contact email shown on this page.",
     "nojs": "Enable JavaScript to use the form, or contact us by email.",
     "required": "Please fill in this field.",
     "invalidEmail": "Please enter a valid email address.",
@@ -347,7 +347,7 @@
     "sections": [
       {
         "title": "Contact details",
-        "text": "The operator of Prasentace is identified by the business details below. For questions about personal data, contact info@prasentace.cz."
+        "text": "The operator of Prasentace is identified by the business details below. For questions about personal data, use the contact email shown below this information."
       },
       {
         "title": "Contact form",

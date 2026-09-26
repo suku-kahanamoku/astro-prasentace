@@ -67,6 +67,7 @@ if (form) {
         language: form.dataset.locale,
         theme: "light",
         size: "flexible",
+        appearance: "interaction-only",
         callback: (value: string) => {
           token = value;
           if (status.textContent === messages.captcha) setStatus("");

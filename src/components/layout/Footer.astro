@@ -1,4 +1,5 @@
 ---
+import ProtectedContact from "@/components/ui/ProtectedContact.astro";
 import { dictionary, url, type Locale, type PageId } from "@/i18n";
 import { site } from "@/config/site";
 import BrandLogo from "@/components/ui/BrandLogo.astro";
@@ -21,9 +22,7 @@ const t = dictionary(locale);
           <a href={url(locale, id as PageId)}>{label}</a>
         ))}
       </nav>
-      <a class="footer-email" href={`mailto:${site.email}`}>
-        {site.email}
-      </a>
+      <ProtectedContact kind="email" class="footer-email" />
     </div>
     <div class="footer-bottom">
       <p>

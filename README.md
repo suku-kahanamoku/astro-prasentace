@@ -270,7 +270,8 @@ Sešit s údajem 10+ má jemně potrhaný horní okraj vytvořený pomocí CSS `
 Přepínač jazyků zobrazuje lokální SVG vlajky z `public/flags` (CZ, GB pro angličtinu,
 DE), bez knihovny a externích požadavků. Odkazy mají přístupné názvy jazyků a tooltipy.
 
-Vybraná vlajka má kruhový rámeček; SVG šipka je s ní svisle vycentrovaná.
+Vybraná vlajka vyplňuje celý kruhový odznak o velikosti 24 × 24 px pomocí `object-fit: cover` a ořezu
+přes `overflow: hidden`; SVG šipka je s ní svisle vycentrovaná.
 
 Pořadí akcí hlavičky: Probrat projekt → přepínač jazyků → mobilní menu.
 
@@ -291,3 +292,20 @@ Chybová pole zachovávají červené zvýraznění i při focusu.
 
 Kontaktní formulář je do šířky 767 px (včetně sm) pod kontaktními údaji a sídlem.
 Od 768 px zůstává rozložení ve dvou sloupcích.
+
+Turnstile používá `appearance: "interaction-only"`: ověřování běží na pozadí
+a widget se zobrazí jen při potřebě interakce. Pro produkční widget používejte režim
+Managed v Cloudflare. Ověření tokenu na serveru zůstává povinné.
+Viz [konfigurace Turnstile](https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/widget-configurations/).
+
+Odznak vlajky má jemný vypouklý vzhled pomocí odlesku a vnitřního stínu.
+Mezera mezi odznakem a šipkou je 4 px.
+
+Kontakty používají `ProtectedContact.astro`: HTML rozděluje text po znacích a cíl
+odkazu kóduje, JavaScript obnoví běžné `mailto:`/`tel:` odkazy. Bez JavaScriptu
+jsou údaje stále čitelné a kopírovatelné. Přímé kopie nejsou v JSON-LD, SEO
+popisech ani formulářových hláškách. Jde o omezení jednoduchého sběru kontaktů,
+nikoliv utajení: roboti schopní parsovat DOM nebo spouštět JavaScript je získat mohou.
+
+Čumáček z loga je samostatně v `public/brand/snout.svg` a nahrazuje hvězdičku
+v pruhu se sloganem na homepage. Zachovává původní tvar i barvy loga.

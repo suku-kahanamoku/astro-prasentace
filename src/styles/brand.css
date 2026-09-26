@@ -288,10 +288,11 @@ body {
   font-style: italic;
   color: #202b49;
 }
-.brand-strip-star {
-  color: #ba503d;
-  font-size: 28px;
-  line-height: 1;
+.brand-strip-snout {
+  display: block;
+  width: 32px;
+  height: auto;
+  flex-shrink: 0;
 }
 .eyebrow {
   font-family: ui-monospace, monospace;
@@ -631,8 +632,8 @@ body {
   .brand-strip > div > span:first-child {
     font-size: 11px;
   }
-  .brand-strip-star {
-    font-size: 20px;
+  .brand-strip-snout {
+    width: 26px;
   }
   .brand-strip p {
     width: 100%;

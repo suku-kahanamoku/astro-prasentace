@@ -54,7 +54,7 @@
     },
     "contact": {
       "title": "Pojďme probrat váš projekt",
-      "description": "Napište nám, co potřebujete zjednodušit, propojit nebo vytvořit. Kontaktujte Prasentace na info@prasentace.cz."
+      "description": "Napište nám, co potřebujete zjednodušit, propojit nebo vytvořit. Proberte svůj projekt s Prasentace."
     },
     "privacy": {
       "title": "Ochrana soukromí",
@@ -330,10 +330,10 @@
     "sending": "Odesíláme…",
     "notice": "Údaje použijeme k vyřízení vaší poptávky.",
     "success": "Děkujeme. Vaše zpráva dorazila, ozveme se vám na uvedený e-mail.",
-    "error": "Zprávu se nepodařilo odeslat. Zkuste to později nebo napište na info@prasentace.cz.",
+    "error": "Zprávu se nepodařilo odeslat. Zkuste to později nebo využijte kontaktní e-mail uvedený na stránce.",
     "invalid": "Zkontrolujte prosím vyznačená pole.",
     "captcha": "Dokončete prosím ověření proti spamu.",
-    "unavailable": "Formulář nyní není dostupný. Napište nám prosím přímo na info@prasentace.cz.",
+    "unavailable": "Formulář nyní není dostupný. Napište nám prosím na kontaktní e-mail uvedený na stránce.",
     "nojs": "Pro odeslání formuláře zapněte JavaScript nebo nám napište e-mailem.",
     "required": "Vyplňte prosím toto pole.",
     "invalidEmail": "Zadejte platnou e-mailovou adresu.",
@@ -347,7 +347,7 @@
     "sections": [
       {
         "title": "Kontaktní údaje",
-        "text": "Provozovatele webu Prasentace identifikují údaje uvedené níže. S dotazy k osobním údajům se můžete obrátit na info@prasentace.cz."
+        "text": "Provozovatele webu Prasentace identifikují údaje uvedené níže. S dotazy k osobním údajům se můžete obrátit na kontaktní e-mail uvedený pod těmito informacemi."
       },
       {
         "title": "Kontaktní formulář",
