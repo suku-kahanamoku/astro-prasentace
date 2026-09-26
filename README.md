@@ -247,7 +247,7 @@ neodešlou sitemapu do Search Console ani nevyvolají indexaci.
 
 Značka propojuje prezentaci a prase: znak v `public/brand/mark.svg` kombinuje
 prezentační snímek s předsazenou dlaždicí P. Lososový detail uvnitř snímku
-připomíná rypáček; prasátko je až druhou, nenápadnou vrstvou znaku. `BrandLogo.astro` je společné logo hlavičky a patičky.
+připomíná rypáček, dvě modré tečky o poloměru 3,4 těsně nad ním tvoří oči; prasátko je až druhou, nenápadnou vrstvou znaku. `BrandLogo.astro` je společné logo hlavičky a patičky.
 Favicon vychází ze stejného znaku. Vektorové soubory jsou vlastní kresba bez
 externích obrázků a lze je škálovat i upravovat.
 
@@ -259,3 +259,8 @@ zůstávají řízené stávajícími daty.
 
 Slogan v pruhu pod úvodem (`brand.formula`) používá školní humor: „Paní učitelko,
 to není kaňka. To je design.“ Má odpovídající anglickou a německou verzi.
+
+Červená tečka před úvodním sloganem jemně pulzuje v intervalu 2,8 s.
+Při `prefers-reduced-motion: reduce` zůstává statická.
+
+Úvodní ilustrace ekosystému nezobrazuje stavový popisek „Všechno spolu funguje.“

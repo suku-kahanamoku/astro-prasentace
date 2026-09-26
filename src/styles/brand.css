@@ -91,8 +91,21 @@ body {
   margin-bottom: 22px;
 }
 .hero-tag > span {
+  flex-shrink: 0;
   background: #ba503d;
   box-shadow: 0 0 0 4px #f2ad9c32;
+  animation: hero-dot-pulse 2.8s ease-in-out infinite;
+}
+@keyframes hero-dot-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 4px #f2ad9c32;
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 7px #f2ad9c12;
+  }
 }
 .hero h1 {
   font-weight: 750;
