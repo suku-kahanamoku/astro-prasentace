@@ -1,0 +1,17 @@
+---
+import { site } from "@/config/site";
+interface Props {
+  href: string;
+}
+const { href } = Astro.props;
+---
+
+<a class="wordmark brand-logo" href={href} aria-label={site.name}>
+  <img src="/brand/mark.svg" width="48" height="48" alt="" class="brand-mark" />
+  <span class="brand-name">
+    {site.name}
+    <span class="logo-dot" aria-hidden="true">
+      .
+    </span>
+  </span>
+</a>

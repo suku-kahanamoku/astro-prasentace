@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/manrope";
 import "@/styles/global.css";
+import "@/styles/brand.css";
 import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
 import { dictionary, locales, url, type Locale, type PageId } from "@/i18n";
@@ -29,6 +30,7 @@ const schema = {
   "@type": "Organization",
   "@id": organizationId,
   name: site.name,
+  logo: new URL("/brand/mark.svg", Astro.site).href,
   url: Astro.site?.href,
   email: site.email,
   telephone: site.phone.replaceAll(" ", ""),
@@ -80,7 +82,7 @@ const structuredData = [
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#f8faff" />
+    <meta name="theme-color" content="#faf7ef" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     {noindex ? (
       <meta name="robots" content="noindex, follow" />

@@ -1,6 +1,7 @@
 ---
 import { dictionary, locales, url, type Locale, type PageId } from "@/i18n";
 import Button from "@/components/ui/Button.astro";
+import BrandLogo from "@/components/ui/BrandLogo.astro";
 interface Props {
   locale: Locale;
   page: PageId;
@@ -13,12 +14,7 @@ const languageCode = locale === "cs" ? "CZ" : locale.toUpperCase();
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="wordmark" href={url(locale)} aria-label="Prasentace">
-      Prasentace
-      <span class="logo-dot" aria-hidden="true">
-        .
-      </span>
-    </a>
+    <BrandLogo href={url(locale)} />
     <nav class="desktop-nav" aria-label={t.menu}>
       {Object.entries(t.nav).map(([id, label]) => (
         <a

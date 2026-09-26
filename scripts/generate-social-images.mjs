@@ -22,6 +22,12 @@ const escapeHtml = (value) =>
         char
       ],
   );
+const mark = (await readFile(resolve(root, "public/brand/mark.svg"))).toString(
+  "base64",
+);
+const ink = (await readFile(resolve(root, "public/brand/ink.svg"))).toString(
+  "base64",
+);
 const browser = await chromium.launch({ channel: "chrome" });
 try {
   const page = await browser.newPage({
@@ -36,24 +42,25 @@ try {
     );
     await page.setContent(`<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><style>
 ${fontCss}
-*{box-sizing:border-box}body{margin:0;width:1200px;height:630px;overflow:hidden;font-family:'Manrope Variable',sans-serif;color:#182239;background:#f8faff}
-.card{position:relative;margin:30px;padding:52px 58px;height:570px;border-radius:30px;background:linear-gradient(125deg,#fff 52%,#edf3ff);box-shadow:0 12px 40px #1822390c;overflow:hidden}
-.brand{position:relative;font-size:42px;font-weight:750;letter-spacing:-2px;z-index:1}.dot{color:#3267df}
-h1{position:relative;margin:38px 0 30px;font-size:61px;line-height:1.14;font-weight:650;letter-spacing:-2.5px;max-width:865px;z-index:1}
-.services{position:relative;display:flex;gap:12px;z-index:1;flex-wrap:wrap}.services span{font-size:18px;font-weight:550;padding:12px 18px;background:#fff;border:1px solid #dfe7f4;border-radius:12px}
-.line{position:absolute;bottom:44px;left:58px;width:68px;height:5px;background:#3267df;border-radius:4px}
-.orbit{position:absolute;border:1px solid #3267df18;border-radius:50%;width:430px;height:430px;right:-190px;bottom:-210px}.orbit.second{width:570px;height:570px;right:-260px;bottom:-280px}.orbit.third{width:710px;height:710px;right:-330px;bottom:-350px}
-</style></head><body><main class="card"><div class="brand">Prasentace<span class="dot">.</span></div><h1>${escapeHtml(t.seo.home.title)}</h1><div class="services">${t.solutions.items
+*{box-sizing:border-box}body{margin:0;width:1200px;height:630px;overflow:hidden;font-family:'Manrope Variable',sans-serif;color:#202b49;background:#faf7ef}
+.card{position:relative;margin:28px;padding:44px 58px;height:574px;border:1px solid #dedbce;border-radius:4px 18px 8px 5px;background-color:#fffdf6;background-image:repeating-linear-gradient(transparent 0 31px,#253da410 31px 32px);box-shadow:5px 6px 0 #dedbce;overflow:hidden}
+.brand{position:relative;display:flex;align-items:center;gap:12px;font-size:42px;font-weight:800;letter-spacing:-2px;z-index:1}.brand img{width:68px;height:68px}.dot{color:#ba503d}
+h1{position:relative;margin:26px 0 26px;font-size:59px;line-height:1.16;font-weight:750;letter-spacing:-2.5px;max-width:910px;z-index:1}
+.services{position:relative;display:flex;gap:12px;z-index:1;flex-wrap:wrap}.services span{font-size:17px;font-weight:550;padding:10px 16px;background:#fffdf6;border:1px solid #d7d2c2;border-radius:5px;box-shadow:2px 3px 0 #202b4908}
+.promise{position:absolute;left:58px;bottom:38px;font-family:Georgia,serif;font-style:italic;font-size:25px;color:#253da4}
+.ink{position:absolute;width:230px;height:auto;right:-30px;bottom:-50px;transform:rotate(-22deg)}
+.tape{position:absolute;right:70px;top:10px;width:145px;height:26px;background:#e8d5bf88;transform:rotate(9deg)}
+</style></head><body><main class="card"><span class="tape"></span><div class="brand"><img src="data:image/svg+xml;base64,${mark}" alt=""/>Prasentace<span class="dot">.</span></div><h1>${escapeHtml(t.seo.home.title)}</h1><div class="services">${t.solutions.items
       .slice(0, 3)
       .map((item) => `<span>${escapeHtml(item.title)}</span>`)
       .join(
         "",
-      )}</div><div class="line"></div><div class="orbit"></div><div class="orbit second"></div><div class="orbit third"></div></main></body></html>`);
+      )}</div><div class="promise">${escapeHtml(t.brand.promise)}</div><img class="ink" src="data:image/svg+xml;base64,${ink}" alt=""/></main></body></html>`);
     await page.evaluate(() => document.fonts.ready);
     const fits = await page.evaluate(
       () =>
         document.querySelector(".services").getBoundingClientRect().bottom <
-        515,
+        490,
     );
     if (!fits) throw new Error(`Social image content overflows: ${locale}`);
     await page.screenshot({

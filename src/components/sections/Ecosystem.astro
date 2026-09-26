@@ -8,6 +8,18 @@ const { t } = Astro.props;
 ---
 
 <div class="ecosystem" role="img" aria-label={t.hero.visualLabel}>
+  <div class="notebook-sheet" aria-hidden="true"></div>
+  <span class="notebook-label" aria-hidden="true">
+    {t.brand.notebook}
+  </span>
+  <img
+    class="notebook-ink"
+    src="/brand/ink.svg"
+    width="130"
+    height="112"
+    alt=""
+    aria-hidden="true"
+  />
   <div class="orbit orbit-one"></div>
   <div class="orbit orbit-two"></div>
   <div class="orbit orbit-three"></div>
@@ -19,12 +31,14 @@ const { t } = Astro.props;
     />
   </svg>
   <div class="ecosystem-core">
-    <span class="core-symbol" aria-hidden="true">
-      <i></i>
-      <i></i>
-      <i></i>
-    </span>
-    <strong>{t.hero.core}</strong>
+    <img
+      src="/brand/mark.svg"
+      width="72"
+      height="72"
+      alt=""
+      class="core-brand"
+    />
+    <strong>Prasentace</strong>
     <span>{t.hero.coreSub}</span>
   </div>
   <div class="floating-card system-card">
@@ -73,6 +87,9 @@ const { t } = Astro.props;
     <span class="status-dot"></span>
     {t.hero.connected}
   </div>
+  <span class="notebook-note" aria-hidden="true">
+    {t.brand.note}
+  </span>
   <span class="deco-spark spark-one" aria-hidden="true">
     +
   </span>

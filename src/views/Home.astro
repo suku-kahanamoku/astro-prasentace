@@ -15,6 +15,7 @@ const t = dictionary(locale);
 
 <section class="hero container">
   <div class="hero-copy">
+    <p class="brand-edition">{t.brand.edition}</p>
     <p class="hero-tag">
       <span></span>
       {t.hero.tag}
@@ -48,12 +49,28 @@ const t = dictionary(locale);
     </div>
   ))}
 </section>
+<div class="brand-strip" aria-label={t.brand.storyLabel}>
+  <div class="container">
+    <span>{t.brand.formula}</span>
+    <span class="brand-strip-star" aria-hidden="true">
+      ✳
+    </span>
+    <p>{t.brand.promise}</p>
+  </div>
+</div>
 <Solutions {locale} />
 <section class="container approach-section section">
   <div class="experience-visual" aria-hidden="true">
     <span class="experience-years">
       10<span>+</span>
     </span>
+    <img
+      class="experience-ink"
+      src="/brand/ink.svg"
+      width="220"
+      height="190"
+      alt=""
+    />
     <div class="experience-lines">
       <i></i>
       <i></i>

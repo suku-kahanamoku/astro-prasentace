@@ -116,10 +116,7 @@
           "Přehledy, reporty a exporty"
         ],
         "outcome": "Přehled o důležitých informacích, méně ruční práce a systém připravený na další rozvoj.",
-        "tags": [
-          "CRM & portály",
-          "Data & procesy"
-        ],
+        "tags": ["CRM & portály", "Data & procesy"],
         "sections": [
           {
             "title": "Kdy má vlastní systém smysl",
@@ -150,10 +147,7 @@
           "Responzivní rozhraní a technické SEO"
         ],
         "outcome": "Rychlé a srozumitelné prostředí, ve kterém zákazníci i zaměstnanci snadno najdou to podstatné.",
-        "tags": [
-          "Webové aplikace",
-          "Firemní weby"
-        ],
+        "tags": ["Webové aplikace", "Firemní weby"],
         "sections": [
           {
             "title": "Firemní web, nebo pracovní aplikace?",
@@ -184,10 +178,7 @@
           "Využití kamery, mikrofonu a polohy"
         ],
         "outcome": "Jednotné mobilní řešení pro zákazníky nebo pracovníky v terénu, s návazností na vaše existující služby.",
-        "tags": [
-          "iOS & Android",
-          "React Native"
-        ],
+        "tags": ["iOS & Android", "React Native"],
         "sections": [
           {
             "title": "Když telefon zjednoduší každodenní práci",
@@ -218,10 +209,7 @@
           "Notifikace, dokumenty a automatizace"
         ],
         "outcome": "Plynulý tok informací mezi nástroji a méně opakujících se úkolů pro vaše lidi.",
-        "tags": [
-          "API & integrace",
-          "AI & automatizace"
-        ],
+        "tags": ["API & integrace", "AI & automatizace"],
         "sections": [
           {
             "title": "Začněme konkrétní opakující se činností",
@@ -252,10 +240,7 @@
           "Dokumentace a plán dalšího rozvoje"
         ],
         "outcome": "Srozumitelný plán, udržovatelný kód a kontinuita při rozvoji vašeho softwaru.",
-        "tags": [
-          "Údržba & podpora",
-          "Další rozvoj"
-        ],
+        "tags": ["Údržba & podpora", "Další rozvoj"],
         "sections": [
           {
             "title": "Nejdřív porozumět současnému řešení",
@@ -382,5 +367,13 @@
   "notFound": {
     "title": "Tady příběh nepokračuje.",
     "text": "Tato stránka neexistuje nebo se její adresa změnila."
+  },
+  "brand": {
+    "edition": "Digitální studio / Brno & odkudkoli",
+    "notebook": "sešit dobrých nápadů / 01",
+    "note": "tady to začíná ↗",
+    "storyLabel": "Příběh značky Prasentace",
+    "formula": "prezentace + prase = Prasentace",
+    "promise": "Kaňky na papíře. Pořádek v kódu."
   }
 }

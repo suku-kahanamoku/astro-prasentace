@@ -116,10 +116,7 @@
           "Übersichten, Berichte und Exporte"
         ],
         "outcome": "Wichtige Informationen im Blick, weniger Handarbeit und ein System mit Raum für Weiterentwicklung.",
-        "tags": [
-          "CRM & Portale",
-          "Daten & Prozesse"
-        ],
+        "tags": ["CRM & Portale", "Daten & Prozesse"],
         "sections": [
           {
             "title": "Wann sich ein eigenes System lohnt",
@@ -150,10 +147,7 @@
           "Responsive Oberflächen und technisches SEO"
         ],
         "outcome": "Eine schnelle, übersichtliche Oberfläche, auf der Kunden und Mitarbeitende das Wesentliche finden.",
-        "tags": [
-          "Webanwendungen",
-          "Unternehmenswebsites"
-        ],
+        "tags": ["Webanwendungen", "Unternehmenswebsites"],
         "sections": [
           {
             "title": "Unternehmenswebsite oder Arbeitsanwendung?",
@@ -184,10 +178,7 @@
           "Kamera, Mikrofon und Standortfunktionen"
         ],
         "outcome": "Eine einheitliche mobile Lösung für Kunden oder den Außendienst, angebunden an Ihre bestehenden Dienste.",
-        "tags": [
-          "iOS & Android",
-          "React Native"
-        ],
+        "tags": ["iOS & Android", "React Native"],
         "sections": [
           {
             "title": "Wenn das Smartphone den Alltag erleichtert",
@@ -218,10 +209,7 @@
           "Benachrichtigungen, Dokumente und Automatisierung"
         ],
         "outcome": "Ein reibungsloser Informationsfluss zwischen Werkzeugen und weniger Routineaufgaben für Ihre Mitarbeitenden.",
-        "tags": [
-          "APIs & Integrationen",
-          "KI & Automatisierung"
-        ],
+        "tags": ["APIs & Integrationen", "KI & Automatisierung"],
         "sections": [
           {
             "title": "Mit einer wiederkehrenden Aufgabe beginnen",
@@ -252,10 +240,7 @@
           "Dokumentation und Entwicklungsplanung"
         ],
         "outcome": "Ein klarer Plan, wartbarer Code und Kontinuität bei der Weiterentwicklung Ihrer Software.",
-        "tags": [
-          "Wartung & Betreuung",
-          "Weiterentwicklung"
-        ],
+        "tags": ["Wartung & Betreuung", "Weiterentwicklung"],
         "sections": [
           {
             "title": "Zuerst die vorhandene Lösung verstehen",
@@ -382,5 +367,13 @@
   "notFound": {
     "title": "Hier geht die Geschichte nicht weiter.",
     "text": "Diese Seite existiert nicht oder ihre Adresse hat sich geändert."
+  },
+  "brand": {
+    "edition": "Digitalstudio / Brünn & überall",
+    "notebook": "ein Heft voller guter Ideen / 01",
+    "note": "hier geht’s los ↗",
+    "storyLabel": "Die Geschichte hinter Prasentace",
+    "formula": "Präsentation + prase (Schwein) = Prasentace",
+    "promise": "Kleckse auf Papier. Klarheit im Code."
   }
 }

@@ -2,13 +2,13 @@
 
 @theme {
   --font-sans: "Manrope Variable", sans-serif;
-  --color-brand: #2459e0;
+  --color-brand: #253da4;
 }
 
 :root {
-  --ink: #182239;
-  --muted: #48566d;
-  --text-secondary: #526079;
+  --ink: #202b49;
+  --muted: #51576a;
+  --text-secondary: #595f71;
   --text-caption: 12px;
   --text-label: 13px;
   --text-ui: 14px;
@@ -16,9 +16,9 @@
   --text-copy: 16px;
   --text-body: 17px;
   --text-lead: 18px;
-  --blue: #2459e0;
-  --line: #e5e9f1;
-  --paper: #f8faff;
+  --blue: #253da4;
+  --line: #dedbce;
+  --paper: #f3f0e6;
   --radius: 24px;
   color-scheme: light;
 }
@@ -31,7 +31,7 @@ html {
 }
 body {
   margin: 0;
-  background: #fff;
+  background: #faf7ef;
   color: var(--ink);
   font-family: "Manrope Variable", sans-serif;
   font-size: var(--text-body);

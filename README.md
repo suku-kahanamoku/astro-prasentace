@@ -242,3 +242,16 @@ nebo skutečnou indexaci v účtu Google.
 
 Výsledky z účtu Search Console zatím nejsou ověřené. Změny v projektu samy
 neodešlou sitemapu do Search Console ani nevyvolají indexaci.
+
+## Vizuální identita Prasentace
+
+Značka propojuje prezentaci a prase: znak v `public/brand/mark.svg` kombinuje
+prezentační plátno s prasátkem. `BrandLogo.astro` je společné logo hlavičky a patičky.
+Favicon vychází ze stejného znaku. Vektorové soubory jsou vlastní kresba bez
+externích obrázků a lze je škálovat i upravovat.
+
+`src/styles/brand.css` definuje teplý papír, modrý inkoust, lososový akcent,
+linkovaný sešit a drobné kreslené nedokonalosti. Kaňky jsou dekorativní, obsah
+zůstává čitelný a animace respektují omezený pohyb. Texty příběhu značky jsou
+ve všech třech locale souborech v sekci `brand`. Nabídka služeb, routing a kontakty
+zůstávají řízené stávajícími daty.

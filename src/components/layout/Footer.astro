@@ -1,6 +1,7 @@
 ---
 import { dictionary, url, type Locale, type PageId } from "@/i18n";
 import { site } from "@/config/site";
+import BrandLogo from "@/components/ui/BrandLogo.astro";
 interface Props {
   locale: Locale;
 }
@@ -12,9 +13,7 @@ const t = dictionary(locale);
   <div class="container">
     <div class="footer-top">
       <div>
-        <a href={url(locale)} class="wordmark">
-          Prasentace<span class="logo-dot">.</span>
-        </a>
+        <BrandLogo href={url(locale)} />
         <p>{t.common.rights}</p>
       </div>
       <nav aria-label={t.menu}>

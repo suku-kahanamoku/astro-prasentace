@@ -116,10 +116,7 @@
           "Dashboards, reports and exports"
         ],
         "outcome": "A clear view of essential information, less manual work and a system ready to evolve.",
-        "tags": [
-          "CRM & portals",
-          "Data & processes"
-        ],
+        "tags": ["CRM & portals", "Data & processes"],
         "sections": [
           {
             "title": "When a custom system makes sense",
@@ -150,10 +147,7 @@
           "Responsive interfaces and technical SEO"
         ],
         "outcome": "A fast, clear experience that helps customers and employees find what matters.",
-        "tags": [
-          "Web applications",
-          "Business websites"
-        ],
+        "tags": ["Web applications", "Business websites"],
         "sections": [
           {
             "title": "A company website or a working application?",
@@ -184,10 +178,7 @@
           "Camera, microphone and location features"
         ],
         "outcome": "A unified mobile solution for customers or field staff, connected to your existing services.",
-        "tags": [
-          "iOS & Android",
-          "React Native"
-        ],
+        "tags": ["iOS & Android", "React Native"],
         "sections": [
           {
             "title": "When a phone makes daily work easier",
@@ -218,10 +209,7 @@
           "Notifications, documents and automation"
         ],
         "outcome": "A smooth flow of information between tools and fewer repetitive tasks for your people.",
-        "tags": [
-          "APIs & integrations",
-          "AI & automation"
-        ],
+        "tags": ["APIs & integrations", "AI & automation"],
         "sections": [
           {
             "title": "Start with one recurring task",
@@ -252,10 +240,7 @@
           "Documentation and development planning"
         ],
         "outcome": "A clear plan, maintainable code and continuity as your software evolves.",
-        "tags": [
-          "Maintenance & support",
-          "Ongoing development"
-        ],
+        "tags": ["Maintenance & support", "Ongoing development"],
         "sections": [
           {
             "title": "Understand the existing solution first",
@@ -382,5 +367,13 @@
   "notFound": {
     "title": "This is not where the story continues.",
     "text": "This page does not exist or its address has changed."
+  },
+  "brand": {
+    "edition": "Digital studio / Brno & beyond",
+    "notebook": "a notebook of good ideas / 01",
+    "note": "it starts here ↗",
+    "storyLabel": "The story behind Prasentace",
+    "formula": "presentation + prase (pig) = Prasentace",
+    "promise": "Ink on paper. Order in code."
   }
 }
