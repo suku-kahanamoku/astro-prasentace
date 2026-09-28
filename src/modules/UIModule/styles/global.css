@@ -3,7 +3,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: calc(var(--site-header-height, 88px) + 16px);
 }
 body {
   margin: 0;

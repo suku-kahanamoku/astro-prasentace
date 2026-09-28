@@ -362,3 +362,24 @@ Browser testy spouštějí izolovaný Astro server na 4331 s `astro.test.config.
 - `tests/browser/theme.spec.ts` ověřuje systémovou i uloženou volbu, synchronizaci záložek, zakázané úložiště, klávesnici, jazyky, responzivitu a podobu tlačítka. Backendové scénáře browser testů používají mock, nikoli produkční služby.
 
 Přepínač tématu a jazyků tvoří v hlavičce společnou skupinu s mezerou 8 px; téma je bezprostředně nalevo od vlajky.
+
+## Společné hlavní menu
+
+Rozložení hlavičky vlastní `src/modules/UIModule/components/MainMenu.astro`, styly `UIModule/styles/main-menu.css` a chování `useMainMenu`, `useNavigation` a `useHeaderOffset`. Tato komponenta a její rozložení jsou shodné v projektech astro-scaffold, astro-etymolog, astro-prasentace a astro-sorry-jako. Repozitáře zůstávají samostatné a neimportují soubory sousedních projektů.
+
+`SiteModule/components/Header.astro` je pouze projektová kompozice:
+
+- `items` definuje hlavní odkazy (`href`, `label`, volitelně `current`); `mobileItems` navíc obsahuje přihlášení nebo hlavní akci.
+- Slot `brand` obsahuje logo, slot `language` jazykový přepínač a slot `action` přihlášení nebo výrazné CTA. `locale` předává jazyk přepínači tématu z UIModule, `label` pojmenovává navigaci. Volitelné `openLabel`/`closeLabel` pojmenovávají hamburger.
+- Desktop od 1280 px používá tři sloupce: logo vlevo, navigace přesně uprostřed, akce vpravo v pořadí téma → jazyk → hlavní akce. Mezi tématem a jazykem je 8 px.
+- Pod 1280 px přechází navigace do hamburgeru. Pod 768 px se hlavní akce přesune do mobilních odkazů. Funguje Escape, kliknutí mimo, zavření po výběru odkazu, změna šířky i navigace bez JavaScriptu.
+- `framed` zapojuje hlavičku do existujícího subgridu stránky (Scaffold/Etymolog); nezapíná reklamy. `showAction={false}` skryje volitelnou akci i její prostor.
+- Projektové barvy se upravují pomocí `--menu-background`, `--menu-panel`, `--menu-link`, `--menu-accent` a `--menu-border` ve stylech SiteModule. Logo si zachovává vlastní brand styly. Rozložení se v SiteModule znovu nedefinuje.
+
+Při založení dalšího projektu použijte Scaffold jako šablonu a zachovejte MainMenu i jeho UI závislosti. Měňte pouze značku, data odkazů, překlady a slot hlavní akce v projektové hlavičce. Při změně společného rozložení přeneste stejné soubory UIModule do ostatních samostatných projektů. `tests/browser/main-menu.spec.ts` hlídá centrování, pořadí, rozestupy, překryvy a přechod mezi desktopem a hamburgerem.
+
+## Lokalizované URL
+
+URL slugy jsou v `src/config/locales/{cs,en,de}.json`; stabilní ID a tvorbu odkazů spravuje `src/config/routes.ts`. Nové odkazy skládejte helpery, nikoli ručně. Překlady textů zůstávají v jednotlivých modulech.
+
+Existující překlady stránek i detailů řešení zůstávají zachované. `url(locale, page, solutionId)` vytváří odkazy, `allRoutes()` z téže mapy generuje stránky. Například `/kontakt/`, `/en/contact/`, `/de/kontakt/`. Stejný vzor používají i ostatní Astro projekty.

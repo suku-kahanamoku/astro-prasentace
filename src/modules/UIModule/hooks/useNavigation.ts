@@ -1,68 +1,102 @@
-export function useNavigation() {
-  const toggle =
-    document.querySelector<HTMLButtonElement>("[data-menu-toggle]");
-  const mobileNav = document.querySelector<HTMLElement>("#mobile-navigation");
-  let menuLeaveTimer: ReturnType<typeof setTimeout> | undefined;
-  function cancelMenuLeave() {
-    clearTimeout(menuLeaveTimer);
-    menuLeaveTimer = undefined;
-  }
-  function closeMenu() {
-    cancelMenuLeave();
-    if (toggle && mobileNav) {
-      toggle.setAttribute("aria-expanded", "false");
-      mobileNav.hidden = true;
-    }
-  }
-  toggle?.addEventListener("click", () => {
-    if (!mobileNav) return;
-    cancelMenuLeave();
-    const expanded = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", String(!expanded));
-    mobileNav.hidden = expanded;
-  });
-  // A short delay lets the mouse cross the gap between the button and dropdown.
-  function handleMenuPointer(event: PointerEvent) {
+/** Small DOM hook; each menu owns its listeners and hover timer. */
+export function useNavigation(
+  toggle: HTMLButtonElement,
+  mobileNav: HTMLElement,
+) {
+  const controller = new AbortController();
+  const options = { signal: controller.signal };
+  let timer: ReturnType<typeof setTimeout> | undefined;
+  const cancelLeave = () => {
+    clearTimeout(timer);
+    timer = undefined;
+  };
+  const close = () => {
+    cancelLeave();
+    toggle.setAttribute("aria-expanded", "false");
+    mobileNav.hidden = true;
+    toggle.setAttribute("aria-label", toggle.dataset.openLabel ?? "");
+  };
+  toggle.addEventListener(
+    "click",
+    () => {
+      cancelLeave();
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      mobileNav.hidden = expanded;
+      toggle.setAttribute(
+        "aria-label",
+        (expanded ? toggle.dataset.openLabel : toggle.dataset.closeLabel) ?? "",
+      );
+    },
+    options,
+  );
+  const pointer = (event: PointerEvent) => {
     if (
       event.pointerType !== "mouse" ||
-      toggle?.getAttribute("aria-expanded") !== "true"
+      toggle.getAttribute("aria-expanded") !== "true"
     )
       return;
     const target =
       event.type === "pointerout" ? event.relatedTarget : event.target;
     if (
       target instanceof Node &&
-      (toggle.contains(target) || mobileNav?.contains(target))
+      (toggle.contains(target) || mobileNav.contains(target))
     ) {
-      cancelMenuLeave();
+      cancelLeave();
       return;
     }
-    if (menuLeaveTimer === undefined)
-      menuLeaveTimer = setTimeout(closeMenu, 180);
-  }
-  document.addEventListener("pointermove", handleMenuPointer);
-  document.addEventListener("pointerout", (event) => {
-    if (!event.relatedTarget) handleMenuPointer(event);
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      if (toggle?.getAttribute("aria-expanded") === "true") {
-        closeMenu();
+    if (timer === undefined) timer = setTimeout(close, 180);
+  };
+  document.addEventListener("pointermove", pointer, options);
+  document.addEventListener(
+    "pointerout",
+    (event) => {
+      if (!event.relatedTarget) pointer(event);
+    },
+    options,
+  );
+  document.addEventListener(
+    "keydown",
+    (event) => {
+      if (
+        event.key === "Escape" &&
+        toggle.getAttribute("aria-expanded") === "true"
+      ) {
+        close();
         toggle.focus();
       }
-    }
-  });
-  document.addEventListener("click", (event) => {
-    const target = event.target;
-    if (
-      target instanceof Node &&
-      toggle?.getAttribute("aria-expanded") === "true" &&
-      !toggle.contains(target) &&
-      !mobileNav?.contains(target)
-    )
-      closeMenu();
-  });
-  matchMedia("(min-width: 1101px)").addEventListener("change", (event) => {
-    if (event.matches) closeMenu();
-  });
+    },
+    options,
+  );
+  document.addEventListener(
+    "click",
+    (event) => {
+      const target = event.target;
+      if (
+        target instanceof Node &&
+        !toggle.contains(target) &&
+        !mobileNav.contains(target)
+      )
+        close();
+    },
+    options,
+  );
+  matchMedia("(min-width: 1280px)").addEventListener(
+    "change",
+    (event) => {
+      if (event.matches) close();
+    },
+    options,
+  );
+  mobileNav.addEventListener(
+    "click",
+    (event) => {
+      if (event.target instanceof Element && event.target.closest("a")) close();
+    },
+    options,
+  );
+  return () => {
+    cancelLeave();
+    controller.abort();
+  };
 }

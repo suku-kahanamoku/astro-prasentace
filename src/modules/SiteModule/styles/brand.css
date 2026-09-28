@@ -1,7 +1,3 @@
-.site-header {
-  background: var(--site-header-background, rgb(250 247 239 / 88%));
-  box-shadow: 0 5px 22px #202b4906;
-}
 .brand-logo {
   display: inline-flex;
   align-items: center;
@@ -33,17 +29,6 @@
 }
 .logo-dot {
   color: var(--theme-error, #ba503d);
-}
-.desktop-nav a {
-  color: var(--theme-muted, #51576a);
-}
-.desktop-nav [aria-current="page"] {
-  text-decoration: underline wavy var(--theme-accent, #253da4);
-  text-underline-offset: 8px;
-  text-decoration-thickness: 1px;
-}
-.mobile-nav {
-  background: var(--theme-warm-surface, #faf7ef);
 }
 .button-secondary {
   background: var(--theme-surface, #fffdf6);
@@ -103,13 +88,6 @@
     width: 36px;
     height: 36px;
   }
-  .header-inner {
-    gap: 12px;
-  }
-  .header-actions {
-    margin-left: 0;
-    gap: 13px;
-  }
   .brand-strip {
     margin-top: 24px;
     padding-block: 20px;
@@ -132,19 +110,4 @@
 
 [data-theme-mode="dark"] {
   --site-header-background: rgb(25 29 41 / 88%);
-}
-
-@media (max-width: 640px) {
-  .header-actions {
-    gap: 5px;
-  }
-}
-@media (min-width: 1101px) and (max-width: 1250px) {
-  .header-actions {
-    gap: 12px;
-    margin-left: 0;
-  }
-  .desktop-nav {
-    gap: 18px;
-  }
 }
