@@ -20,7 +20,7 @@
   flex-shrink: 0;
   border: 1px solid var(--line);
   border-radius: 50%;
-  background: #fffdf6;
+  background: var(--theme-surface, #fffdf6);
   box-shadow: 0 2px 3px #202b4926;
 }
 .language-current::after {
@@ -62,7 +62,7 @@
   right: -10px;
   top: 49px;
   padding: 7px;
-  background: #fff;
+  background: var(--theme-surface, #fff);
   border: 1px solid var(--line);
   border-radius: 12px;
   box-shadow: 0 12px 40px #16295613;
@@ -79,6 +79,6 @@
 }
 .language-options a:hover,
 .language-options [aria-current] {
-  background: #f0f5ff;
+  background: var(--theme-surface, #f0f5ff);
   color: var(--blue);
 }

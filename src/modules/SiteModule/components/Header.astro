@@ -1,4 +1,5 @@
 ---
+import ThemeToggle from "../../UIModule/components/ThemeToggle.astro";
 import LanguagePicker from "../../LangModule/components/LanguagePicker.astro";
 import { dictionary } from "../providers/translations";
 import { type Locale } from "../../LangModule/providers/locale";
@@ -29,6 +30,7 @@ const t = dictionary(locale);
       ))}
     </nav>
     <div class="header-actions">
+      <ThemeToggle {locale} />
       <Button href={url(locale, "contact")} class="header-cta">
         {t.common.cta}
       </Button>

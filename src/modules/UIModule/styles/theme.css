@@ -19,3 +19,35 @@
   --radius: 24px;
   color-scheme: light;
 }
+
+[data-theme-mode="dark"] {
+  color-scheme: dark;
+  --theme-ink: #eeeef2;
+  --theme-muted: #b9bfce;
+  --theme-accent: #adc0ff;
+  --theme-surface: #232c3b;
+  --theme-surface-soft: #1b2432;
+  --theme-line: #455065;
+  --theme-success: #a9dab7;
+  --theme-success-surface: #223e32;
+  --theme-error: #ffb3a8;
+  --theme-error-surface: #452c30;
+  --theme-warm: #e6c6a1;
+  --theme-warm-surface: #3c342a;
+  --theme-lilac: #d1bff3;
+  --theme-lilac-surface: #332d46;
+  --theme-cool-surface: #29374d;
+}
+
+[data-theme-mode="dark"] {
+  --ink: #eeeef2;
+  --muted: #b9bfce;
+  --text-secondary: #b9bfce;
+  --blue: #adc0ff;
+  --line: #455065;
+  --paper: #202633;
+}
+
+[data-theme-mode="dark"] {
+  --theme-page-background: #191d29;
+}

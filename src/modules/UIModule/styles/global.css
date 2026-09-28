@@ -7,7 +7,7 @@ html {
 }
 body {
   margin: 0;
-  background: #faf7ef;
+  background: var(--theme-page-background, #faf7ef);
   color: var(--ink);
   font-family: "Manrope Variable", sans-serif;
   font-size: var(--text-body);
@@ -16,8 +16,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 ::selection {
-  background: #dce6ff;
-  color: #183977;
+  background: var(--theme-cool-surface, #dce6ff);
+  color: var(--theme-accent, #183977);
 }
 a {
   color: inherit;
@@ -45,7 +45,7 @@ svg {
   flex-shrink: 0;
 }
 :focus-visible {
-  outline: 3px solid #759afa;
+  outline: 3px solid var(--theme-line, #759afa);
   outline-offset: 5px;
 }
 h1,
@@ -128,7 +128,7 @@ p {
   position: fixed;
   left: 20px;
   top: -100px;
-  background: white;
+  background: var(--theme-surface, white);
   padding: 16px;
   z-index: 100;
 }
@@ -161,7 +161,7 @@ p {
   width: 10px;
   height: 27px;
   border-radius: 4px;
-  background: linear-gradient(#83a6ff, #2459e0);
+  background: linear-gradient(var(--theme-cool-surface, #83a6ff), #2459e0);
   box-shadow: 3px 4px 4px #2459e018;
 }
 .core-symbol i:nth-child(2) {
@@ -198,7 +198,7 @@ p {
   font-size: var(--text-body);
 }
 .card-arrow {
-  color: #7387aa;
+  color: var(--theme-muted, #7387aa);
 }
 .page-intro {
   padding-top: 95px;

@@ -62,7 +62,7 @@
 }
 .contact-form {
   min-width: 0;
-  background: #fafbff;
+  background: var(--theme-surface, #fafbff);
   padding: 36px;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -94,9 +94,9 @@
 .field textarea,
 .field select {
   width: 100%;
-  border: 1px solid #dfe5ee;
+  border: 1px solid var(--theme-line, #dfe5ee);
   border-radius: 8px;
-  background: #fff;
+  background: var(--theme-surface, #fff);
   padding: 12px 13px;
   outline-offset: 2px;
   font-size: var(--text-small);
@@ -112,10 +112,10 @@
   color: var(--text-secondary);
 }
 .field [aria-invalid="true"] {
-  border-color: #b74b56;
+  border-color: var(--theme-error, #b74b56);
 }
 .field-error {
-  color: #a53442;
+  color: var(--theme-error, #a53442);
   font-size: var(--text-ui);
   margin-top: 5px;
 }
@@ -132,10 +132,10 @@
   margin-top: 16px;
 }
 .form-status[data-state="error"] {
-  color: #a53442;
+  color: var(--theme-error, #a53442);
 }
 .form-status[data-state="success"] {
-  color: #217557;
+  color: var(--theme-success, #217557);
 }
 .honeypot {
   position: absolute;

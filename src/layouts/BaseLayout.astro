@@ -1,4 +1,5 @@
 ---
+import ThemeInit from "../modules/UIModule/components/ThemeInit.astro";
 import SeoHead from "../modules/SiteModule/components/SeoHead.astro";
 
 import "@fontsource-variable/manrope";
@@ -40,6 +41,7 @@ const breadcrumbItems = noindex
       description={Astro.props.description}
       {noindex}
     />
+    <ThemeInit />
   </head>
   <body>
     <a class="skip-link" href="#main-content">

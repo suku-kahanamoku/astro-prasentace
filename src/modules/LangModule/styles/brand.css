@@ -1,4 +1,4 @@
 .language-options {
-  background: #fffdf6;
-  border-color: #dedbce;
+  background: var(--theme-surface, #fffdf6);
+  border-color: var(--theme-line, #dedbce);
 }

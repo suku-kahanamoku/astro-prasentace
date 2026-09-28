@@ -1,5 +1,5 @@
 .site-header {
-  background: rgb(250 247 239 / 88%);
+  background: var(--site-header-background, rgb(250 247 239 / 88%));
   box-shadow: 0 5px 22px #202b4906;
 }
 .brand-logo {
@@ -27,33 +27,33 @@
   transform: rotate(-2deg);
 }
 .wordmark {
-  color: #202b49;
+  color: var(--theme-accent, #202b49);
   font-weight: 800;
   letter-spacing: -0.075em;
 }
 .logo-dot {
-  color: #ba503d;
+  color: var(--theme-error, #ba503d);
 }
 .desktop-nav a {
-  color: #51576a;
+  color: var(--theme-muted, #51576a);
 }
 .desktop-nav [aria-current="page"] {
-  text-decoration: underline wavy #253da4;
+  text-decoration: underline wavy var(--theme-accent, #253da4);
   text-underline-offset: 8px;
   text-decoration-thickness: 1px;
 }
 .mobile-nav {
-  background: #faf7ef;
+  background: var(--theme-warm-surface, #faf7ef);
 }
 .button-secondary {
-  background: #fffdf6;
-  border-color: #cecabb;
+  background: var(--theme-surface, #fffdf6);
+  border-color: var(--theme-line, #cecabb);
 }
 .brand-strip {
   margin-top: 40px;
   padding: 23px 0;
-  border-block: 1px solid #dedbce;
-  background: #f1ebdd;
+  border-block: 1px solid var(--theme-line, #dedbce);
+  background: var(--theme-warm-surface, #f1ebdd);
 }
 .brand-strip > div {
   display: flex;
@@ -64,14 +64,14 @@
 }
 .brand-strip > div > span:first-child {
   font-family: ui-monospace, monospace;
-  color: #253da4;
+  color: var(--theme-accent, #253da4);
   font-size: 14px;
 }
 .brand-strip p {
   font-family: Georgia, serif;
   font-size: 21px;
   font-style: italic;
-  color: #202b49;
+  color: var(--theme-accent, #202b49);
 }
 .brand-strip-snout {
   display: block;
@@ -80,7 +80,7 @@
   flex-shrink: 0;
 }
 .site-footer {
-  background: #efebdf;
+  background: var(--theme-warm-surface, #efebdf);
 }
 .brand-strip {
   pointer-events: none;
@@ -127,5 +127,24 @@
   .brand-strip p {
     width: 100%;
     font-size: 19px;
+  }
+}
+
+[data-theme-mode="dark"] {
+  --site-header-background: rgb(25 29 41 / 88%);
+}
+
+@media (max-width: 640px) {
+  .header-actions {
+    gap: 5px;
+  }
+}
+@media (min-width: 1101px) and (max-width: 1250px) {
+  .header-actions {
+    gap: 12px;
+    margin-left: 0;
+  }
+  .desktop-nav {
+    gap: 18px;
   }
 }

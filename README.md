@@ -1,6 +1,6 @@
 # Prasentace
 
-Vícejazyčný firemní web v Astro. Světlý vlastní design, lokální variabilní font Manrope,
+Vícejazyčný firemní web v Astro. Vlastní světlý i tmavý design, lokální variabilní font Manrope,
 typografické logo a animace v CSS/SVG. Web nepoužívá fotografie, klientské reference
 ani ukázky interních projektů. Obsah prezentuje dodávku kompletních řešení firmám.
 
@@ -62,7 +62,7 @@ Každý modul vlastní potřebné `components`, `hooks`, `providers`, `locales`,
 
 Texty patří do `modules/<Name>Module/locales/{cs,en,de}.json`; společný slovník LangModule obsahuje jen sdílené názvy a ovládací texty. Modulový `providers/translations.ts` doplní vlastní texty o tuto společnou slovní zásobu. Žádný produkční modul nenačítá slovník jiného funkčního modulu. `scripts/read-translations.mjs` skládá slovníky pouze pro kontrolní nástroje a testy. `scripts/check-locales.mjs` kontroluje každý modul i původní obsahové invarianty.
 
-Vlastní světlé theme a společné styly jsou v `UIModule/styles`; styly sekcí patří do jejich modulů. Soubory v `src/styles` pouze skládají CSS ve správném pořadí. Barvy, typografie, breakpointy, animace i HTML struktura zůstaly zachované. Nepřidává se daisyUI, nové theme ani reklamní rám. Projekty nemají AdsModule ani reklamní integrace. Fonty, favicon a publikované obrázky se nadále vydávají na původních veřejných URL.
+Světlé i tmavé theme a společné styly jsou v `UIModule/styles`; styly sekcí patří do jejich modulů. Soubory v `src/styles` skládají CSS ve správném pořadí. Světlá paleta zůstává zachovaná, tmavé téma používá vlastní barevné proměnné. Nepřidává se daisyUI ani reklamní rám. Projekty nemají AdsModule ani reklamní integrace. Fonty, favicon a publikované obrázky se nadále vydávají na původních veřejných URL.
 
 `tests/architecture.test.mjs` kontroluje povolené závislosti, cykly včetně cest přes konfiguraci, zákaz modulových `pages`, tranzitivní oddělení serverového kódu od browser hooků/providerů a nepřítomnost reklamních integrací. Nový modul přidejte do povoleného grafu v tomto testu. Hooky se spouštějí explicitně z komponent, které příslušnou interakci vlastní.
 
@@ -351,3 +351,12 @@ corepack pnpm format:check
 ```
 
 Browser testy spouštějí izolovaný Astro server na 4331 s `astro.test.config.mjs`. Testují stejné routy a API handlery přímo, aby vývojová proxy Netlify nepodávala staré soubory z `dist` nebo nezměnila stav lokalizovaných 404. Produkční `astro.config.mjs`, Netlify adaptér a přesměrování zůstávají zachované a ověřuje je produkční build. Testy formuláře používají mock CAPTCHA a mock odpovědi API; nepotvrzují doručení skutečného e-mailu.
+
+## Světlé a tmavé téma
+
+- `UIModule/config/theme.ts` definuje názvy obou témat, barvu prohlížeče a vlastní klíč úložiště projektu.
+- `UIModule/components/ThemeInit.astro` nastavuje téma v hlavičce před vykreslením obsahu. `ThemeToggle.astro` je přístupné tlačítko se sluncem/měsícem bez rámečku, pozadí nebo stínu; při ovládání klávesnicí má viditelný focus.
+- `UIModule/hooks/useTheme.ts` ukládá ruční volbu a synchronizuje záložky. Bez platné uložené volby sleduje `prefers-color-scheme` včetně změn za běhu. Chyba úložiště přepnutí nezablokuje; bez JavaScriptu zůstává výchozí světlá stránka a tlačítko je skryté.
+- Každý modul vlastní styly svých komponent. Sdílené proměnné `--theme-*` a případné daisyUI tokeny dodává UIModule; modul si může přidat vlastní proměnné a tmavé varianty pod `[data-theme-mode="dark"]`. Původní světlé barvy zůstávají ve fallback hodnotách. Nepoužívejte plošné invertování obrázků ani barev.
+- Automatický režim se obnoví smazáním projektového klíče z `localStorage`; přepínač v menu nabízí ruční světlou/tmavou volbu.
+- `tests/browser/theme.spec.ts` ověřuje systémovou i uloženou volbu, synchronizaci záložek, zakázané úložiště, klávesnici, jazyky, responzivitu a podobu tlačítka. Backendové scénáře browser testů používají mock, nikoli produkční služby.
