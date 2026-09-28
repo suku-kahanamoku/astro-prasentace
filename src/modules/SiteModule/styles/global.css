@@ -50,6 +50,12 @@
   align-items: center;
   margin-left: 16px;
 }
+.header-preferences {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
 .header-cta {
   padding: 12px 17px;
   min-height: 42px;
