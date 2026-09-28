@@ -1,0 +1,16 @@
+{
+  "langName": "English",
+  "language": "Language",
+  "nav": {
+    "solutions": "Solutions",
+    "process": "Our process",
+    "about": "About Prasentace",
+    "contact": "Contact"
+  },
+  "common": {
+    "cta": "Discuss your project",
+    "privacy": "Privacy",
+    "registration": "Business ID",
+    "entity": "Sole trader"
+  }
+}

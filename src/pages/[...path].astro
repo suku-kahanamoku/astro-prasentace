@@ -1,10 +1,26 @@
 ---
-import { allRoutes, dictionary, type Locale, type PageId } from "@/i18n";
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Home from "@/views/Home.astro";
-import ContentPage from "@/views/ContentPage.astro";
-import Contact from "@/views/Contact.astro";
-import Privacy from "@/views/Privacy.astro";
+import { allRoutes, type PageId } from "../config/routes";
+import { dictionary } from "../modules/ContentModule/providers/translations";
+import type { Locale } from "../modules/LangModule/config";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BrandStrip from "../modules/SiteModule/components/BrandStrip.astro";
+import PrivacyContent from "../modules/SiteModule/components/PrivacyContent.astro";
+import ContactIntro from "../modules/ContactModule/components/ContactIntro.astro";
+import ContactSection from "../modules/ContactModule/components/ContactSection.astro";
+import HeroSection from "../modules/ContentModule/components/HeroSection.astro";
+import ProofSection from "../modules/ContentModule/components/ProofSection.astro";
+import ApproachSection from "../modules/ContentModule/components/ApproachSection.astro";
+import TechnologySection from "../modules/ContentModule/components/TechnologySection.astro";
+import Solutions from "../modules/ContentModule/components/Solutions.astro";
+import Process from "../modules/ContentModule/components/Process.astro";
+import CallToAction from "../modules/ContentModule/components/CallToAction.astro";
+import ContentIntro from "../modules/ContentModule/components/ContentIntro.astro";
+import SolutionOverview from "../modules/ContentModule/components/SolutionOverview.astro";
+import ServiceDetailSection from "../modules/ContentModule/components/ServiceDetailSection.astro";
+import AboutIntro from "../modules/ContentModule/components/AboutIntro.astro";
+import ValuesSection from "../modules/ContentModule/components/ValuesSection.astro";
+import AboutTechnologySection from "../modules/ContentModule/components/AboutTechnologySection.astro";
+import RelatedSolutions from "../modules/ContentModule/components/RelatedSolutions.astro";
 export const prerender = true;
 export const getStaticPaths = allRoutes;
 interface Props {
@@ -13,25 +29,60 @@ interface Props {
   solutionId?: string;
 }
 const { locale, page, solutionId } = Astro.props;
-const solution = dictionary(locale).solutions.items.find(
-  (item) => item.id === solutionId,
-);
+const t = dictionary(locale);
+const solution = t.solutions.items.find((item) => item.id === solutionId);
 ---
 
 <BaseLayout
   {locale}
   {page}
   {solutionId}
+  solutionTitle={solution?.title}
   title={solution?.seoTitle}
   description={solution?.description}
 >
   {page === "home" ? (
-    <Home {locale} />
+    <>
+      <HeroSection {locale} />
+      <ProofSection {locale} />
+      <BrandStrip {locale} />
+      <Solutions {locale} />
+      <ApproachSection {locale} />
+      <Process {locale} />
+      <TechnologySection {locale} />
+      <CallToAction {locale} />
+    </>
   ) : page === "contact" ? (
-    <Contact {locale} />
+    <>
+      <ContactIntro {locale} />
+      <ContactSection {locale} interests={t.solutions.items} />
+    </>
   ) : page === "privacy" ? (
-    <Privacy {locale} />
+    <PrivacyContent {locale} />
   ) : (
-    <ContentPage {locale} {page} {solutionId} />
+    <>
+      <ContentIntro {locale} {page} {solution} />
+      {page === "solutions" && !solution && (
+        <Solutions {locale} heading={false} />
+      )}
+      {solution && <SolutionOverview {locale} {solution} />}
+      {solution && (
+        <div class="container service-details">
+          {solution.sections.map((section) => (
+            <ServiceDetailSection {section} />
+          ))}
+        </div>
+      )}
+      {page === "process" && <Process {locale} detailed />}
+      {page === "about" && (
+        <>
+          <AboutIntro {locale} />
+          <ValuesSection {locale} />
+          <AboutTechnologySection {locale} />
+        </>
+      )}
+      {solution && <RelatedSolutions {locale} {solution} />}
+      <CallToAction {locale} />
+    </>
   )}
 </BaseLayout>

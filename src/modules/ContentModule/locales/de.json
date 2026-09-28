@@ -1,0 +1,256 @@
+{
+  "common": {
+    "detail": "Was wir für Sie lösen",
+    "deliverables": "Ihr Ergebnis",
+    "related": "Lösungen, die zusammenspielen"
+  },
+  "hero": {
+    "tag": "Digitale Lösungen. Echter Fortschritt.",
+    "line1": "Ihre Vision.",
+    "line2": "Unser Code.",
+    "line3": "Gemeinsam weiter.",
+    "text": "Wir machen aus komplexen Prozessen klare digitale Lösungen. Von der ersten Idee bis zur Software, auf die sich Ihr Unternehmen verlassen kann.",
+    "secondary": "Unsere Lösungen entdecken",
+    "note": "Vom ersten Entwurf bis zur Weiterentwicklung",
+    "visualLabel": "Verbindung von Unternehmenssystemen, mobilen Anwendungen und Automatisierung",
+    "system": "Unternehmenssystem",
+    "systemSub": "Alles an einem Ort",
+    "mobile": "Mobile Anwendung",
+    "mobileSub": "Immer griffbereit",
+    "automation": "Automatisierung",
+    "automationSub": "Weniger Routine. Mehr Freiraum.",
+    "coreSub": "Im Mittelpunkt der Lösung"
+  },
+  "proof": [
+    {
+      "value": "10+",
+      "label": "Jahre Entwicklungserfahrung"
+    },
+    {
+      "value": "Von A bis Z",
+      "label": "von der Analyse bis zum Start"
+    },
+    {
+      "value": "Nach Maß",
+      "label": "für Ihre Prozesse und Anforderungen"
+    }
+  ],
+  "solutions": {
+    "tag": "WAS WIR GEMEINSAM SCHAFFEN",
+    "title": "Gute Software beginnt\nmit Verständnis für Ihr Geschäft.",
+    "text": "Bestehende Werkzeuge verbinden oder ein neues System entwickeln: Wir finden einen Weg, der heute und in Zukunft sinnvoll ist.",
+    "intro": "Technologie ist das Mittel. Ein funktionierendes Unternehmen das Ziel.",
+    "items": [
+      {
+        "id": "systems",
+        "title": "Unternehmenssysteme",
+        "seoTitle": "Individuelle Unternehmenssoftware entwickeln",
+        "short": "Weniger Tabellen. Mehr Überblick.",
+        "description": "CRM, Kundenportale und interne Werkzeuge, die sich an Ihrer Arbeitsweise orientieren.",
+        "detail": "Informationen in verschiedenen Tabellen, E-Mails und Anwendungen bremsen den Alltag. Wir schaffen eine gemeinsame Umgebung für Ihre Daten, Prozesse und Mitarbeitenden.",
+        "features": [
+          "CRM und interne Informationssysteme",
+          "Kunden- und Partnerportale",
+          "Benutzerrollen und Zugriffsrechte",
+          "Übersichten, Berichte und Exporte"
+        ],
+        "outcome": "Wichtige Informationen im Blick, weniger Handarbeit und ein System mit Raum für Weiterentwicklung.",
+        "tags": ["CRM & Portale", "Daten & Prozesse"],
+        "sections": [
+          {
+            "title": "Wann sich ein eigenes System lohnt",
+            "text": "Wenn Vertrieb, Betrieb und Geschäftsführung mit unterschiedlichen Versionen derselben Daten arbeiten, hilft eine weitere Tabelle oft nicht mehr. Ein eigenes System kann Abläufe abbilden, die Standardwerkzeuge nicht ausreichend unterstützen: Auftragsfreigaben, Kundenbetreuung oder die Koordination von Aufgaben. Gemeinsam klären wir zunächst, was entwickelt werden muss und was sich durch die Verbindung bestehender Anwendungen lösen lässt."
+          },
+          {
+            "title": "Von Arbeitsabläufen zu verbundenen Daten",
+            "text": "Wir erfassen Benutzerrollen, Informationsflüsse und die Entscheidungen, die das System unterstützen soll. Darauf bauen Oberflächen, Berechtigungen und Anbindungen an Buchhaltung oder weitere Dienste auf, abhängig von deren Schnittstellen. Eine Datenübernahme beginnt mit einer Qualitätsprüfung und einem Testimport. Funktionen prüfen wir anhand konkreter Abläufe, etwa von der Anfrage über die Freigabe bis zur Auswertung."
+          },
+          {
+            "title": "Eine Einführung, die zum Betrieb passt",
+            "text": "Gemeinsam legen wir die erste nutzbare Etappe, Abnahmekriterien und die Übergabe fest. Zum vereinbarten Umfang können Dokumentation, Einweisung und der Wechsel von bisherigen Werkzeugen gehören. Vor dem Start klären wir die Verantwortung für Betrieb, Zugänge und Sicherungen. Die weitere Entwicklung orientiert sich anschließend an den Rückmeldungen der Menschen, die das System tatsächlich verwenden."
+          }
+        ]
+      },
+      {
+        "id": "web",
+        "title": "Websites & Webanwendungen",
+        "seoTitle": "Websites und Webanwendungen entwickeln",
+        "short": "Durchdacht bis zum letzten Klick.",
+        "description": "Schnelle Unternehmenswebsites und leistungsfähige Anwendungen. Verständlich für Nutzer und bereit für Wachstum.",
+        "detail": "Von der mehrsprachigen Unternehmenswebsite bis zur komplexen Anwendung mit Formularen und Datenübersichten. Wir verbinden Design, Funktionalität und eine solide technische Basis.",
+        "features": [
+          "Unternehmens- und mehrsprachige Websites",
+          "Anwendungen mit Vue.js und Nuxt",
+          "Schnelle Inhaltswebsites mit Astro",
+          "Responsive Oberflächen und technisches SEO"
+        ],
+        "outcome": "Eine schnelle, übersichtliche Oberfläche, auf der Kunden und Mitarbeitende das Wesentliche finden.",
+        "tags": ["Webanwendungen", "Unternehmenswebsites"],
+        "sections": [
+          {
+            "title": "Unternehmenswebsite oder Arbeitsanwendung?",
+            "text": "Eine Unternehmenswebsite soll Ihr Angebot verständlich erklären und den ersten Kontakt erleichtern. Eine Webanwendung unterstützt zusätzlich konkrete Aufgaben: Kundenservice, Buchungen, Formulare oder Auswertungen. Zu Beginn klären wir Zielgruppen, Ziele und wichtige Nutzerwege. Daraus ergeben sich Umfang, Inhaltsstruktur und technische Grundlage, statt jedem Projekt dieselbe Vorlage überzustülpen. Entscheidend ist, was Besucher oder Mitarbeitende zuverlässig erledigen sollen."
+          },
+          {
+            "title": "Gestaltung und Funktion gehören zusammen",
+            "text": "Wir gestalten Oberflächen für Smartphones und große Bildschirme und prüfen wichtige Schritte von der Anmeldung bis zum Abschluss einer Aufgabe. Bei Inhaltswebsites berücksichtigen wir Geschwindigkeit, Zugänglichkeit für Suchmaschinen und Sprachversionen. Bei Anwendungen ergänzen wir nach Bedarf Benutzerrollen, Formularprüfung und Datenanbindungen. Auch Fehlerfälle und verständliche Rückmeldungen gehören zum Entwurf, damit Nutzer wissen, wie es weitergeht."
+          },
+          {
+            "title": "Übergabe mit Raum für Weiterentwicklung",
+            "text": "Vor der Veröffentlichung prüfen wir vereinbarte Abläufe, Links und das Verhalten auf unterschiedlichen Bildschirmgrößen. Wir stimmen Inhaltspflege, Betriebsumgebung sowie die Übergabe von Zugängen und Dokumentation ab. Ersetzt die Website eine ältere Lösung, planen wir die Übernahme von Inhalten und Weiterleitungen wichtiger Adressen. Weitere Anpassungen können schrittweise nach tatsächlichem Bedarf und Erfahrungen aus dem Betrieb erfolgen."
+          }
+        ]
+      },
+      {
+        "id": "mobile",
+        "title": "Mobile Anwendungen",
+        "seoTitle": "Individuelle mobile Apps entwickeln",
+        "short": "Ihre Leistungen. Immer erreichbar.",
+        "description": "iOS- und Android-Anwendungen, verbunden mit Ihren Diensten. Vom einfachen Vorgang zum täglichen Arbeitswerkzeug.",
+        "detail": "Wir bringen Ihre Leistungen aufs Smartphone. Wir gestalten die Bedienung für kleine Bildschirme und verbinden die Anwendung mit Backend und Gerätefunktionen.",
+        "features": [
+          "Plattformübergreifende Entwicklung mit React Native",
+          "Anbindung an Unternehmenssysteme",
+          "Push-Benachrichtigungen und Kommunikation",
+          "Kamera, Mikrofon und Standortfunktionen"
+        ],
+        "outcome": "Eine einheitliche mobile Lösung für Kunden oder den Außendienst, angebunden an Ihre bestehenden Dienste.",
+        "tags": ["iOS & Android", "React Native"],
+        "sections": [
+          {
+            "title": "Wenn das Smartphone den Alltag erleichtert",
+            "text": "Eine mobile Anwendung ist sinnvoll, wenn Menschen außerhalb des Büros arbeiten, schnell reagieren müssen oder Gerätefunktionen benötigen. Sie kann Besuchsberichte, das Erfassen von Anfragen oder den Zugang zu Kundenservices vereinfachen. Gemeinsam prüfen wir, ob eine eigene App sinnvoll ist oder eine gut gestaltete mobile Website ausreicht. Maßgeblich ist die Nutzung, nicht allein die Technologie."
+          },
+          {
+            "title": "Eine gemeinsame Basis für iOS und Android",
+            "text": "Mit React Native entwickeln wir eine gemeinsame Grundlage für beide Plattformen und berücksichtigen deren Bediengewohnheiten. Wir planen Anmeldung, Backend-Anbindung und Geräteberechtigungen. Benachrichtigungen, Kamera, Standort oder Sprachfunktionen setzen wir dort ein, wo sie eine konkrete Aufgabe unterstützen. Falls Arbeiten ohne Verbindung und eine spätere Synchronisierung nötig sind, stimmen wir das Verhalten bereits beim Entwurf ab."
+          },
+          {
+            "title": "Vom Gerätetest bis zur Veröffentlichung",
+            "text": "Wichtige Abläufe prüfen wir auf vereinbarten Geräten, auch bei Verbindungsabbrüchen und verweigerten Berechtigungen. Vor der Veröffentlichung klären wir den Vertriebsweg, die Konten des App-Eigentümers und die Unterlagen für die Stores. Die Freigabe hängt auch von den Regeln der Store-Betreiber ab. Nach dem Start können vereinbarte Wartung, Updates und Weiterentwicklung an Nutzerfeedback und Plattformänderungen anknüpfen."
+          }
+        ]
+      },
+      {
+        "id": "automation",
+        "title": "Integrationen, Automatisierung & KI",
+        "seoTitle": "Systemintegration und Automatisierung mit KI",
+        "short": "Lassen Sie Technologien zusammenspielen.",
+        "description": "Verbundene Daten, automatische Abläufe und sinnvoll eingesetzte KI. Mehr Raum für die wesentliche Arbeit.",
+        "detail": "Wir erkennen wiederkehrende Aufgaben, die Software übernehmen kann. Wir verbinden externe Dienste und ergänzen Sprach- oder KI-Funktionen mit praktischem Nutzen.",
+        "features": [
+          "REST-APIs und externe Integrationen",
+          "Automatische Importe und Datenverarbeitung",
+          "KI-Assistenz und Sprachfunktionen",
+          "Benachrichtigungen, Dokumente und Automatisierung"
+        ],
+        "outcome": "Ein reibungsloser Informationsfluss zwischen Werkzeugen und weniger Routineaufgaben für Ihre Mitarbeitenden.",
+        "tags": ["APIs & Integrationen", "KI & Automatisierung"],
+        "sections": [
+          {
+            "title": "Mit einer wiederkehrenden Aufgabe beginnen",
+            "text": "Daten zwischen Systemen abzuschreiben, Dokumente manuell zu erstellen oder Prüfungen ständig zu wiederholen, kostet Zeit. Wir wählen einen Ablauf mit klarem Eingang und erwartetem Ergebnis und erfassen seine Ausnahmen. Nicht jede Automatisierung braucht KI: Für vorhersehbare Datenübertragungen ist eine direkte Verbindung oft geeigneter. KI prüfen wir dort, wo Texte, Sprache oder weniger strukturierte Unterlagen einen sinnvollen Einsatz ermöglichen."
+          },
+          {
+            "title": "Verbindungen müssen auch Fehler beherrschen",
+            "text": "Wir prüfen verfügbare APIs, Berechtigungen, Datenformate und Grenzen externer Dienste. Dabei legen wir fest, was bei Ausfällen, doppelten Anfragen oder unvollständigen Eingaben geschehen soll. Je nach Ablauf ergänzen wir Wiederholungen, Ergebnisprotokolle oder Hinweise an die zuständige Person. Bei KI-Funktionen klären wir, welche Daten an den Anbieter übermittelt werden dürfen und wo Menschen Ergebnisse vor der Verwendung prüfen sollen."
+          },
+          {
+            "title": "Den Nutzen prüfen, dann erweitern",
+            "text": "Wir beginnen mit einem begrenzten Szenario und vereinbaren, wie sich sein Nutzen bewerten lässt, etwa anhand manueller Schritte oder der Bearbeitungszeit. Mit Beispieldaten prüfen wir Richtigkeit, Ausnahmen und Kosten externer Dienste. Vor der Übergabe legen wir Betriebsverantwortung und Vorgehen bei Fehlern fest. Weitere Systeme und Abläufe verbinden wir schrittweise auf Grundlage dieser Ergebnisse."
+          }
+        ]
+      },
+      {
+        "id": "support",
+        "title": "Weiterentwicklung & Betreuung",
+        "seoTitle": "Software weiterentwickeln und betreuen",
+        "short": "Mit dem Start ist es nicht vorbei.",
+        "description": "Stabiler Betrieb, neue Funktionen und durchdachte Weiterentwicklung. Eine technische Basis für Ihren nächsten Schritt.",
+        "detail": "Wir arbeiten uns auch in bestehende Projekte ein. Wir klären Prioritäten und technische Abhängigkeiten und planen Verbesserungen nach dem tatsächlichen Bedarf.",
+        "features": [
+          "Analyse und Übernahme bestehender Anwendungen",
+          "Optimierung und Fehlerbehebung",
+          "Neue Funktionen und laufende Aktualisierungen",
+          "Dokumentation und Entwicklungsplanung"
+        ],
+        "outcome": "Ein klarer Plan, wartbarer Code und Kontinuität bei der Weiterentwicklung Ihrer Software.",
+        "tags": ["Wartung & Betreuung", "Weiterentwicklung"],
+        "sections": [
+          {
+            "title": "Zuerst die vorhandene Lösung verstehen",
+            "text": "Die Übernahme einer Anwendung beginnt mit einem Überblick über Code, Abhängigkeiten, Umgebungen und die Bereitstellung. Wir besprechen bekannte Probleme und die Änderungen, die Ihr Betrieb benötigt. Daraus entsteht eine Übersicht von Prioritäten und Risiken. Sie hilft bei der Entscheidung zwischen einer gezielten Korrektur, schrittweiser Modernisierung und größeren Anpassungen. Eine vollständige Neuentwicklung ist nicht automatisch der Ausgangspunkt."
+          },
+          {
+            "title": "Weiterentwicklung in überprüfbaren Schritten",
+            "text": "Fehlerbehebungen und neue Funktionen teilen wir in kleinere Etappen mit einem klaren Zweck auf. Für betroffene Bereiche prüfen wir wichtige Nutzerszenarien und Auswirkungen auf verbundene Systeme. Bibliotheksupdates und Infrastrukturänderungen planen wir nach Kompatibilität und betrieblichen Anforderungen. Begleitend ergänzen wir die Dokumentation, damit Entscheidungen und Abläufe nicht nur im Wissen einzelner Personen verbleiben."
+          },
+          {
+            "title": "Klare Vereinbarungen für die Betreuung",
+            "text": "Wir vereinbaren den Umfang der Unterstützung, die Meldung von Anforderungen und deren Priorisierung. Reaktionszeiten und Verfügbarkeit richten sich nach der konkreten Absprache; ein Rund-um-die-Uhr-Service wird nicht vorausgesetzt. Ebenso klären wir die Verantwortung für Hosting, Sicherungen und Drittanbieter. Regelmäßige Prioritätsprüfungen helfen, notwendige Wartung von neuen Funktionen mit dem größten Nutzen für Ihr Unternehmen zu unterscheiden."
+          }
+        ]
+      }
+    ]
+  },
+  "process": {
+    "tag": "VON DER IDEE ZUM ERGEBNIS",
+    "title": "Ein klarer Weg.\nKeine Blackbox.",
+    "text": "Sie wissen, was entsteht, warum und was als Nächstes kommt. Wichtige Entscheidungen treffen wir gemeinsam.",
+    "items": [
+      {
+        "title": "Zuerst hören wir zu",
+        "text": "Wir sprechen über Ihre Abläufe, Ziele und Hindernisse. Gemeinsam klären wir Prioritäten und Projektgrenzen.",
+        "output": "Gemeinsames Verständnis und klare Prioritäten"
+      },
+      {
+        "title": "Wir planen den Weg",
+        "text": "Wir entwerfen Lösung, Nutzerabläufe und technische Architektur. Umfang, Etappen und Budget stimmen wir ab.",
+        "output": "Lösungskonzept und Umsetzungsplan"
+      },
+      {
+        "title": "Wir entwickeln und prüfen",
+        "text": "Wir arbeiten in sinnvollen Schritten. Sie sehen regelmäßig Ergebnisse, die wir anhand realer Szenarien prüfen.",
+        "output": "Funktionierende Software und regelmäßiges Feedback"
+      },
+      {
+        "title": "Wir starten und begleiten",
+        "text": "Wir übernehmen Bereitstellung, Übergabe und vereinbarte Betreuung. Der weitere Ausbau folgt den Erfahrungen im Betrieb.",
+        "output": "Start, Übergabe und Weiterentwicklung"
+      }
+    ]
+  },
+  "about": {
+    "tag": "ÜBER PRASENTACE",
+    "title": "Technische Erfahrung.\nMenschliche Zusammenarbeit.",
+    "text": "Gute Software braucht mehr als Code: Verständnis für Zusammenhänge, durchdachte Entscheidungen und Verantwortung für das Ergebnis.",
+    "body": "Prasentace baut auf mehr als zehn Jahren Erfahrung in der Entwicklung von Webanwendungen und Unternehmenssystemen auf. Wir verbinden Frontend, Backend und mobile Anwendungen zu einem funktionierenden Ganzen.",
+    "body2": "Jedes Unternehmen hat seine eigene Arbeitsweise. Wir finden uns in bestehenden Systemen zurecht, erklären technische Möglichkeiten verständlich und begleiten Projekte vom ersten Gespräch bis zum Start.",
+    "values": [
+      {
+        "title": "Zusammenhänge statt Abkürzungen",
+        "text": "Wir suchen die tatsächliche Ursache und eine Lösung, die zu Ihrem Betrieb passt."
+      },
+      {
+        "title": "Offene Kommunikation",
+        "text": "Wir sprechen verständlich über Möglichkeiten, Prioritäten und technische Grenzen."
+      },
+      {
+        "title": "Raum für die Zukunft",
+        "text": "Modulare Architektur und wartbarer Code erleichtern die spätere Weiterentwicklung."
+      }
+    ],
+    "technology": "Solide Basis. Passende Werkzeuge.",
+    "technologyText": "Wir wählen Technologien nach dem Projekt, seinen Anforderungen und dem künftigen Betrieb aus."
+  },
+  "cta": {
+    "tag": "DER NÄCHSTE SCHRITT IST EINFACH",
+    "title": "Was bringt Ihr\nUnternehmen weiter?",
+    "text": "Eine Idee, eine konkrete Herausforderung oder der Wunsch, besser zu arbeiten. Finden wir gemeinsam den richtigen Anfang."
+  },
+  "brand": {
+    "edition": "Digitalstudio / Brünn & überall",
+    "notebook": "ein Heft voller guter Ideen / 01",
+    "note": "hier geht’s los"
+  }
+}

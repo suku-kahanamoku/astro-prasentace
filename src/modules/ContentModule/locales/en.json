@@ -1,0 +1,256 @@
+{
+  "common": {
+    "detail": "What we can solve for you",
+    "deliverables": "What you get",
+    "related": "Solutions that work together"
+  },
+  "hero": {
+    "tag": "Digital solutions. Real progress.",
+    "line1": "Your vision.",
+    "line2": "Our code.",
+    "line3": "Shared progress.",
+    "text": "We turn complex processes into clear digital solutions. From the first idea to software your business can rely on.",
+    "secondary": "Explore our solutions",
+    "note": "From the first sketch to ongoing development",
+    "visualLabel": "Connecting business systems, mobile applications and automation",
+    "system": "Business system",
+    "systemSub": "Everything in one place",
+    "mobile": "Mobile application",
+    "mobileSub": "Always within reach",
+    "automation": "Automation",
+    "automationSub": "Less routine. More possibilities.",
+    "coreSub": "At the heart of it all"
+  },
+  "proof": [
+    {
+      "value": "10+",
+      "label": "years of development experience"
+    },
+    {
+      "value": "End to end",
+      "label": "from analysis to launch"
+    },
+    {
+      "value": "Tailor-made",
+      "label": "for your processes and needs"
+    }
+  ],
+  "solutions": {
+    "tag": "WHAT WE CAN BUILD TOGETHER",
+    "title": "Great software starts with\nunderstanding your business.",
+    "text": "Whether you need to connect existing tools or build an entirely new system. We find an approach that makes sense today and for years to come.",
+    "intro": "Technology is the means. A thriving business is the goal.",
+    "items": [
+      {
+        "id": "systems",
+        "title": "Business systems",
+        "seoTitle": "Custom Business Software Development",
+        "short": "Fewer spreadsheets. More clarity.",
+        "description": "CRM, customer portals and internal tools designed around the way your business works.",
+        "detail": "Information scattered across spreadsheets, emails and applications slows down everyday work. We design a shared environment for your data, processes and people.",
+        "features": [
+          "CRM and internal business systems",
+          "Customer and partner portals",
+          "User roles and access permissions",
+          "Dashboards, reports and exports"
+        ],
+        "outcome": "A clear view of essential information, less manual work and a system ready to evolve.",
+        "tags": ["CRM & portals", "Data & processes"],
+        "sections": [
+          {
+            "title": "When a custom system makes sense",
+            "text": "When sales, operations and management work with different versions of the same data, another spreadsheet may no longer help. A custom system can support processes that standard tools do not cover: order approvals, customer care or work coordination. Together, we first identify what needs to be built and what can be solved by connecting your existing applications."
+          },
+          {
+            "title": "From workflows to connected data",
+            "text": "We map user roles, information flows and the decisions your system needs to support. We design screens, permissions and connections to accounting or other services according to their interfaces. Any data migration starts with a quality check and trial import. Features are verified against concrete scenarios, such as moving a request from submission through approval to reporting."
+          },
+          {
+            "title": "A rollout that fits your operations",
+            "text": "Together, we define the first useful release, acceptance criteria and handover conditions. The agreed scope may include documentation, training and a transition plan from existing tools. Before launch, we clarify responsibility for operations, access and backups. Further development is then informed by feedback from the people who actually use the system."
+          }
+        ]
+      },
+      {
+        "id": "web",
+        "title": "Websites & web applications",
+        "seoTitle": "Website and Web Application Development",
+        "short": "Thoughtful down to the last click.",
+        "description": "Fast business websites and capable applications. Intuitive for users and ready to grow with you.",
+        "detail": "From a multilingual company website to a complex application with forms and dashboards. We bring design, functionality and a solid technical foundation together.",
+        "features": [
+          "Business and multilingual websites",
+          "Vue.js and Nuxt applications",
+          "Fast content websites with Astro",
+          "Responsive interfaces and technical SEO"
+        ],
+        "outcome": "A fast, clear experience that helps customers and employees find what matters.",
+        "tags": ["Web applications", "Business websites"],
+        "sections": [
+          {
+            "title": "A company website or a working application?",
+            "text": "A company website should explain your offer clearly and make the first contact easy. A web application also handles specific tasks: customer self-service, bookings, forms or reporting. We begin by identifying your audience, goals and key user journeys. These guide the scope, content structure and technical foundation, rather than applying the same template to every project."
+          },
+          {
+            "title": "Design connected to functionality",
+            "text": "We design for phones and larger screens and verify important steps from sign-in to task completion. Content websites need speed, search engine access and clear language versions. For applications, we add user roles, form validation and data connections as required. Error states and understandable feedback are part of the interface design, so people know what happened and how to proceed."
+          },
+          {
+            "title": "Handover and room for change",
+            "text": "Before deployment, we check agreed scenarios, links and behaviour across screen sizes. We agree on content management, the hosting environment, access and documentation handover. If the website replaces an older version, the plan includes content migration and redirects for important addresses. Subsequent improvements can be delivered in stages based on real needs and experience after launch."
+          }
+        ]
+      },
+      {
+        "id": "mobile",
+        "title": "Mobile applications",
+        "seoTitle": "Custom Mobile App Development",
+        "short": "Your services. Always within reach.",
+        "description": "iOS and Android applications connected to your services. From a simple task to an everyday work tool.",
+        "detail": "We help bring your services to mobile. We design for smaller screens and connect the application to your backend and device capabilities.",
+        "features": [
+          "Cross-platform React Native development",
+          "Integration with business systems",
+          "Push notifications and communication",
+          "Camera, microphone and location features"
+        ],
+        "outcome": "A unified mobile solution for customers or field staff, connected to your existing services.",
+        "tags": ["iOS & Android", "React Native"],
+        "sections": [
+          {
+            "title": "When a phone makes daily work easier",
+            "text": "A mobile application is useful when people work away from a desk, need to respond quickly or benefit from device features. It can simplify recording visits, submitting requests or accessing customer services. Together, we assess whether a dedicated application is appropriate or a well-designed mobile website is sufficient. The choice follows how people will use it, not the technology alone."
+          },
+          {
+            "title": "A shared foundation for iOS and Android",
+            "text": "With React Native, we build a common foundation for both platforms while respecting their interaction conventions. We plan authentication, backend connections and device permissions. Notifications, the camera, location or voice features belong where they support a specific task. If offline work and later synchronisation are needed, we agree on their behaviour early in the design process."
+          },
+          {
+            "title": "From device testing to release",
+            "text": "We verify key scenarios on agreed devices, including lost connectivity and denied permissions. Before release, we clarify the distribution method, app owner accounts and store submission materials. Store approval also depends on the operators’ policies. After launch, agreed maintenance, updates and further development can build on user feedback and changes to the platforms."
+          }
+        ]
+      },
+      {
+        "id": "automation",
+        "title": "Integrations, automation & AI",
+        "seoTitle": "System Integration and AI Automation",
+        "short": "Let your technology work together.",
+        "description": "Connected data, automated processes and practical AI. More room for the work that matters.",
+        "detail": "We identify repetitive work that software can take over. We connect external services and introduce voice or AI features where they deliver practical value.",
+        "features": [
+          "REST APIs and external integrations",
+          "Automated imports and data processing",
+          "AI assistance and voice features",
+          "Notifications, documents and automation"
+        ],
+        "outcome": "A smooth flow of information between tools and fewer repetitive tasks for your people.",
+        "tags": ["APIs & integrations", "AI & automation"],
+        "sections": [
+          {
+            "title": "Start with one recurring task",
+            "text": "Copying data between systems, preparing documents manually or repeating the same checks can slow down your work. We select a process with a clear input and expected result and map its exceptions. Not every automation needs AI: a direct integration is often better for predictable data transfers. We consider AI where text, voice or less structured material makes it useful."
+          },
+          {
+            "title": "Connections need to handle failures too",
+            "text": "We review available APIs, permissions, data formats and third-party service limits. We define what happens when a service fails, a request arrives twice or an input is incomplete. Depending on the process, we add retries, result logs or alerts for an operator. For AI features, we clarify what data may reach the provider and where a person should review a result before it is used."
+          },
+          {
+            "title": "Verify the benefit before expanding",
+            "text": "We begin with a limited scenario and agree how to assess its value, such as the number of manual steps or processing time. A data sample helps verify correctness, exceptions and external service costs. Before handover, we define operational responsibility and failure handling. Further systems and workflows are connected gradually, guided by what the initial evaluation shows."
+          }
+        ]
+      },
+      {
+        "id": "support",
+        "title": "Development & ongoing care",
+        "seoTitle": "Software Development and Ongoing Support",
+        "short": "Launch is just the beginning.",
+        "description": "Stable operations, new features and considered improvements. Technical foundations for your next chapter.",
+        "detail": "We can work with existing projects too. We identify priorities and technical dependencies, then plan gradual improvements around real needs.",
+        "features": [
+          "Existing application review and takeover",
+          "Optimisation and troubleshooting",
+          "New features and ongoing updates",
+          "Documentation and development planning"
+        ],
+        "outcome": "A clear plan, maintainable code and continuity as your software evolves.",
+        "tags": ["Maintenance & support", "Ongoing development"],
+        "sections": [
+          {
+            "title": "Understand the existing solution first",
+            "text": "Taking over an application starts with reviewing its code, dependencies, environments and deployment process. We discuss known problems and the changes your operations need. The result is an overview of priorities and risks to help choose between a focused fix, gradual modernisation or a larger change. A complete rewrite is not the automatic starting point."
+          },
+          {
+            "title": "Development in verifiable steps",
+            "text": "We divide fixes and new features into smaller stages with a clear purpose. For affected areas, we verify important user scenarios and impacts on connected systems. Library updates and infrastructure changes are planned around compatibility and operational needs. We add documentation along the way so that decisions and procedures do not remain only in individual people’s heads."
+          },
+          {
+            "title": "A clear agreement on ongoing care",
+            "text": "We agree on the support scope, how requests are reported and how they are prioritised. Response times and availability depend on the specific agreement; around-the-clock service is not assumed. We also clarify responsibility for hosting, backups and third-party services. Regular priority reviews help distinguish essential maintenance from new features with the greatest value for your business."
+          }
+        ]
+      }
+    ]
+  },
+  "process": {
+    "tag": "FROM IDEA TO IMPACT",
+    "title": "A clear process.\nNo black boxes.",
+    "text": "You know what is being built, why it matters and what comes next. We make important decisions together.",
+    "items": [
+      {
+        "title": "We listen first",
+        "text": "We discuss your operations, goals and current bottlenecks. Together we define priorities and project boundaries.",
+        "output": "A shared brief and clear priorities"
+      },
+      {
+        "title": "We map the way",
+        "text": "We design the solution, user journeys and technical approach. We agree on scope, milestones and budget.",
+        "output": "A solution design and delivery plan"
+      },
+      {
+        "title": "We build and validate",
+        "text": "We develop in meaningful stages. You see progress regularly and we test against real scenarios.",
+        "output": "Working software and regular feedback"
+      },
+      {
+        "title": "We launch and evolve",
+        "text": "We handle deployment, handover and agreed support. Further development is guided by real use.",
+        "output": "Launch, handover and ongoing development"
+      }
+    ]
+  },
+  "about": {
+    "tag": "ABOUT PRASENTACE",
+    "title": "Technical experience.\nA human approach.",
+    "text": "Great software takes more than code. It takes understanding, thoughtful decisions and responsibility for the result.",
+    "body": "Prasentace builds on more than ten years of experience in web application and business system development. We connect frontend, backend and mobile into one working whole.",
+    "body2": "Every business has its own way of working. We can navigate existing systems, explain technical options clearly and take a project from the first conversation to launch.",
+    "values": [
+      {
+        "title": "Context before shortcuts",
+        "text": "We look for the real cause of a problem and a solution that fits your operations."
+      },
+      {
+        "title": "Open communication",
+        "text": "We speak clearly about possibilities, priorities and technical constraints."
+      },
+      {
+        "title": "Room to grow",
+        "text": "Modular architecture and maintainable code make future development easier."
+      }
+    ],
+    "technology": "Solid foundations. The right tools.",
+    "technologyText": "We choose technologies around the project, its needs and its future operation."
+  },
+  "cta": {
+    "tag": "THE NEXT STEP IS SIMPLE",
+    "title": "What could move\nyour business forward?",
+    "text": "An idea, a specific challenge or a desire to work better. Let’s find the right place to start."
+  },
+  "brand": {
+    "edition": "Digital studio / Brno & beyond",
+    "notebook": "a notebook of good ideas / 01",
+    "note": "it starts here"
+  }
+}

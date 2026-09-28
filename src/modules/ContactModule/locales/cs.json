@@ -1,0 +1,34 @@
+{
+  "common": {
+    "address": "Sídlo"
+  },
+  "contact": {
+    "tag": "POJĎME TO PROBRAT",
+    "title": "Dobrý projekt začíná\njedním rozhovorem.",
+    "text": "Napište nám, co chcete vytvořit, zjednodušit nebo propojit. Technické zadání mít nemusíte.",
+    "emailLabel": "Napište nám",
+    "formTitle": "Prostor pro váš nápad",
+    "name": "Vaše jméno",
+    "email": "Pracovní e-mail",
+    "company": "Firma",
+    "optional": "nepovinné",
+    "interest": "Co potřebujete řešit?",
+    "choose": "Vyberte oblast",
+    "message": "Povězte nám o svém projektu",
+    "placeholder": "Co by mělo řešení umět? Co vás dnes brzdí?",
+    "submit": "Odeslat poptávku",
+    "sending": "Odesíláme…",
+    "notice": "Údaje použijeme k vyřízení vaší poptávky.",
+    "success": "Děkujeme. Vaše zpráva dorazila, ozveme se vám na uvedený e-mail.",
+    "error": "Zprávu se nepodařilo odeslat. Zkuste to později nebo využijte kontaktní e-mail uvedený na stránce.",
+    "invalid": "Zkontrolujte prosím vyznačená pole.",
+    "captcha": "Dokončete prosím ověření proti spamu.",
+    "unavailable": "Formulář nyní není dostupný. Napište nám prosím na kontaktní e-mail uvedený na stránce.",
+    "nojs": "Pro odeslání formuláře zapněte JavaScript nebo nám napište e-mailem.",
+    "required": "Vyplňte prosím toto pole.",
+    "invalidEmail": "Zadejte platnou e-mailovou adresu.",
+    "messageLength": "Napište alespoň 10 znaků.",
+    "website": "Webová stránka",
+    "phoneLabel": "Zavolejte nám"
+  }
+}

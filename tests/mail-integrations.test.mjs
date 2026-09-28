@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import {
   acceptsTurnstile,
   sendPhpMail,
-} from "../src/server/mail-integrations.mjs";
+} from "../src/modules/ContactModule/server/mail-integrations.mjs";
 const secret = "1x0000000000000000000000000000000AA";
 test("dummy Turnstile metadata accepted only in local development", () => {
   const result = { success: true, hostname: "localhost", action: "test" };

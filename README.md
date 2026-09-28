@@ -32,7 +32,7 @@ a jemný spodní stín místo spodní linky.
 
 ## Čitelnost a typografie
 
-Velikosti běžných textů jsou řízené tokeny v `src/styles/global.css`: obsah
+Velikosti běžných textů jsou řízené tokeny v `src/modules/UIModule/styles/theme.css`: obsah
 16–18 px, ovládací prvky 14–15 px a drobné popisky nejméně 12 px. Sekundární
 text používá tmavší šedomodrou; základní řez má váhu 450. Kompaktní popisky
 uvnitř animované ilustrace mají vlastní velikost. Navigace přechází do
@@ -42,23 +42,31 @@ mobilního menu při šířce 1100 px, aby se větší text vešel i v němčin�
 
 ```text
 src/
-  config/site.ts          značka, kontakt, sídlo, IČO, technologie
-  locales/{cs,en,de}.json všechny jazykové texty včetně SEO a URL slugů
-  i18n/index.ts          typování, URL helper, generátor cest
-  components/
-    ui/                  společné malé komponenty
-    layout/              hlavička, patička, přepínač jazyků
-    sections/            vizuál, služby, proces, výzva ke kontaktu
-    forms/               kontaktní formulář
-  views/                 společné šablony stránek
-  layouts/BaseLayout     dokument, metadata, canonical, hreflang, JSON-LD
-  pages/[...path].astro  jedna routa generující všech 33 obsahových URL
-  pages/[locale]/404     společná jazyková šablona chyby
-  pages/api/contact.ts   serverová PHP mailer a Turnstile integrace
-  server/                validace a zpracování poptávky
-  scripts/               menu, animace, klientský formulář
-  styles/global.css     designové tokeny, komponenty, responzivita, pohyb
+  config/site.ts             značka, kontakt, sídlo, IČO, technologie
+  config/routes.ts           URL helper a generátor všech 33 obsahových rout
+  config/locales/            přeložené slugy a stabilní ID služeb
+  modules/
+    UIModule/                tlačítka, ikony, breadcrumb UI, kontaktní odkazy, DOM hooks, theme
+    LangModule/              locale helpery, společné texty, vlajky, přepínač, 404 middleware
+    SiteModule/              hlavička, patička, značka, slogan, SEO, privacy a 404 obsah
+    ContentModule/           hero, důkazy, služby/detail, proces, přístup, hodnoty, technologie, CTA
+    ContactModule/           kontaktní sekce/formulář, klientská validace, server a PHP mailer
+  layouts/BaseLayout.astro   kompozice dokumentu, společné navigace a obsahu
+  pages/                     jediná vrstva rout a skládání sekcí
+  pages/api/contact.ts       kompozice kontakt handleru a lokalizovaných názvů služeb
+  middleware.ts              zapojení jazykového fallbacku
+  styles/                    vstupy původní CSS kaskády
 ```
+
+Každý modul vlastní potřebné `components`, `hooks`, `providers`, `locales`, `assets`, `styles`, případně `server` a `config`. Prázdné složky se nevytvářejí. Moduly nemají `pages`; všechny stránky skládá hlavní `src/pages`. Závislosti směřují do UIModule a LangModule, nikoli mezi funkčními moduly. UI neimportuje projektové překlady ani konfiguraci. Jazykový přepínač dostává tvorbu odkazu přes prop `href`.
+
+Texty patří do `modules/<Name>Module/locales/{cs,en,de}.json`; společný slovník LangModule obsahuje jen sdílené názvy a ovládací texty. Modulový `providers/translations.ts` doplní vlastní texty o tuto společnou slovní zásobu. Žádný produkční modul nenačítá slovník jiného funkčního modulu. `scripts/read-translations.mjs` skládá slovníky pouze pro kontrolní nástroje a testy. `scripts/check-locales.mjs` kontroluje každý modul i původní obsahové invarianty.
+
+Vlastní světlé theme a společné styly jsou v `UIModule/styles`; styly sekcí patří do jejich modulů. Soubory v `src/styles` pouze skládají CSS ve správném pořadí. Barvy, typografie, breakpointy, animace i HTML struktura zůstaly zachované. Nepřidává se daisyUI, nové theme ani reklamní rám. Projekty nemají AdsModule ani reklamní integrace. Fonty, favicon a publikované obrázky se nadále vydávají na původních veřejných URL.
+
+`tests/architecture.test.mjs` kontroluje povolené závislosti, cykly včetně cest přes konfiguraci, zákaz modulových `pages`, tranzitivní oddělení serverového kódu od browser hooků/providerů a nepřítomnost reklamních integrací. Nový modul přidejte do povoleného grafu v tomto testu. Hooky se spouštějí explicitně z komponent, které příslušnou interakci vlastní.
+
+ContactModule dostává možnosti formuláře přes `interests` a překlad vybrané služby na serveru přes callback `createContactHandler()`. Proto nezávisí na ContentModule. API klíč, Turnstile tajemství, validace a odesílání zůstávají v `ContactModule/server`. Viditelné breadcrumbs a JSON-LD používají stejný helper v SiteModule; konkrétní název služby dodá hlavní stránka.
 
 Astro předgeneruje obsah do HTML. Jen kontaktní endpoint běží na serveru přes
 Netlify Functions. Tailwind 4 je zapojený přes Vite; design je definovaný vlastními
@@ -191,7 +199,7 @@ Nadpisy detailů dovolují dělení dlouhých slov, čísla kroků mají vyšš�
 přístupný název přepínače jazyků obsahuje viditelný kód jazyka. Formulář dovoluje
 zmenšení v gridu, takže ani delší německé volby neroztahují mobilní stránku.
 
-`src/utils/breadcrumbs.ts` je společný zdroj viditelné drobečkové navigace a
+`src/modules/SiteModule/providers/breadcrumbs.ts` je společný zdroj viditelné drobečkové navigace a
 `BreadcrumbList` JSON-LD. Navigace se nezobrazuje na homepage ani chybových stránkách.
 Homepage přidává `WebSite` propojený s `Organization`. Všechny absolutní SEO URL
 nadále vycházejí z `PUBLIC_SITE_URL`; před produkčním přechodem je třeba tuto
@@ -210,7 +218,7 @@ požadavky. PNG jsou součástí repozitáře, běžný build prohlížeč nepot
 cestu i parametry dotazu a mají přednost před existujícími soubory a jazykovými
 404 fallbacky. Deploy preview adres se netýkají. Změna se projeví až po nasazení.
 
-Každá služba má v `src/locales/{cs,en,de}.json` vlastní `seoTitle`. Společná
+Každá služba má v `src/modules/ContentModule/locales/{cs,en,de}.json` vlastní `seoTitle`. Společná
 stránková šablona jej předává do layoutu pro HTML title a sociální metadata.
 Krátký `title` se nadále používá pro viditelné nadpisy, navigaci a formulář.
 
@@ -251,7 +259,7 @@ připomíná rypáček, dvě modré tečky o poloměru 3,4 těsně nad ním tvo�
 Favicon používá pouze světlé písmeno P na modré zaoblené dlaždici převzaté z loga. Vektorové soubory jsou vlastní kresba bez
 externích obrázků a lze je škálovat i upravovat.
 
-`src/styles/brand.css` definuje teplý papír, modrý inkoust, lososový akcent,
+Vstup `src/styles/brand.css` skládá modulové styly definující teplý papír, modrý inkoust, lososový akcent,
 linkovaný sešit a drobné kreslené nedokonalosti. Kaňky jsou dekorativní, obsah
 zůstává čitelný a animace respektují omezený pohyb. Texty příběhu značky jsou
 ve všech třech locale souborech v sekci `brand`. Nabídka služeb, routing a kontakty
@@ -267,7 +275,7 @@ Při `prefers-reduced-motion: reduce` zůstává statická.
 
 Sešit s údajem 10+ má jemně potrhaný horní okraj vytvořený pomocí CSS `clip-path`.
 
-Přepínač jazyků zobrazuje lokální SVG vlajky z `public/flags` (CZ, GB pro angličtinu,
+Přepínač jazyků zobrazuje lokální SVG vlajky z `src/modules/LangModule/assets/flags` (veřejné `/flags/` URL zůstávají dostupné) (CZ, GB pro angličtinu,
 DE), bez knihovny a externích požadavků. Odkazy mají přístupné názvy jazyků a tooltipy.
 
 Vybraná vlajka vyplňuje celý kruhový odznak o velikosti 24 × 24 px pomocí `object-fit: cover` a ořezu
@@ -330,3 +338,16 @@ pro serverové funkce. Samotný lokální soubor prostředí do Netlify přes Gi
 neputuje. Po změně veřejného klíče je nutné nové sestavení webu.
 Lokální `.env.development` nadále používá testovací CAPTCHA klíče a lokální PHP.
 Tajné klíče nikdy nekopírovat do repozitáře nebo veřejného klientského kódu.
+
+## Ověření modulového refaktoringu
+
+Před a po rozdělení byly porovnány všechny 33 obsahové URL ve třech jazycích při šířkách 390 a 1440 px: 66 celostránkových snímků se shoduje pixel po pixelu, stejně jako texty, odkazy a metadata. Vývojářský toolbar je při porovnání odstraněn. Reklamy se nepřidávají.
+
+```sh
+corepack pnpm test
+corepack pnpm build
+corepack pnpm test:browser
+corepack pnpm format:check
+```
+
+Browser testy spouštějí izolovaný Astro server na 4331 s `astro.test.config.mjs`. Testují stejné routy a API handlery přímo, aby vývojová proxy Netlify nepodávala staré soubory z `dist` nebo nezměnila stav lokalizovaných 404. Produkční `astro.config.mjs`, Netlify adaptér a přesměrování zůstávají zachované a ověřuje je produkční build. Testy formuláře používají mock CAPTCHA a mock odpovědi API; nepotvrzují doručení skutečného e-mailu.

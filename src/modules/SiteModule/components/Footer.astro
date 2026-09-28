@@ -1,0 +1,39 @@
+---
+import ProtectedContact from "../../UIModule/components/ProtectedContact.astro";
+import { dictionary } from "../providers/translations";
+import { type Locale } from "../../LangModule/providers/locale";
+import { url, type PageId } from "../../../config/routes";
+import { site } from "../../../config/site";
+import BrandLogo from "./BrandLogo.astro";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <BrandLogo href={url(locale)} />
+        <p>{t.common.rights}</p>
+      </div>
+      <nav aria-label={t.menu}>
+        {Object.entries(t.nav).map(([id, label]) => (
+          <a href={url(locale, id as PageId)}>{label}</a>
+        ))}
+      </nav>
+      <ProtectedContact kind="email" value={site.email} class="footer-email" />
+    </div>
+    <div class="footer-bottom">
+      <p>
+        © {new Date().getFullYear()} {site.name}{" "}
+        <span class="footer-separator">/</span> {t.common.registration}:{" "}
+        {site.registrationId}
+      </p>
+      <p>Brno, CZ</p>
+      <a href={url(locale, "privacy")}>{t.common.privacy}</a>
+    </div>
+  </div>
+</footer>

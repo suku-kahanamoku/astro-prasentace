@@ -1,0 +1,119 @@
+---
+import { dictionary } from "../providers/translations";
+import { type Locale } from "../../LangModule/providers/locale";
+import { url } from "../../../config/routes";
+import { TURNSTILE_SITE_KEY } from "astro:env/client";
+import DisclosureChevron from "../../UIModule/components/DisclosureChevron.astro";
+import Icon from "../../UIModule/components/Icon.astro";
+interface Props {
+  locale: Locale;
+  interests: { id: string; title: string }[];
+}
+const { locale, interests } = Astro.props;
+const t = dictionary(locale);
+const siteKey = TURNSTILE_SITE_KEY || "";
+---
+
+<form
+  class="contact-form"
+  method="post"
+  action="/api/contact/"
+  data-contact-form
+  data-messages={JSON.stringify(t.contact)}
+  data-sitekey={siteKey}
+  data-locale={locale}
+>
+  <h2>{t.contact.formTitle}</h2>
+  <input type="hidden" name="locale" value={locale} />
+  <div class="form-row">
+    <div class="field">
+      <label for="name">{t.contact.name} *</label>
+      <input
+        id="name"
+        name="name"
+        autocomplete="name"
+        required
+        maxlength="100"
+        aria-describedby="name-error"
+      />
+      <p class="field-error" id="name-error"></p>
+    </div>
+    <div class="field">
+      <label for="email">{t.contact.email} *</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        required
+        maxlength="254"
+        aria-describedby="email-error"
+      />
+      <p class="field-error" id="email-error"></p>
+    </div>
+  </div>
+  <div class="field">
+    <label for="company">
+      {t.contact.company} <span>({t.contact.optional})</span>
+    </label>
+    <input
+      id="company"
+      name="company"
+      autocomplete="organization"
+      maxlength="150"
+      aria-describedby="company-error"
+    />
+    <p class="field-error" id="company-error"></p>
+  </div>
+  <div class="field">
+    <label for="interest">
+      {t.contact.interest} <span>({t.contact.optional})</span>
+    </label>
+    <div class="select-control">
+      <select id="interest" name="interest" aria-describedby="interest-error">
+        <option value="">{t.contact.choose}</option>
+        {interests.map((item) => (
+          <option value={item.id}>{item.title}</option>
+        ))}
+      </select>
+      <DisclosureChevron />
+    </div>
+    <p class="field-error" id="interest-error"></p>
+  </div>
+  <div class="field">
+    <label for="message">{t.contact.message} *</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="5"
+      required
+      minlength="10"
+      maxlength="5000"
+      placeholder={t.contact.placeholder}
+      aria-describedby="message-error"
+    ></textarea>
+    <p class="field-error" id="message-error"></p>
+  </div>
+  <div class="honeypot" aria-hidden="true">
+    <label for="website">{t.contact.website}</label>
+    <input id="website" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+  <div class="captcha-container" data-captcha></div>
+  <p class="form-notice">
+    {t.contact.notice} <a href={url(locale, "privacy")}>{t.common.privacy}</a>
+  </p>
+  <button class="button button-primary" type="submit" disabled={!siteKey}>
+    <span data-submit-label>{t.contact.submit}</span>
+    <Icon name="arrow" size={18} />
+  </button>
+  <p class="form-status" data-form-status role="status" aria-live="polite">
+    {!siteKey && t.contact.unavailable}
+  </p>
+  <noscript>
+    <p class="form-status">{t.contact.nojs}</p>
+  </noscript>
+</form>
+<script>
+  import { useContactForm } from "../hooks/useContactForm";
+  useContactForm();
+</script>

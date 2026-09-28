@@ -1,0 +1,16 @@
+{
+  "langName": "Deutsch",
+  "language": "Sprache",
+  "nav": {
+    "solutions": "Lösungen",
+    "process": "Unser Vorgehen",
+    "about": "Über Prasentace",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "cta": "Projekt besprechen",
+    "privacy": "Datenschutz",
+    "registration": "Identifikationsnummer",
+    "entity": "Einzelunternehmer"
+  }
+}

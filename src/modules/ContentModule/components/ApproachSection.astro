@@ -1,0 +1,42 @@
+---
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+import Button from "../../UIModule/components/Button.astro";
+
+import { url } from "../../../config/routes";
+---
+
+<section class="container approach-section section">
+  <div class="experience-visual" aria-hidden="true">
+    <span class="experience-years">
+      10<span>+</span>
+    </span>
+    <img
+      class="experience-ink"
+      src="/brand/ink.svg"
+      width="220"
+      height="190"
+      alt=""
+    />
+    <div class="experience-lines">
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+    <span class="experience-caption">Prasentace.</span>
+  </div>
+  <div data-reveal>
+    <p class="eyebrow">{t.about.tag}</p>
+    <h2>{t.about.title}</h2>
+    <p class="lead">{t.about.body}</p>
+    <Button href={url(locale, "about")} variant="text">
+      {t.nav.about}
+    </Button>
+  </div>
+</section>

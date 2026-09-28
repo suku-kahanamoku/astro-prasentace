@@ -1,0 +1,25 @@
+---
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+import type { Solution } from "../providers/translations";
+interface Props {
+  locale: Locale;
+  page: PageId;
+  solution?: Solution;
+}
+const { locale, page, solution } = Astro.props;
+const t = dictionary(locale);
+import Button from "../../UIModule/components/Button.astro";
+
+import { url, type PageId } from "../../../config/routes";
+
+const content =
+  page === "process" ? t.process : page === "about" ? t.about : t.solutions;
+---
+
+<section class="container page-intro">
+  <p class="eyebrow">{solution ? t.nav.solutions : content.tag}</p>
+  <h1>{solution ? solution.title : content.title}</h1>
+  <p class="lead">{solution ? solution.description : content.text}</p>
+  {solution && <Button href={url(locale, "contact")}>{t.common.cta}</Button>}
+</section>

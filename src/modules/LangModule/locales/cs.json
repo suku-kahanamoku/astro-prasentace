@@ -1,0 +1,16 @@
+{
+  "langName": "Čeština",
+  "language": "Jazyk",
+  "nav": {
+    "solutions": "Řešení",
+    "process": "Jak pracujeme",
+    "about": "O Prasentace",
+    "contact": "Kontakt"
+  },
+  "common": {
+    "cta": "Probrat projekt",
+    "privacy": "Ochrana soukromí",
+    "registration": "IČO",
+    "entity": "Podnikající fyzická osoba"
+  }
+}

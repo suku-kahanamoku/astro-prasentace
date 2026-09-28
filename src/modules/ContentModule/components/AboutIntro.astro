@@ -1,0 +1,20 @@
+---
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<section class="container section about-intro">
+  <div class="big-stat">
+    10<span>+</span>
+    <p>{t.proof[0].label}</p>
+  </div>
+  <div>
+    <p class="lead">{t.about.body}</p>
+    <p class="lead">{t.about.body2}</p>
+  </div>
+</section>

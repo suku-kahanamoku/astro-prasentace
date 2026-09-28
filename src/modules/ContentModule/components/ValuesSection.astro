@@ -1,0 +1,19 @@
+---
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<section class="container values-grid">
+  {t.about.values.map((item, i) => (
+    <article data-reveal>
+      <span class="eyebrow">0{i + 1}</span>
+      <h2>{item.title}</h2>
+      <p>{item.text}</p>
+    </article>
+  ))}
+</section>

@@ -1,0 +1,34 @@
+{
+  "routes": {
+    "home": "",
+    "solutions": "solutions",
+    "process": "our-process",
+    "about": "about",
+    "contact": "contact",
+    "privacy": "privacy"
+  },
+  "solutions": {
+    "items": [
+      {
+        "id": "systems",
+        "slug": "business-systems"
+      },
+      {
+        "id": "web",
+        "slug": "web-applications"
+      },
+      {
+        "id": "mobile",
+        "slug": "mobile-applications"
+      },
+      {
+        "id": "automation",
+        "slug": "integrations-and-ai"
+      },
+      {
+        "id": "support",
+        "slug": "development-and-support"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "common": {
+    "address": "Registered address"
+  },
+  "contact": {
+    "tag": "LET’S TALK",
+    "title": "A great project starts\nwith one conversation.",
+    "text": "Tell us what you want to build, simplify or connect. You do not need a technical specification.",
+    "emailLabel": "Write to us",
+    "formTitle": "A space for your idea",
+    "name": "Your name",
+    "email": "Work email",
+    "company": "Company",
+    "optional": "optional",
+    "interest": "What can we help with?",
+    "choose": "Choose an area",
+    "message": "Tell us about your project",
+    "placeholder": "What should the solution do? What is slowing you down today?",
+    "submit": "Send enquiry",
+    "sending": "Sending…",
+    "notice": "We will use your details to respond to your enquiry.",
+    "success": "Thank you. Your message has arrived. We will reply to the email address you provided.",
+    "error": "Your message could not be sent. Please try again later or use the contact email shown on this page.",
+    "invalid": "Please check the highlighted fields.",
+    "captcha": "Please complete the spam protection check.",
+    "unavailable": "The form is currently unavailable. Please use the contact email shown on this page.",
+    "nojs": "Enable JavaScript to use the form, or contact us by email.",
+    "required": "Please fill in this field.",
+    "invalidEmail": "Please enter a valid email address.",
+    "messageLength": "Please enter at least 10 characters.",
+    "website": "Website",
+    "phoneLabel": "Call us"
+  }
+}

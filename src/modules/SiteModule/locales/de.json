@@ -1,0 +1,75 @@
+{
+  "skip": "Zum Inhalt springen",
+  "menu": "Menü",
+  "close": "Schließen",
+  "back": "Zur Startseite",
+  "common": {
+    "learn": "Lösung entdecken",
+    "allSolutions": "Alle Lösungen",
+    "eyebrow": "TECHNOLOGIE MIT KLAREM ZIEL",
+    "rights": "Durchdacht. Bis ins letzte Detail.",
+    "home": "Startseite",
+    "breadcrumbs": "Brotkrumennavigation"
+  },
+  "seo": {
+    "home": {
+      "title": "Software, die Ihr Unternehmen voranbringt",
+      "description": "Web- und mobile Anwendungen, Unternehmenssysteme und Automatisierung. Prasentace verbindet über 10 Jahre Entwicklungserfahrung mit durchdachten Lösungen."
+    },
+    "solutions": {
+      "title": "Digitale Lösungen für Unternehmen",
+      "description": "Unternehmenssysteme, Web- und mobile Anwendungen, Integrationen und Weiterentwicklung. Software passend zu Ihrem Unternehmen."
+    },
+    "process": {
+      "title": "Vom ersten Gespräch zur fertigen Lösung",
+      "description": "Unser Vorgehen bei Analyse, Konzeption, Entwicklung und Betreuung. Transparent und mit klaren Prioritäten."
+    },
+    "about": {
+      "title": "Erfahrung, auf die Sie bauen können",
+      "description": "Prasentace verbindet technische Erfahrung mit Verständnis für Geschäftsprozesse. Mehr als 10 Jahre Erfahrung in der Anwendungsentwicklung."
+    },
+    "contact": {
+      "title": "Sprechen wir über Ihr Projekt",
+      "description": "Was möchten Sie vereinfachen, verbinden oder entwickeln? Besprechen Sie Ihr Projekt mit Prasentace."
+    },
+    "privacy": {
+      "title": "Datenschutz",
+      "description": "Informationen zum Umgang mit Angaben aus dem Kontaktformular von Prasentace."
+    }
+  },
+  "hero": {
+    "core": "Ihr Unternehmen",
+    "flow": "Idee → Lösung → Fortschritt"
+  },
+  "privacy": {
+    "title": "Ihre Privatsphäre",
+    "intro": "Wir verwenden Ihre Angaben ausschließlich im Zusammenhang mit Ihrer Anfrage.",
+    "sections": [
+      {
+        "title": "Kontaktdaten",
+        "text": "Der Betreiber von Prasentace wird durch die unten aufgeführten Unternehmensdaten identifiziert. Bei Fragen zu personenbezogenen Daten nutzen Sie die darunter angegebene E-Mail-Adresse."
+      },
+      {
+        "title": "Kontaktformular",
+        "text": "Wir verarbeiten Ihren Namen, Ihre E-Mail-Adresse, optional den Firmennamen und Ihre Nachricht, um zu antworten und das weitere Vorgehen zu besprechen. Bitte übermitteln Sie keine sensiblen Daten oder Passwörter."
+      },
+      {
+        "title": "Technische Dienste",
+        "text": "Hosting, E-Mail-Server und Cloudflare Turnstile dienen dem Betrieb, dem Nachrichtenversand und dem Schutz des Formulars. Die Website selbst setzt kein Marketing- oder Analyse-Tracking ein."
+      },
+      {
+        "title": "Ihre Anliegen",
+        "text": "Wenn Sie Auskunft zu den Angaben Ihrer Anfrage wünschen, diese korrigieren oder ihre Löschung beantragen möchten, schreiben Sie uns bitte eine E-Mail."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Hier geht die Geschichte nicht weiter.",
+    "text": "Diese Seite existiert nicht oder ihre Adresse hat sich geändert."
+  },
+  "brand": {
+    "storyLabel": "Die Geschichte hinter Prasentace",
+    "formula": "Frau Lehrerin, das ist kein Klecks. Das ist Design.",
+    "promise": "Kleckse auf Papier. Klarheit im Code."
+  }
+}

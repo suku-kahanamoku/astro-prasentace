@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { handleContact } from "../src/server/contact-service.mjs";
+import { handleContact } from "../src/modules/ContactModule/server/contact-service.mjs";
 const valid = {
   name: "Test User",
   email: "test@example.com",

@@ -1,0 +1,131 @@
+.site-header {
+  background: rgb(250 247 239 / 88%);
+  box-shadow: 0 5px 22px #202b4906;
+}
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.brand-mark {
+  width: 46px;
+  height: 46px;
+}
+.brand-name {
+  position: relative;
+  padding-bottom: 3px;
+}
+.brand-name::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 8px;
+  bottom: -4px;
+  height: 3px;
+  background: #253da4;
+  border-radius: 60% 25% 55% 30%;
+  transform: rotate(-2deg);
+}
+.wordmark {
+  color: #202b49;
+  font-weight: 800;
+  letter-spacing: -0.075em;
+}
+.logo-dot {
+  color: #ba503d;
+}
+.desktop-nav a {
+  color: #51576a;
+}
+.desktop-nav [aria-current="page"] {
+  text-decoration: underline wavy #253da4;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 1px;
+}
+.mobile-nav {
+  background: #faf7ef;
+}
+.button-secondary {
+  background: #fffdf6;
+  border-color: #cecabb;
+}
+.brand-strip {
+  margin-top: 40px;
+  padding: 23px 0;
+  border-block: 1px solid #dedbce;
+  background: #f1ebdd;
+}
+.brand-strip > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 28px;
+}
+.brand-strip > div > span:first-child {
+  font-family: ui-monospace, monospace;
+  color: #253da4;
+  font-size: 14px;
+}
+.brand-strip p {
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-style: italic;
+  color: #202b49;
+}
+.brand-strip-snout {
+  display: block;
+  width: 32px;
+  height: auto;
+  flex-shrink: 0;
+}
+.site-footer {
+  background: #efebdf;
+}
+.brand-strip {
+  pointer-events: none;
+}
+@media (max-width: 1100px) {
+  .brand-logo {
+    gap: 6px;
+  }
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media (max-width: 640px) {
+  .brand-logo {
+    font-size: 22px;
+    gap: 5px;
+  }
+  .brand-mark {
+    width: 36px;
+    height: 36px;
+  }
+  .header-inner {
+    gap: 12px;
+  }
+  .header-actions {
+    margin-left: 0;
+    gap: 13px;
+  }
+  .brand-strip {
+    margin-top: 24px;
+    padding-block: 20px;
+  }
+  .brand-strip > div {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+  .brand-strip > div > span:first-child {
+    font-size: 11px;
+  }
+  .brand-strip-snout {
+    width: 26px;
+  }
+  .brand-strip p {
+    width: 100%;
+    font-size: 19px;
+  }
+}

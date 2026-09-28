@@ -1,0 +1,20 @@
+---
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+
+import { site } from "../../../config/site";
+---
+
+<section class="technology-strip container">
+  <p>{t.about.technology}</p>
+  <div>
+    {site.technologies.map((name) => (
+      <span>{name}</span>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,75 @@
+{
+  "skip": "Přejít na obsah",
+  "menu": "Menu",
+  "close": "Zavřít",
+  "back": "Zpět na úvod",
+  "common": {
+    "learn": "Objevit řešení",
+    "allSolutions": "Všechna řešení",
+    "eyebrow": "TECHNOLOGIE S JASNÝM SMYSLEM",
+    "rights": "S rozmyslem. Do posledního detailu.",
+    "home": "Úvod",
+    "breadcrumbs": "Drobečková navigace"
+  },
+  "seo": {
+    "home": {
+      "title": "Vývoj softwaru pro vaše podnikání",
+      "description": "Webové a mobilní aplikace, firemní systémy a automatizace. Prasentace propojuje více než 10 let zkušeností s promyšleným vývojem na míru."
+    },
+    "solutions": {
+      "title": "Digitální řešení pro firmy",
+      "description": "Vývoj firemních systémů, webových a mobilních aplikací, integrace a dlouhodobý rozvoj. Řešení podle potřeb vašeho podnikání."
+    },
+    "process": {
+      "title": "Od prvního rozhovoru k fungujícímu řešení",
+      "description": "Zjistěte, jak probíhá analýza, návrh, vývoj a následná péče o váš software. Přehledně a s jasnými prioritami."
+    },
+    "about": {
+      "title": "Zkušenosti, na kterých můžete stavět",
+      "description": "Prasentace propojuje technické zkušenosti s porozuměním firemním procesům. Přes 10 let praxe ve vývoji aplikací."
+    },
+    "contact": {
+      "title": "Pojďme probrat váš projekt",
+      "description": "Napište nám, co potřebujete zjednodušit, propojit nebo vytvořit. Proberte svůj projekt s Prasentace."
+    },
+    "privacy": {
+      "title": "Ochrana soukromí",
+      "description": "Informace o údajích z kontaktního formuláře webu Prasentace."
+    }
+  },
+  "hero": {
+    "core": "Váš byznys",
+    "flow": "Nápad → Řešení → Posun"
+  },
+  "privacy": {
+    "title": "Vaše soukromí",
+    "intro": "S údaji, které nám svěříte, pracujeme pouze v souvislosti s vaší poptávkou.",
+    "sections": [
+      {
+        "title": "Kontaktní údaje",
+        "text": "Provozovatele webu Prasentace identifikují údaje uvedené níže. S dotazy k osobním údajům se můžete obrátit na kontaktní e-mail uvedený pod těmito informacemi."
+      },
+      {
+        "title": "Kontaktní formulář",
+        "text": "Zpracováváme jméno, e-mail, případně název firmy a obsah zprávy, abychom mohli odpovědět a domluvit další postup. Do zprávy nevkládejte citlivé údaje ani přístupová hesla."
+      },
+      {
+        "title": "Technické služby",
+        "text": "K provozu webu, doručení zprávy a ochraně formuláře slouží hosting, e-mailový server a Cloudflare Turnstile. Web sám nepřidává marketingové ani analytické sledování."
+      },
+      {
+        "title": "Vaše požadavky",
+        "text": "Pokud chcete zjistit, jaké údaje jsme v souvislosti s vaší poptávkou obdrželi, opravit je nebo požádat o jejich odstranění, napište nám na kontaktní e-mail."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "Tady příběh nepokračuje.",
+    "text": "Tato stránka neexistuje nebo se její adresa změnila."
+  },
+  "brand": {
+    "storyLabel": "Příběh značky Prasentace",
+    "formula": "Paní učitelko, to není kaňka. To je design.",
+    "promise": "Kaňky na papíře. Pořádek v kódu."
+  }
+}

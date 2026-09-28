@@ -1,0 +1,57 @@
+---
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+interface Props {
+  locale: Locale;
+  href: (locale: Locale) => string;
+}
+const { locale, href } = Astro.props;
+const t = dictionary(locale);
+import { locales } from "../config";
+import csFlag from "../assets/flags/cs.svg?url";
+import enFlag from "../assets/flags/en.svg?url";
+import deFlag from "../assets/flags/de.svg?url";
+const flags = { cs: csFlag, en: enFlag, de: deFlag };
+const languageCode = locale === "cs" ? "CZ" : locale.toUpperCase();
+import DisclosureChevron from "../../UIModule/components/DisclosureChevron.astro";
+---
+
+<details class="language-picker">
+  <summary aria-label={`${t.language}: ${languageCode}`}>
+    <span class="language-current">
+      <img
+        class="language-flag"
+        src={flags[locale]}
+        width="27"
+        height="18"
+        alt=""
+      />
+    </span>
+    <DisclosureChevron class="language-chevron" />
+  </summary>
+  <div class="language-options">
+    {locales.map((code) => (
+      <a
+        href={href(code)}
+        lang={code}
+        hreflang={code}
+        aria-current={code === locale ? "true" : undefined}
+        aria-label={dictionary(code).langName}
+        title={dictionary(code).langName}
+      >
+        <img
+          class="language-flag"
+          src={flags[code]}
+          width="27"
+          height="18"
+          alt=""
+        />
+      </a>
+    ))}
+  </div>
+</details>
+
+<script>
+  import { useDisclosure } from "../../UIModule/hooks/useDisclosure";
+  useDisclosure(".language-picker");
+</script>

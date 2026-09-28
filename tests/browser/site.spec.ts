@@ -1,15 +1,7 @@
 import { test, expect } from "@playwright/test";
-import { readFileSync } from "node:fs";
+import { readTranslations } from "../../scripts/read-translations.mjs";
 const dictionaries = Object.fromEntries(
-  ["cs", "en", "de"].map((locale) => [
-    locale,
-    JSON.parse(
-      readFileSync(
-        new URL(`../../src/locales/${locale}.json`, import.meta.url),
-        "utf8",
-      ),
-    ),
-  ]),
+  ["cs", "en", "de"].map((locale) => [locale, readTranslations(locale)]),
 );
 
 test("all 33 localized pages have a unique title, canonical and matching language links", async ({
@@ -234,7 +226,7 @@ test("reduced motion and no-JavaScript content remain usable", async ({
     reducedMotion: "reduce",
   });
   const page = await context.newPage();
-  await page.goto("http://127.0.0.1:4321/de/");
+  await page.goto("http://127.0.0.1:4331/de/");
   await expect(page.locator("main h1")).toContainText("Ihre Vision.");
   await expect(page.locator(".solution-card")).toHaveCount(5);
   expect(
@@ -260,7 +252,7 @@ test("invalid contact submissions are rejected before sending", async ({
   if (key) await expect(page.locator("button[type=submit]")).toBeEnabled();
   else await expect(page.locator("button[type=submit]")).toBeDisabled();
   const response = await request.post("/api/contact/", {
-    headers: { origin: "http://127.0.0.1:4321" },
+    headers: { origin: "http://127.0.0.1:4331" },
     data: { name: "", email: "invalid", message: "short", locale: "cs" },
   });
   expect(response.status()).toBe(422);

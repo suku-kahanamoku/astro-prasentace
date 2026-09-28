@@ -1,0 +1,15 @@
+---
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<section class="container page-intro">
+  <p class="eyebrow">{t.contact.tag}</p>
+  <h1>{t.contact.title}</h1>
+  <p class="lead">{t.contact.text}</p>
+</section>

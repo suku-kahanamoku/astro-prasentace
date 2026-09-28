@@ -1,0 +1,83 @@
+---
+import LanguagePicker from "../../LangModule/components/LanguagePicker.astro";
+import { dictionary } from "../providers/translations";
+import { type Locale } from "../../LangModule/providers/locale";
+import { url, type PageId } from "../../../config/routes";
+import Button from "../../UIModule/components/Button.astro";
+
+import BrandLogo from "./BrandLogo.astro";
+interface Props {
+  locale: Locale;
+  page: PageId;
+  solutionId?: string;
+}
+const { locale, page, solutionId } = Astro.props;
+const t = dictionary(locale);
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <BrandLogo href={url(locale)} />
+    <nav class="desktop-nav" aria-label={t.menu}>
+      {Object.entries(t.nav).map(([id, label]) => (
+        <a
+          href={url(locale, id as PageId)}
+          aria-current={page === id ? "page" : undefined}
+        >
+          {label}
+        </a>
+      ))}
+    </nav>
+    <div class="header-actions">
+      <Button href={url(locale, "contact")} class="header-cta">
+        {t.common.cta}
+      </Button>
+      <LanguagePicker {locale} href={(code) => url(code, page, solutionId)} />
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-navigation"
+        aria-label={t.menu}
+        data-menu-toggle
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-navigation" class="mobile-nav" aria-label={t.menu} hidden>
+    {Object.entries(t.nav).map(([id, label]) => (
+      <a
+        href={url(locale, id as PageId)}
+        aria-current={page === id ? "page" : undefined}
+      >
+        {label}
+      </a>
+    ))}
+  </nav>
+</header>
+
+<noscript>
+  <style is:global>
+    @media (max-width: 1100px) {
+      .menu-toggle {
+        display: none;
+      }
+      .mobile-nav[hidden] {
+        display: block;
+      }
+      .site-header {
+        position: relative;
+        height: auto;
+      }
+      .header-inner {
+        min-height: 75px;
+      }
+    }
+  </style>
+</noscript>
+
+<script>
+  import { useNavigation } from "../../UIModule/hooks/useNavigation";
+  useNavigation();
+</script>

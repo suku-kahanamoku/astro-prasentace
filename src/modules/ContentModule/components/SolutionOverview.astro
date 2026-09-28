@@ -1,0 +1,36 @@
+---
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+import type { Solution } from "../providers/translations";
+interface Props {
+  locale: Locale;
+  solution: Solution;
+}
+const { locale, solution } = Astro.props;
+const t = dictionary(locale);
+
+import Icon from "../../UIModule/components/Icon.astro";
+---
+
+<section class="container section detail-grid">
+  <div data-reveal>
+    <span class="service-icon large">
+      <Icon name={solution.id} size={32} />
+    </span>
+    <h2>{solution.short}</h2>
+    <p class="lead">{solution.detail}</p>
+    <div class="outcome">
+      <p class="eyebrow">{t.common.deliverables}</p>
+      <p>{solution.outcome}</p>
+    </div>
+  </div>
+  <div class="feature-panel" data-reveal>
+    <h3>{t.common.detail}</h3>
+    {solution.features.map((feature) => (
+      <div class="feature-row">
+        <Icon name="check" size={20} />
+        <span>{feature}</span>
+      </div>
+    ))}
+  </div>
+</section>

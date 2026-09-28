@@ -1,0 +1,35 @@
+body {
+  background-image: radial-gradient(#253da410 0.6px, transparent 0.6px);
+  background-size: 7px 7px;
+}
+::selection {
+  background: #f2ad9c;
+  color: #202b49;
+}
+.button {
+  border-radius: 6px 8px 5px 7px;
+}
+@keyframes hero-dot-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 4px #f2ad9c32;
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 7px #f2ad9c12;
+  }
+}
+.connection-status {
+  background: #fffdf6;
+  border: 1px solid #d7d2c2;
+  border-radius: 4px;
+  box-shadow: 2px 3px 0 #202b490a;
+}
+.eyebrow {
+  font-family: ui-monospace, monospace;
+  letter-spacing: 0.12em;
+}
+.card-arrow {
+  border-radius: 50% 43% 48% 40%;
+}

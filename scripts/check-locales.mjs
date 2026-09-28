@@ -1,12 +1,7 @@
-import { readFileSync } from "node:fs";
+import { readdirSync, existsSync } from "node:fs";
+import { readTranslations, readModule } from "./read-translations.mjs";
 import assert from "node:assert/strict";
-const read = (locale) =>
-  JSON.parse(
-    readFileSync(
-      new URL(`../src/locales/${locale}.json`, import.meta.url),
-      "utf8",
-    ),
-  );
+const read = readTranslations;
 function shape(value, path = "") {
   if (Array.isArray(value))
     return value.map((item, index) => shape(item, `${path}.${index}`));
@@ -45,3 +40,21 @@ for (const locale of ["cs", "en", "de"]) {
 console.log(
   "CZ / EN / DE: translation structure, solution IDs and unique routes verified.",
 );
+
+const modules = new URL("../src/modules/", import.meta.url);
+for (const module of readdirSync(modules)) {
+  const folder = new URL(`${module}/locales/`, modules);
+  if (!existsSync(folder)) continue;
+  assert.deepEqual(
+    readdirSync(folder).sort(),
+    ["cs.json", "de.json", "en.json"],
+    module,
+  );
+  for (const locale of ["cs", "en", "de"])
+    assert.deepEqual(
+      shape(readModule(module, locale)),
+      shape(readModule(module, "cs")),
+      `${module}: ${locale}`,
+    );
+}
+console.log("Module locale structures verified.");

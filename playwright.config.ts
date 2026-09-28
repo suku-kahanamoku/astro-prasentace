@@ -5,15 +5,16 @@ export default defineConfig({
   workers: 2,
   timeout: 45000,
   use: {
-    baseURL: "http://127.0.0.1:4321",
+    baseURL: "http://127.0.0.1:4331",
     browserName: "chromium",
     launchOptions: { channel: "chrome" },
     screenshot: "only-on-failure",
     trace: "retain-on-failure",
   },
   webServer: {
-    command: "corepack pnpm dev --port 4321",
-    url: "http://127.0.0.1:4321",
+    command:
+      "corepack pnpm exec astro dev --config astro.test.config.mjs --host 127.0.0.1 --port 4331 --ignore-lock",
+    url: "http://127.0.0.1:4331",
     reuseExistingServer: !process.env.CI,
     timeout: 60000,
   },

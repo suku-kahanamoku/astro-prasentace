@@ -1,3 +1,4 @@
+import { readTranslations } from "./read-translations.mjs";
 import { chromium } from "@playwright/test";
 import { readFile, mkdir } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
@@ -37,9 +38,7 @@ try {
   await page.route("**/*", (route) => route.abort());
   await mkdir(resolve(root, "public/social"), { recursive: true });
   for (const locale of ["cs", "en", "de"]) {
-    const t = JSON.parse(
-      await readFile(resolve(root, `src/locales/${locale}.json`), "utf8"),
-    );
+    const t = readTranslations(locale);
     await page.setContent(`<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><style>
 ${fontCss}
 *{box-sizing:border-box}body{margin:0;width:1200px;height:630px;overflow:hidden;font-family:'Manrope Variable',sans-serif;color:#202b49;background:#faf7ef}

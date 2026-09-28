@@ -1,0 +1,49 @@
+---
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+interface Props {
+  locale: Locale;
+  interests: { id: string; title: string }[];
+}
+const { locale, interests } = Astro.props;
+const t = dictionary(locale);
+
+import Icon from "../../UIModule/components/Icon.astro";
+import { site } from "../../../config/site";
+
+import ProtectedContact from "../../UIModule/components/ProtectedContact.astro";
+import ContactForm from "./ContactForm.astro";
+---
+
+<section class="container contact-grid">
+  <div class="contact-details">
+    <p class="eyebrow contact-label">
+      <Icon name="mail" size={20} />
+      {t.contact.emailLabel}
+    </p>
+    <ProtectedContact kind="email" value={site.email} class="contact-link" />
+    <p class="eyebrow contact-label">
+      <Icon name="mobile" size={20} />
+      {t.contact.phoneLabel}
+    </p>
+    <ProtectedContact kind="phone" value={site.phone} class="contact-link" />
+    <p class="eyebrow contact-label">
+      <Icon name="globe" size={20} />
+      {t.common.address}
+    </p>
+    <address>
+      {site.address.street}
+      <br />
+      {site.address.postalCode} {site.address.city}
+    </address>
+    <div class="business-details">
+      <p>
+        {site.name} · {t.common.entity}
+      </p>
+      <p>
+        {t.common.registration}: {site.registrationId}
+      </p>
+    </div>
+  </div>
+  <ContactForm {locale} {interests} />
+</section>

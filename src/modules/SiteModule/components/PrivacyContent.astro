@@ -1,0 +1,32 @@
+---
+import LegalSection from "./LegalSection.astro";
+import ProtectedContact from "../../UIModule/components/ProtectedContact.astro";
+import { dictionary } from "../providers/translations";
+import { type Locale } from "../../LangModule/providers/locale";
+import { site } from "../../../config/site";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<article class="container legal-page">
+  <p class="eyebrow">Prasentace</p>
+  <h1>{t.privacy.title}</h1>
+  <p class="lead">{t.privacy.intro}</p>
+  {t.privacy.sections.map((section) => (
+    <LegalSection {...section} />
+  ))}
+  <address>
+    {site.name} · {t.common.entity}
+    <br />
+    {t.common.registration}: {site.registrationId}
+    <br />
+    {site.address.street}
+    <br />
+    {site.address.postalCode} {site.address.city}
+    <br />
+    <ProtectedContact kind="email" value={site.email} />
+  </address>
+</article>

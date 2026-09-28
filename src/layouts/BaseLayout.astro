@@ -1,128 +1,44 @@
 ---
+import SeoHead from "../modules/SiteModule/components/SeoHead.astro";
+
 import "@fontsource-variable/manrope";
-import "@/styles/global.css";
-import "@/styles/brand.css";
-import Header from "@/components/layout/Header.astro";
-import Footer from "@/components/layout/Footer.astro";
-import { dictionary, locales, url, type Locale, type PageId } from "@/i18n";
-import { site } from "@/config/site";
-import Breadcrumbs from "@/components/ui/Breadcrumbs.astro";
-import { breadcrumbs } from "@/utils/breadcrumbs";
+import "../styles/global.css";
+import "../styles/brand.css";
+import Header from "../modules/SiteModule/components/Header.astro";
+import Footer from "../modules/SiteModule/components/Footer.astro";
+import { dictionary } from "../modules/SiteModule/providers/translations";
+import { type Locale } from "../modules/LangModule/providers/locale";
+import { type PageId } from "../config/routes";
+
+import Breadcrumbs from "../modules/UIModule/components/Breadcrumbs.astro";
+import { breadcrumbs } from "../modules/SiteModule/providers/breadcrumbs";
 interface Props {
   locale: Locale;
   page: PageId;
   solutionId?: string;
+  solutionTitle?: string;
   title?: string;
   description?: string;
   noindex?: boolean;
 }
 const { locale, page, solutionId, noindex = false } = Astro.props;
 const t = dictionary(locale);
-const title = `${Astro.props.title || t.seo[page].title} | Prasentace`;
-const description = Astro.props.description || t.seo[page].description;
-const canonical = new URL(url(locale, page, solutionId), Astro.site);
-const breadcrumbItems = noindex ? [] : breadcrumbs(locale, page, solutionId);
-const socialImage = new URL(`/social/og-${locale}.png`, Astro.site);
-const socialImageAlt = `${site.name} — ${t.seo.home.title}`;
-const organizationId = new URL("/#organization", Astro.site).href;
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": organizationId,
-  name: site.name,
-  logo: new URL("/brand/mark.svg", Astro.site).href,
-  url: Astro.site?.href,
-  identifier: site.registrationId,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: site.address.street,
-    addressLocality: site.address.city,
-    postalCode: site.address.postalCode,
-    addressCountry: site.address.country,
-  },
-};
-const structuredData = [
-  schema,
-  ...(!noindex && page === "home"
-    ? [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "@id": new URL("/#website", Astro.site).href,
-          name: site.name,
-          url: Astro.site?.href,
-          inLanguage: locales,
-          publisher: { "@id": organizationId },
-        },
-      ]
-    : []),
-  ...(breadcrumbItems.length
-    ? [
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: breadcrumbItems.map((item, index) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            name: item.name,
-            item: new URL(item.href, Astro.site).href,
-          })),
-        },
-      ]
-    : []),
-];
+const breadcrumbItems = noindex
+  ? []
+  : breadcrumbs(locale, page, solutionId, Astro.props.solutionTitle);
 ---
 
 <!doctype html>
 <html lang={locale}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#faf7ef" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    {noindex ? (
-      <meta name="robots" content="noindex, follow" />
-    ) : (
-      <>
-        <link rel="canonical" href={canonical} />
-        {locales.map((code) => (
-          <link
-            rel="alternate"
-            hreflang={code}
-            href={new URL(url(code, page, solutionId), Astro.site)}
-          />
-        ))}
-        <link
-          rel="alternate"
-          hreflang="x-default"
-          href={new URL(url("cs", page, solutionId), Astro.site)}
-        />
-      </>
-    )}
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Prasentace" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
-    <meta
-      property="og:locale"
-      content={{ cs: "cs_CZ", en: "en_GB", de: "de_DE" }[locale]}
-    />
-    <meta property="og:image" content={socialImage} />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content={socialImageAlt} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={socialImage} />
-    <meta name="twitter:image:alt" content={socialImageAlt} />
-    <script
-      type="application/ld+json"
-      set:html={JSON.stringify(structuredData).replace(/</g, "\\u003c")}
+    <SeoHead
+      {locale}
+      {page}
+      {solutionId}
+      solutionTitle={Astro.props.solutionTitle}
+      title={Astro.props.title}
+      description={Astro.props.description}
+      {noindex}
     />
   </head>
   <body>
@@ -138,7 +54,8 @@ const structuredData = [
     </main>
     <Footer {locale} />
     <script>
-      import "@/scripts/site";
+      import { useReveal } from "../modules/UIModule/hooks/useReveal";
+      useReveal();
     </script>
   </body>
 </html>

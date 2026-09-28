@@ -1,0 +1,42 @@
+---
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const t = dictionary(locale);
+import Button from "../../UIModule/components/Button.astro";
+
+import { url } from "../../../config/routes";
+import Ecosystem from "./Ecosystem.astro";
+---
+
+<section class="hero container">
+  <div class="hero-copy">
+    <p class="brand-edition">{t.brand.edition}</p>
+    <p class="hero-tag">
+      <span></span>
+      {t.hero.tag}
+    </p>
+    <h1>
+      {t.hero.line1}
+      <br />
+      <span>{t.hero.line2}</span>
+      <br />
+      {t.hero.line3}
+    </h1>
+    <p class="hero-description">{t.hero.text}</p>
+    <div class="hero-buttons">
+      <Button href={url(locale, "contact")}>{t.common.cta}</Button>
+      <Button href="#solutions" variant="text">
+        {t.hero.secondary}
+      </Button>
+    </div>
+    <p class="hero-note">
+      <span aria-hidden="true">↳</span>
+      {t.hero.note}
+    </p>
+  </div>
+  <Ecosystem {t} />
+</section>

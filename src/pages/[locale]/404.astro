@@ -1,7 +1,7 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import NotFound from "@/views/NotFound.astro";
-import type { Locale } from "@/i18n";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NotFound from "../../modules/SiteModule/components/NotFoundSection.astro";
+import { type Locale } from "../../modules/LangModule/providers/locale";
 export const getStaticPaths = () =>
   ["en", "de"].map((locale) => ({ params: { locale }, props: { locale } }));
 interface Props {

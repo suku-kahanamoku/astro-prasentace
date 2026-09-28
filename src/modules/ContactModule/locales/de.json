@@ -1,0 +1,34 @@
+{
+  "common": {
+    "address": "Geschäftssitz"
+  },
+  "contact": {
+    "tag": "SPRECHEN WIR DARÜBER",
+    "title": "Ein gutes Projekt beginnt\nmit einem Gespräch.",
+    "text": "Was möchten Sie entwickeln, vereinfachen oder verbinden? Ein technisches Pflichtenheft brauchen Sie noch nicht.",
+    "emailLabel": "Schreiben Sie uns",
+    "formTitle": "Raum für Ihre Idee",
+    "name": "Ihr Name",
+    "email": "Geschäftliche E-Mail",
+    "company": "Unternehmen",
+    "optional": "optional",
+    "interest": "Wobei können wir helfen?",
+    "choose": "Bereich auswählen",
+    "message": "Erzählen Sie uns von Ihrem Projekt",
+    "placeholder": "Was soll die Lösung können? Was bremst Sie heute?",
+    "submit": "Anfrage senden",
+    "sending": "Wird gesendet…",
+    "notice": "Wir verwenden Ihre Angaben, um Ihre Anfrage zu bearbeiten.",
+    "success": "Vielen Dank. Ihre Nachricht ist angekommen. Wir melden uns unter der angegebenen E-Mail-Adresse.",
+    "error": "Die Nachricht konnte nicht gesendet werden. Versuchen Sie es später erneut oder nutzen Sie die auf dieser Seite angegebene E-Mail-Adresse.",
+    "invalid": "Bitte prüfen Sie die markierten Felder.",
+    "captcha": "Bitte schließen Sie die Spam-Schutz-Prüfung ab.",
+    "unavailable": "Das Formular ist derzeit nicht verfügbar. Nutzen Sie bitte die auf dieser Seite angegebene E-Mail-Adresse.",
+    "nojs": "Aktivieren Sie JavaScript für das Formular oder kontaktieren Sie uns per E-Mail.",
+    "required": "Bitte füllen Sie dieses Feld aus.",
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "messageLength": "Bitte schreiben Sie mindestens 10 Zeichen.",
+    "website": "Website",
+    "phoneLabel": "Rufen Sie uns an"
+  }
+}

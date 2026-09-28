@@ -1,0 +1,366 @@
+.brand-edition {
+  font-family: ui-monospace, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #646477;
+  margin-bottom: 22px;
+}
+.hero {
+  padding-top: 68px;
+  padding-bottom: 66px;
+}
+.hero-tag {
+  color: #51576a;
+  margin-bottom: 22px;
+}
+.hero-tag > span {
+  flex-shrink: 0;
+  background: #ba503d;
+  box-shadow: 0 0 0 4px #f2ad9c32;
+  animation: hero-dot-pulse 2.8s ease-in-out infinite;
+}
+.hero h1 {
+  font-weight: 750;
+  letter-spacing: -0.065em;
+}
+.hero h1 > span {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+.hero h1 > span::after {
+  content: "";
+  position: absolute;
+  left: -1%;
+  right: -3%;
+  bottom: 6%;
+  height: 17%;
+  border-radius: 32% 17% 40% 20%;
+  background: #f2ad9c99;
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+.hero-note {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #51576a;
+}
+.ecosystem {
+  margin-top: 15px;
+}
+.notebook-sheet {
+  position: absolute;
+  inset: 3% 3% 3% 6%;
+  background-color: #fffdf6;
+  background-image:
+    linear-gradient(
+      90deg,
+      transparent 38px,
+      #c7616138 38px,
+      #c7616138 39px,
+      transparent 39px
+    ),
+    repeating-linear-gradient(transparent 0 27px, #253da416 27px 28px);
+  border: 1px solid #dedbce;
+  border-radius: 3px 12px 10px 3px;
+  transform: rotate(3deg);
+  box-shadow:
+    4px 7px 0 #eee9dd,
+    5px 8px 0 #d8d3c6,
+    10px 18px 38px #352d2110;
+  z-index: -2;
+}
+.notebook-sheet::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 38%;
+  width: 30%;
+  height: 28px;
+  background: #e8d5bfa6;
+  border-left: 2px dashed #fffdf6;
+  border-right: 2px dashed #fffdf6;
+  transform: rotate(-5deg);
+}
+.notebook-label {
+  position: absolute;
+  top: 9%;
+  right: 10%;
+  font:
+    10px ui-monospace,
+    monospace;
+  color: #5c647b;
+  transform: rotate(3deg);
+}
+.notebook-ink {
+  position: absolute;
+  width: 25%;
+  height: auto;
+  right: 1%;
+  bottom: 6%;
+  transform: rotate(-22deg);
+  z-index: -1;
+}
+.notebook-note {
+  position: absolute;
+  bottom: 7%;
+  left: 10%;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+  color: #253da4;
+  transform: rotate(-6deg);
+}
+.orbit {
+  display: none;
+}
+.connections {
+  stroke: #8791bb;
+  stroke-dasharray: 6 5;
+}
+.flow-line {
+  stroke: #253da4;
+}
+.ecosystem-core {
+  background: #fffdf6;
+  border: 1px solid #d7d2c2;
+  border-radius: 9px 13px 8px 11px;
+  box-shadow:
+    4px 6px 0 #253da418,
+    0 10px 22px #202b490c;
+  gap: 0;
+}
+.core-brand {
+  width: 72px;
+  height: 72px;
+}
+.ecosystem-core strong {
+  color: #253da4;
+  margin-top: 0;
+  font-weight: 800;
+}
+.floating-card {
+  background: #fffdf6;
+  border-color: #d7d2c2;
+  border-radius: 5px 9px 7px 4px;
+  box-shadow:
+    3px 5px 0 #202b4910,
+    0 10px 24px #202b4908;
+}
+.mobile-card {
+  background: #f8e5dc;
+}
+.mini-icon {
+  color: #253da4;
+  background: #e9eaf4;
+  border-radius: 7px;
+}
+.mini-icon.lilac {
+  color: #853f36;
+  background: #f4d8cd;
+}
+.mini-icon.mint {
+  color: #496651;
+  background: #e8ecdf;
+}
+.proof-strip {
+  border-color: #dedbce;
+}
+.proof-strip strong {
+  color: #253da4;
+}
+.solution-card {
+  border-radius: 7px 13px 9px 5px;
+  background: #fffdf6;
+  box-shadow: 3px 4px 0 #202b4906;
+}
+.solution-card:hover {
+  border-color: #253da4;
+  box-shadow: 5px 7px 0 #253da416;
+}
+.solution-systems {
+  background: #edf0f6;
+}
+.solution-web {
+  background: #fffdf6;
+}
+.solution-mobile {
+  background: #f9eee5;
+}
+.solution-automation {
+  background: #eef0e5;
+}
+.solution-support {
+  background: #f5f0df;
+}
+.service-icon {
+  border-radius: 8px;
+}
+.card-number {
+  font-family: ui-monospace, monospace;
+  color: #6a6170;
+}
+.tags span {
+  border-radius: 4px;
+}
+.experience-visual {
+  border-radius: 0 0 6px 6px;
+  border-top: 0;
+  border-color: #dedbce;
+
+  clip-path: polygon(
+    0 4px,
+    3% 2px,
+    5% 5px,
+    8% 3px,
+    10% 7px,
+    12% 4px,
+    16% 5px,
+    19% 1px,
+    22% 4px,
+    25% 3px,
+    27% 9px,
+    29% 4px,
+    33% 6px,
+    36% 2px,
+    40% 5px,
+    43% 3px,
+    46% 7px,
+    49% 4px,
+    53% 5px,
+    56% 1px,
+    59% 4px,
+    62% 3px,
+    65% 8px,
+    67% 5px,
+    71% 6px,
+    74% 2px,
+    78% 4px,
+    81% 3px,
+    84% 7px,
+    87% 4px,
+    90% 5px,
+    93% 2px,
+    96% 4px,
+    100% 3px,
+    calc(100% + 12px) 3px,
+    calc(100% + 12px) calc(100% + 12px),
+    -12px calc(100% + 12px),
+    -12px 4px
+  );
+  background-color: #f2eddf;
+  background-image: repeating-linear-gradient(
+    transparent 0 27px,
+    #253da419 27px 28px
+  );
+  box-shadow: 6px 7px 0 #202b4908;
+  transform: rotate(-2deg);
+}
+.experience-years {
+  font-weight: 750;
+  color: #253da4;
+}
+.experience-ink {
+  position: absolute;
+  right: -20px;
+  top: -35px;
+  width: 140px;
+  height: auto;
+  transform: rotate(28deg);
+}
+.experience-lines {
+  display: none;
+}
+.experience-caption {
+  color: #253da4;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+.process-section {
+  background: #f1eddf;
+}
+.step-track span {
+  color: #253da4;
+  font-family: ui-monospace, monospace;
+  border: 1px solid #253da4;
+  border-radius: 48% 52% 44% 56%;
+  padding: 5px 9px;
+  transform: rotate(-5deg);
+}
+.step-track i {
+  background: #d5d0c2;
+}
+.step-output {
+  color: #394b85;
+  border-color: #d5d0c2;
+}
+.cta-panel {
+  background: #eeeade;
+  border-color: #d8d3c5;
+  border-radius: 6px 20px 8px 10px;
+}
+.cta-orbits {
+  background: url("/brand/ink.svg") center / contain no-repeat;
+  transform: translateY(-50%) rotate(-8deg);
+}
+.cta-orbits i {
+  display: none;
+}
+.cta-orbits span {
+  color: #fffdf6;
+  background: none;
+}
+.feature-panel,
+.values-grid article,
+.service-detail {
+  background: #fffdf6;
+  border-radius: 7px 13px 8px 6px;
+}
+.outcome {
+  background: #f1eddf;
+  border-radius: 6px;
+}
+.notebook-sheet,
+.notebook-ink,
+.experience-ink {
+  pointer-events: none;
+}
+@media (max-width: 1100px) {
+  .hero {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 640px) {
+  .hero {
+    padding-top: 38px;
+    padding-bottom: 48px;
+  }
+  .brand-edition {
+    font-size: 10px;
+    letter-spacing: 0.03em;
+    margin-bottom: 18px;
+  }
+  .ecosystem {
+    margin-top: 8px;
+  }
+  .notebook-note {
+    font-size: 16px;
+    bottom: 5%;
+  }
+  .notebook-label {
+    font-size: 8px;
+    top: 8%;
+  }
+  .core-brand {
+    width: 53px;
+    height: 53px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .notebook-sheet,
+  .experience-visual {
+    transform: none;
+  }
+}

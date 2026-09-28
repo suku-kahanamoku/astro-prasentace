@@ -1,0 +1,21 @@
+@theme {
+  --font-sans: "Manrope Variable", sans-serif;
+  --color-brand: #253da4;
+}
+:root {
+  --ink: #202b49;
+  --muted: #51576a;
+  --text-secondary: #595f71;
+  --text-caption: 12px;
+  --text-label: 13px;
+  --text-ui: 14px;
+  --text-small: 15px;
+  --text-copy: 16px;
+  --text-body: 17px;
+  --text-lead: 18px;
+  --blue: #253da4;
+  --line: #dedbce;
+  --paper: #f3f0e6;
+  --radius: 24px;
+  color-scheme: light;
+}

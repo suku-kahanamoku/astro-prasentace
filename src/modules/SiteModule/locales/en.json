@@ -1,0 +1,75 @@
+{
+  "skip": "Skip to content",
+  "menu": "Menu",
+  "close": "Close",
+  "back": "Back to home",
+  "common": {
+    "learn": "Explore solution",
+    "allSolutions": "All solutions",
+    "eyebrow": "TECHNOLOGY WITH PURPOSE",
+    "rights": "Considered. Down to the last detail.",
+    "home": "Home",
+    "breadcrumbs": "Breadcrumb navigation"
+  },
+  "seo": {
+    "home": {
+      "title": "Software that moves your business forward",
+      "description": "Web and mobile applications, business systems and automation. Prasentace combines over 10 years of development experience with thoughtful custom solutions."
+    },
+    "solutions": {
+      "title": "Digital solutions for your business",
+      "description": "Business systems, web and mobile applications, integrations and ongoing development. Software designed around your business."
+    },
+    "process": {
+      "title": "From first conversation to working software",
+      "description": "Discover our approach to analysis, design, development and ongoing support. A clear process with shared priorities."
+    },
+    "about": {
+      "title": "Experience you can build on",
+      "description": "Prasentace brings technical experience and an understanding of business processes together. More than 10 years in application development."
+    },
+    "contact": {
+      "title": "Let’s talk about your project",
+      "description": "Tell us what you want to simplify, connect or create. Discuss your project with Prasentace."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "description": "How Prasentace handles information submitted through the contact form."
+    }
+  },
+  "hero": {
+    "core": "Your business",
+    "flow": "Idea → Solution → Progress"
+  },
+  "privacy": {
+    "title": "Your privacy",
+    "intro": "We use the information you share with us only in connection with your enquiry.",
+    "sections": [
+      {
+        "title": "Contact details",
+        "text": "The operator of Prasentace is identified by the business details below. For questions about personal data, use the contact email shown below this information."
+      },
+      {
+        "title": "Contact form",
+        "text": "We process your name, email, optional company name and message to reply and discuss next steps. Please do not include sensitive information or passwords."
+      },
+      {
+        "title": "Technical services",
+        "text": "Hosting, an email server and Cloudflare Turnstile support website operation, message delivery and form protection. The website itself does not add marketing or analytics tracking."
+      },
+      {
+        "title": "Your requests",
+        "text": "To ask what information we received with your enquiry, correct it or request its removal, please contact us by email."
+      }
+    ]
+  },
+  "notFound": {
+    "title": "This is not where the story continues.",
+    "text": "This page does not exist or its address has changed."
+  },
+  "brand": {
+    "storyLabel": "The story behind Prasentace",
+    "formula": "Miss, that’s not an ink blot. That’s design.",
+    "promise": "Ink on paper. Order in code."
+  }
+}

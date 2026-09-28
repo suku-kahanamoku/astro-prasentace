@@ -1,0 +1,21 @@
+---
+interface Props {
+  kind: "email" | "phone";
+  value: string;
+  class?: string;
+}
+const { kind, value, class: className } = Astro.props;
+const target =
+  kind === "email" ? `mailto:${value}` : `tel:${value.replaceAll(" ", "")}`;
+const encoded = btoa(target);
+---
+
+<span class={className} data-protected-contact={encoded}>
+  {Array.from(value).map((character) => (
+    <span>{character}</span>
+  ))}
+</span>
+<script>
+  import { useProtectedContact } from "../hooks/useProtectedContact";
+  useProtectedContact();
+</script>

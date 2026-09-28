@@ -1,0 +1,34 @@
+{
+  "routes": {
+    "home": "",
+    "solutions": "loesungen",
+    "process": "unser-vorgehen",
+    "about": "ueber-uns",
+    "contact": "kontakt",
+    "privacy": "datenschutz"
+  },
+  "solutions": {
+    "items": [
+      {
+        "id": "systems",
+        "slug": "unternehmenssysteme"
+      },
+      {
+        "id": "web",
+        "slug": "webanwendungen"
+      },
+      {
+        "id": "mobile",
+        "slug": "mobile-anwendungen"
+      },
+      {
+        "id": "automation",
+        "slug": "integrationen-und-ki"
+      },
+      {
+        "id": "support",
+        "slug": "entwicklung-und-betreuung"
+      }
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "routes": {
+    "home": "",
+    "solutions": "reseni",
+    "process": "jak-pracujeme",
+    "about": "o-prasentace",
+    "contact": "kontakt",
+    "privacy": "ochrana-soukromi"
+  },
+  "solutions": {
+    "items": [
+      {
+        "id": "systems",
+        "slug": "firemni-systemy"
+      },
+      {
+        "id": "web",
+        "slug": "webove-aplikace"
+      },
+      {
+        "id": "mobile",
+        "slug": "mobilni-aplikace"
+      },
+      {
+        "id": "automation",
+        "slug": "integrace-a-ai"
+      },
+      {
+        "id": "support",
+        "slug": "rozvoj-a-podpora"
+      }
+    ]
+  }
+}
