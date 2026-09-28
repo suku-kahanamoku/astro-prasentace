@@ -16,7 +16,7 @@ corepack pnpm dev --port 4321
 Pro server na pozadí:
 
 ```bash
-corepack pnpm exec astro dev --host 127.0.0.1 --port 4321 --background
+corepack pnpm dev --port 4321 --background
 corepack pnpm exec astro dev status
 corepack pnpm exec astro dev logs
 corepack pnpm exec astro dev stop
@@ -350,7 +350,7 @@ corepack pnpm test:browser
 corepack pnpm format:check
 ```
 
-Browser testy spouštějí izolovaný Astro server na 4331 s `astro.test.config.mjs`. Testují stejné routy a API handlery přímo, aby vývojová proxy Netlify nepodávala staré soubory z `dist` nebo nezměnila stav lokalizovaných 404. Produkční `astro.config.mjs`, Netlify adaptér a přesměrování zůstávají zachované a ověřuje je produkční build. Testy formuláře používají mock CAPTCHA a mock odpovědi API; nepotvrzují doručení skutečného e-mailu.
+Běžný `npm run dev` (nebo `corepack pnpm dev`) používá `astro.dev.config.mjs`: sdílí konfiguraci webu, ale nezapojuje lokální Netlify proxy. Ta může přes produkční pravidla `/en/*` a `/de/*` vracet HTML z `dist` odkazující na nedostupné hashované CSS. Astro při vývoji obsluhuje stránky i API přímo. Browser testy spouštějí tentýž příkaz na odděleném portu 4331 a ověřují načtení stylů i funkčnost skriptů po přepnutí jazyka. Při přímém spuštění Astro CLI použijte `astro dev --config astro.dev.config.mjs`. Produkční `astro.config.mjs`, Netlify adaptér a přesměrování zůstávají zachované a ověřuje je produkční build. Testy formuláře používají mock CAPTCHA a mock odpovědi API; nepotvrzují doručení skutečného e-mailu.
 
 ## Světlé a tmavé téma
 

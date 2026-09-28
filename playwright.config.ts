@@ -12,8 +12,7 @@ export default defineConfig({
     trace: "retain-on-failure",
   },
   webServer: {
-    command:
-      "corepack pnpm exec astro dev --config astro.test.config.mjs --host 127.0.0.1 --port 4331 --ignore-lock",
+    command: "npm run dev -- --port 4331 --ignore-lock",
     url: "http://127.0.0.1:4331",
     reuseExistingServer: !process.env.CI,
     timeout: 60000,
