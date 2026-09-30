@@ -1,8 +1,18 @@
 ---
+/**
+ * Značka webu s logem a názvem.
+ *
+ * Odkaz na domovskou stránku dostává přes prop, protože v hlavičce míří na
+ * kořen v jazyce návštěvníka a v patičce na domovskou stránku téhož jazyka.
+ */
 import { site } from "../../../config/site";
+
+/** Vstupní parametry značky webu. */
 interface Props {
+  /** URL cílové stránky značky. */
   href: string;
 }
+
 const { href } = Astro.props;
 ---
 

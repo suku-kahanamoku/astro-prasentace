@@ -1,4 +1,16 @@
 ---
+/**
+ * Hlavní lokalizovaná stránka webu.
+ *
+ * Jediná stránka pod `[...path]` skládá všechny sekce (domovská stránka,
+ * řešení, detail řešení, proces, o nás, kontakt, soukromí) do `BaseLayout`.
+ * Seznam statických cest dodává `allRoutes()`, které generuje URL ze
+ * překladových slugů v `src/config/routes.ts`.
+ *
+ * Vstup (z `getStaticPaths`): `locale`, `page` a volitelné `solutionId`.
+ * Neproznané ID řešení se tiše ignoruje – stránka se vykreslí jako přehled
+ * celé sekce řešení.
+ */
 import { allRoutes, type PageId } from "../config/routes";
 import { dictionary } from "../modules/ContentModule/providers/translations";
 import type { Locale } from "../modules/LangModule/config";
@@ -21,13 +33,23 @@ import AboutIntro from "../modules/ContentModule/components/AboutIntro.astro";
 import ValuesSection from "../modules/ContentModule/components/ValuesSection.astro";
 import AboutTechnologySection from "../modules/ContentModule/components/AboutTechnologySection.astro";
 import RelatedSolutions from "../modules/ContentModule/components/RelatedSolutions.astro";
+
+/** Stránka se generuje staticky pro všechny jazyky a sekce z `allRoutes()`. */
 export const prerender = true;
+
+/** Zdroj statických cest: `{ path }` parametry a `locale`/`page`/`solutionId` props. */
 export const getStaticPaths = allRoutes;
+
+/** Props předané z `allRoutes()` do jednotlivé instance stránky. */
 interface Props {
+  /** Jazyk instance stránky. */
   locale: Locale;
+  /** Sekce, pro kterou byla cesta vytvořena. */
   page: PageId;
+  /** ID řešení pro detail; `undefined` u přehledových strásek. */
   solutionId?: string;
 }
+
 const { locale, page, solutionId } = Astro.props;
 const t = dictionary(locale);
 const solution = t.solutions.items.find((item) => item.id === solutionId);

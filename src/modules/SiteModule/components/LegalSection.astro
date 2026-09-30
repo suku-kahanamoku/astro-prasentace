@@ -1,8 +1,17 @@
 ---
+/**
+ * Jedna podsekce právního textu.
+ *
+ * Čistě datová komponenta bez slovníku, protože ji lze použít pro texty
+ * z jakéhokoli oddílu slovníku (aktuálně `privacy.sections`).
+ */
 interface Props {
+  /** Nadpis podsekce. */
   title: string;
+  /** Text podsekce. */
   text: string;
 }
+
 const { title, text } = Astro.props;
 ---
 

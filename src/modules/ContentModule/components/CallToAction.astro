@@ -1,11 +1,21 @@
 ---
+/**
+ * Závěrečný blok s výzvou k akci.
+ *
+ * Používá se opakovaně na konci sekcí i na konci stránek; texty se přebírají
+ * ze slovníku, aby se výzva nemusela překládat v každé komponentě zvlášť.
+ */
 import { dictionary } from "../providers/translations";
 import { type Locale } from "../../LangModule/providers/locale";
 import { url } from "../../../config/routes";
 import Button from "../../UIModule/components/Button.astro";
+
+/** Vstupní parametry výzvy k akci. */
 interface Props {
+  /** Jazyk stránky; určuje texty a jazyk cílové kontaktní stránky. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 ---

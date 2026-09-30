@@ -1,11 +1,23 @@
 ---
+/**
+ * Přehled jedné kapacity v detailní stránce: ikona, popis, výsledek a seznam
+ * vlastností.
+ *
+ * Název ikony se bere přímo z `solution.id`, takže ID kapacity musí odpovídat
+ * názvu v sadě ikon UIModule; neznámé ID se vykreslí výchozí šipkou.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
 import type { Solution } from "../providers/translations";
+
+/** Vstupní parametry přehledu kapacity. */
 interface Props {
+  /** Jazyk stránky; určuje nadpisy sekcí, data kapacity se přebírají z props. */
   locale: Locale;
+  /** Kapacita, kterou přehled popisuje. */
   solution: Solution;
 }
+
 const { locale, solution } = Astro.props;
 const t = dictionary(locale);
 

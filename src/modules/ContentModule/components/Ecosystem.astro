@@ -1,9 +1,21 @@
 ---
+/**
+ * Ilustrovaná grafika v hlavní sekci webu.
+ *
+ * Celý vizuál je jeden obrázekek pro čtečky obrazovky (`role="img"` +
+ * `aria-label`), jednotlivé karty, čáry a dekorace jsou skryté.
+ * Na rozdíl od ostatních sekcí dostává komponenta hotový slovník přes prop,
+ * protože ji vykresluje pouze `HeroSection`.
+ */
 import Icon from "../../UIModule/components/Icon.astro";
 import { type Dictionary } from "../providers/translations";
+
+/** Vstupní parametry ilustrované grafiky. */
 interface Props {
+  /** Již vybraný slovník obsahového modulu pro aktuální jazyk. */
   t: Dictionary;
 }
+
 const { t } = Astro.props;
 ---
 

@@ -1,8 +1,20 @@
+/**
+ * Přepínání světlého a tmavého vzhledu.
+ *
+ * Do výslovné volby návštěvníka se řídí systémovým nastavením a po jejím
+ * uložení ji přebírá – změna v jiném panelu se propaguje událostí `storage`.
+ * Volba i systémové nastavení zapisují atributy `data-theme` a `data-theme-mode`
+ * na kořenový element, mění `meta[name="theme-color"]` a odhalují tlačítka
+ * přepínače. Funguje i s navigací přes Astro View Transitions.
+ *
+ * @returns Úklidová funkce, která odpojí všechny listenery této instance.
+ */
 import { themeConfig } from "../config/theme";
 
+/** Úklid předchozí instance hooku při opakovaném spuštění v jedné session. */
 let dispose: (() => void) | undefined;
 
-/** Follow the system until the visitor explicitly chooses a theme. */
+/** Sleduje systémové nastavení, dokud návštěvník sám neurčí vzhled. */
 export function useTheme() {
   dispose?.();
   const abort = new AbortController();

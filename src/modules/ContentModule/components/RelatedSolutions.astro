@@ -1,11 +1,22 @@
 ---
+/**
+ * Odkazy na ostatní kapacity na konci detailu kapacity.
+ *
+ * Aktuální kapacita se ze seznamu vyřadí, aby se na odkaz neobjevila sama
+ * sobě. URL se skládá přes `url()`, tedy v jazyce návštěvníka.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
 import type { Solution } from "../providers/translations";
+
+/** Vstupní parametry sekce souvisejících kapac. */
 interface Props {
+  /** Jazyk stránky; určuje cílové URL. */
   locale: Locale;
+  /** Kapacita, pro kterou se související kapacity vypisují. */
   solution: Solution;
 }
+
 const { locale, solution } = Astro.props;
 const t = dictionary(locale);
 

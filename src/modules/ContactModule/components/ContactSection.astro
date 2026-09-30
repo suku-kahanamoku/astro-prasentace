@@ -1,10 +1,23 @@
 ---
+/**
+ * Hlavní část kontaktní stránky: kontaktní údaje a formulář vedle sebe.
+ *
+ * Nabídku kapac do formuláře dostává přes props (od stránky, která zná
+ * ContentModule), takže zůstává zachována hranice mezi moduly. E-mail a telefon
+ * se vykreslují přes `ProtectedContact`, tedy jako text s odkazem vytvořeným
+ * až v klientu.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry kontaktní sekce. */
 interface Props {
+  /** Jazyk stránky; určuje popisky kontaktních údajů. */
   locale: Locale;
+  /** Nabídka kapac pro výběr zájmu; hodnoty musí odpovídat ID z `solutions.items`. */
   interests: { id: string; title: string }[];
 }
+
 const { locale, interests } = Astro.props;
 const t = dictionary(locale);
 

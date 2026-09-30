@@ -1,9 +1,20 @@
 ---
+/**
+ * Sekce přístupu na domovské stránce: grafická ilustrace a text s odkazem
+ * na stránku „O nás“.
+ *
+ * Ilustrace je čistě dekorativní (`aria-hidden`), aby čtečky obrazovky
+ * nehlásily bezpopisné SVG.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry sekce přístupu. */
 interface Props {
+  /** Jazyk stránky; určuje texty a cílovou jazykovou verzi odkazu. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 import Button from "../../UIModule/components/Button.astro";

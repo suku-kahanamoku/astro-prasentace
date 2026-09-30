@@ -1,9 +1,19 @@
 ---
+/**
+ * Úvod sekce „O nás“ s hlavním číslem a dvěma odstavci.
+ *
+ * Číslo „10+“ se bere z první položky seznamu důkazů, aby ho nebylo
+ * potřeba duplikovat v překladech.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry úvodu sekce „O nás“. */
 interface Props {
+  /** Jazyk stránky; určuje všechny texty. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 ---

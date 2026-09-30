@@ -1,9 +1,21 @@
 ---
+/**
+ * Seznam odkazů navigace.
+ *
+ * Vykonává celou iteraci a aktivní stav, takže ji lze použít pro desktopovou
+ * i mobilní navigaci bez rozdílné logiky. Data-only komponenta UIModule –
+ * jazyk a odkazy přicházejí z props.
+ */
 import type { NavigationItem } from "../types";
+
+/** Vstupní parametry seznamu navigačních odkazů. */
 interface Props {
+  /** Položky k vykreslení. */
   items: NavigationItem[];
+  /** Společná CSS třída všech odkazů, např. `nav-link`. */
   class?: string;
 }
+
 const { items, class: className } = Astro.props;
 ---
 

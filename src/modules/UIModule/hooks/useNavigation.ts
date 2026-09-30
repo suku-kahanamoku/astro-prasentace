@@ -1,4 +1,16 @@
-/** Small DOM hook; each menu owns its listeners and hover timer. */
+/**
+ * Ovládání jednoho hlavního menu (tlačítko + panel s mobilní navigací).
+ *
+ * Drží stav otevření v atributech `aria-expanded` a `hidden` panelu, přepíná
+ * přístupnostní popisky tlačítka, zavírá menu při odchodu kurzoru (s krátkým
+ * zpožděním, aby se nestihlo zavřít při přesunu na panel), při Escape, kliknutí
+ * mimo menu, přechodu na širší breakpoint i po výběru odkazu. Každé menu
+ * vlastní své listenery a časovač.
+ *
+ * @param toggle - Tlačítko hamburgeru ovládající panel.
+ * @param mobileNav - Panel s mobilní navigací.
+ * @returns Úklidová funkce, která zruší časovač a odpojí všechny listenery.
+ */
 export function useNavigation(
   toggle: HTMLButtonElement,
   mobileNav: HTMLElement,

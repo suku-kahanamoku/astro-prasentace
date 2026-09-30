@@ -1,13 +1,27 @@
 ---
+/**
+ * Sekce „Jak pracujeme“ s jednotlivými kroky postupu.
+ *
+ * Slouží dvěma účelům: jako krátká sekce na domovské stránce a jako podrobná
+ * sekce na stránce procesu. Proto má prop `detailed`: v detailní podobě se
+ * vykreslí výstup každého kroku a nadpis kroku se zvedne na `h2` (nadpis
+ * sekce už v této variantě vykresluje předchozí sekce stránky).
+ */
 import { dictionary } from "../providers/translations";
 import { type Locale } from "../../LangModule/providers/locale";
 import SectionHeading from "../../UIModule/components/SectionHeading.astro";
+
+/** Vstupní parametry sekce procesu. */
 interface Props {
+  /** Jazyk stránky; určuje všechny texty. */
   locale: Locale;
+  /** Podrobná varianta pro stránku procesu; výchozí `false`. */
   detailed?: boolean;
 }
+
 const { locale, detailed = false } = Astro.props;
 const t = dictionary(locale);
+/** Úroveň nadpisu kroku: v detailní variantě navazuje přímo na nadpis sekce. */
 const StepHeading = detailed ? "h2" : "h3";
 ---
 

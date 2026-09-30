@@ -1,13 +1,39 @@
+/**
+ * Klientské chování kontaktního formuláře: validace, CAPTCHA a odeslání.
+ *
+ * Formulář je záměrně odesílán přes `fetch` s JSONem, protože nativní
+ * odeslání bez JavaScriptu nelze použít v kombinaci s tokenem z Turnstile.
+ * Skript:
+ * - vypíná nativní validaci (`noValidate`) a nahrazuje ji vlastními hláškami
+ *   z lokalizovaného slovníku uloženého v `data-messages`,
+ * - validuje pole již při rozbíhnutí (`blur`) a při opravě (`input`),
+ *   chyby zobrazuje vázané na pole pomocí `aria-invalid` a `aria-describedby`,
+ * - lazy načítá Cloudflare Turnstile a vykreslí widget do `[data-captcha]`,
+ * - odesílá data spolu s tokenem, zpracovává odpověď serveru včetně seznamu
+ *   chybných polí a vždy uvádí stav formuláře v `[data-form-status]`.
+ */
+
+/** Rozhraní veřejného API služby Cloudflare Turnstile používané widgetem. */
 type Turnstile = {
+  /** Vykreslí widget v zadaném elementu a vrátí jeho ID. */
   render: (element: HTMLElement, options: Record<string, unknown>) => string;
+  /** Resetuje widget (např. po neúspěšném odeslání). */
   reset: (id: string) => void;
 };
+
 declare global {
   interface Window {
+    /** Turnstile se načítá asynchronně, proto je volitelné. */
     turnstile?: Turnstile;
+    /** Callback, který služba zavolá po načtení skriptu Turnstile. */
     prasentaceCaptchaReady?: () => void;
   }
 }
+
+/**
+ * Napojí validaci, CAPTCHA a odeslání na formulář `[data-contact-form]`.
+ * @returns `undefined`; formulář má přesně jeden výskyt na stránce.
+ */
 export function useContactForm() {
   const form = document.querySelector<HTMLFormElement>("[data-contact-form]");
   if (form) {
@@ -29,11 +55,22 @@ export function useContactForm() {
         HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
       >(".field input, .field textarea, .field select"),
     ];
+    /**
+     * Zapíše stavovou zprávu formuláře a nastaví její sémantiku.
+     * @param text - Text zprávy; prázdný řetězec vymaže hlášku.
+     * @param state - `"error"`, `"success"` nebo `""` pro neutrální stav.
+     * @returns `undefined`.
+     */
     function setStatus(text: string, state: "error" | "success" | "" = "") {
       status.textContent = text;
       status.dataset.state = state;
       status.setAttribute("role", state === "error" ? "alert" : "status");
     }
+    /**
+     * Vrátí lokalizovanou hlášku prvního chybného pravidla daného pole.
+     * @param control - Ověřované pole formuláře.
+     * @returns Text chyby, nebo prázdný řetězec, je-li hodnota v pořádku.
+     */
     function errorFor(control: (typeof controls)[number]) {
       const value = control.value.trim();
       if (control.required && !value) return messages.required;
@@ -44,6 +81,12 @@ export function useContactForm() {
       if (!control.validity.valid) return messages.invalid;
       return "";
     }
+    /**
+     * Zobrazí nebo vymaže chybu u pole a označí pole jako neplatné.
+     * @param control - Pole, kterého se týká chyba.
+     * @param message - Volitelná hláška; bez zadání se dopočítá z `errorFor`.
+     * @returns `true`, pokud je pole po této kontrole v pořádku.
+     */
     function showError(
       control: (typeof controls)[number],
       message = errorFor(control),

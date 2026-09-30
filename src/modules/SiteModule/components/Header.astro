@@ -1,4 +1,12 @@
 ---
+/**
+ * Hlavička webu: značka, navigace, přepínač jazyka, přepínač vzhledu a výzva.
+ *
+ * Tato komponenta je místem, kde se texty mění v odkazy: sestaví položky
+ * navigace ze slovníku, označí aktuální sekci a předá `url()` jazykovému
+ * přepínači, aby odkaz vedl na stejnou stránku v jiném jazyce. UI vrstvu
+ * (`MainMenu`) pouze naplňuje, její logiku nezná.
+ */
 import MainMenu from "../../UIModule/components/MainMenu.astro";
 import LanguagePicker from "../../LangModule/components/LanguagePicker.astro";
 import { dictionary } from "../providers/translations";
@@ -7,18 +15,26 @@ import { url, type PageId } from "../../../config/routes";
 import Button from "../../UIModule/components/Button.astro";
 
 import BrandLogo from "./BrandLogo.astro";
+
+/** Vstupní parametry hlavičky. */
 interface Props {
+  /** Jazyk stránky; určuje texty i jazyk odkazů. */
   locale: Locale;
+  /** Aktuální sekce; slouží k označení aktivní položky. */
   page: PageId;
+  /** Volitelné ID kapacity pro zachování kontextu v jazykovém přepínači. */
   solutionId?: string;
 }
+
 const { locale, page, solutionId } = Astro.props;
 const t = dictionary(locale);
+/** Položky desktopové navigace s označenou aktivní sekcí. */
 const links = Object.entries(t.nav).map(([id, label]) => ({
   href: url(locale, id as PageId),
   label,
   current: page === id,
 }));
+/** Mobilní panel navíc obsahuje výzvu k akci. */
 const mobileLinks = [
   ...links,
   { href: url(locale, "contact"), label: t.common.cta, current: false },

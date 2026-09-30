@@ -1,7 +1,16 @@
 ---
+/**
+ * Šipka indikující stav rozbalovacího prvku.
+ *
+ * Čistě dekorativní SVG (je odstíněna z `currentColor`), proto je skrytá
+ * před čtečkami obrazovky; stav sděluje vlastní `<details>/<summary>`.
+ * Otočení při otevření řeší CSS podle atributu `open`.
+ */
 interface Props {
+  /** Volitelná doplňková třída pro umístění v konkrétním rozkladu. */
   class?: string;
 }
+
 const { class: className } = Astro.props;
 ---
 

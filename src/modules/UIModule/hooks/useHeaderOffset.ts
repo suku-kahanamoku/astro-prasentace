@@ -1,4 +1,14 @@
-/** Shared offset for sticky content and native fragment navigation. */
+/**
+ * Sdílený offset pro lepivé prvky a nativní přeskakování na kotvy.
+ *
+ * Aktuální výšku hlavičky průběžně zapisuje do CSS proměnné
+ * `--site-header-height`, takže styly mohou odsazovat obsah pod hlavičkou
+ * a prohlížeč při přechodu na `#kotva` neskáče pod ni.
+ *
+ * @param header - Element hlavičky, jehož výška se sleduje.
+ * @param root - Kořenový element, na němž se nastavuje proměnná; výchozí `<html>`.
+ * @returns Úklidová funkce odpojující `ResizeObserver` a listener `pageshow`.
+ */
 export function useHeaderOffset(
   header: HTMLElement,
   root = document.documentElement,

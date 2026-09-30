@@ -1,9 +1,21 @@
 ---
+/**
+ * „Drobečková cesta“ nad hlavním obsahem stránky.
+ *
+ * Poslední položka se vykreslí jako neodkazovaný text s `aria-current="page"`,
+ * což odpovídá tomu, že už na aktuální stránce jsme. Data dodává
+ * SiteModule provider `breadcrumbs()`, komponenta je záměrně data-only.
+ */
 import type { Breadcrumb } from "../types";
+
+/** Vstupní parametry drobečkové cesty. */
 interface Props {
+  /** Položky cesty v pořadí od kořene k aktuální stránce. */
   items: Breadcrumb[];
+  /** Přístupnostní název navigace, např. „Drobečková cesta“. */
   label: string;
 }
+
 const { items, label } = Astro.props;
 ---
 

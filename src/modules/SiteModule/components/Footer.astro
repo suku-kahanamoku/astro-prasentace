@@ -1,13 +1,24 @@
 ---
+/**
+ * Patička webu se značkou, navigací, kontaktem a právními údaji.
+ *
+ * Odkazy se skládají ze slovníku, takže přidání sekce se promítne i sem.
+ * E-mail je vykreslen přes `ProtectedContact`, tedy jako text s odkazem
+ * vytvořeným až v klientu.
+ */
 import ProtectedContact from "../../UIModule/components/ProtectedContact.astro";
 import { dictionary } from "../providers/translations";
 import { type Locale } from "../../LangModule/providers/locale";
 import { url, type PageId } from "../../../config/routes";
 import { site } from "../../../config/site";
 import BrandLogo from "./BrandLogo.astro";
+
+/** Vstupní parametry patičky. */
 interface Props {
+  /** Jazyk stránky; určuje texty a jazyk všech odkazů. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 ---

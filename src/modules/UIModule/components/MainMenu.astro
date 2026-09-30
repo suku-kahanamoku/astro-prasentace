@@ -1,19 +1,47 @@
 ---
+/**
+ * Hlavní menu webu (hlavička s logem, navigací a přepínačem vzhledu).
+ *
+ * UIModule záměrně nezná obsah webu: texty a odkazy dodává volající přes props,
+ * doplněné sloty `brand`, `language` a `action`. Stejná komponenta tak slouží
+ * hlavičce i případným framovaným variantám bez kopírování kódu.
+ *
+ * Sloty:
+ * - `brand` – značka webu odkazující na domovskou stránku,
+ * - `language` – přepínač jazyka (slot `language`),
+ * - `action` – hlavní výzva v pravé části hlavičky.
+ *
+ * Chování mobilního panelu zajišťuje `useMainMenu`, který se po každém
+ * přechodu mezi stránkami znovu napojí. Blok `<noscript>` rozpadá na širších
+ * displejích rozbalovací panel, aby menu fungovalo i bez JavaScriptu.
+ */
 import "../styles/main-menu.css";
 import ThemeToggle from "./ThemeToggle.astro";
 import NavigationLinks from "./NavigationLinks.astro";
 import type { NavigationItem } from "../types";
+
+/** Vstupní parametry hlavního menu. */
 interface Props {
+  /** Jazyk webu; předává se přepínači vzhledu. */
   locale: string;
+  /** Přístupnostní název hlavní navigace. */
   label: string;
+  /** Položky desktopové navigace. */
   items: NavigationItem[];
+  /** Položky mobilního panelu; výchozí stejné jako `items`. */
   mobileItems?: NavigationItem[];
+  /** `id` panelu, na který odkazuje `aria-controls` tlačítka; výchozí `mobile-navigation`. */
   menuId?: string;
+  /** Popisek tlačítka v zavřeném stavu; výchozí `label`. */
   openLabel?: string;
+  /** Popisek tlačítka v otevřeném stavu; výchozí `label`. */
   closeLabel?: string;
+  /** Přidá třídu `main-menu-framed` pro ohraničenou variantu hlavičky. */
   framed?: boolean;
+  /** Zda se má vykreslit slot `action`; výchozí `true`. */
   showAction?: boolean;
 }
+
 const {
   locale,
   label,
@@ -79,7 +107,7 @@ const {
         display: none;
       }
       @layer base {
-        /* Layered !important preflight needs an override in the same layer. */
+        /* Vrstvený preflight s !important vyžaduje přepis ve stejné vrstvě. */
         .main-menu .mobile-nav[hidden] {
           display: flex !important;
         }

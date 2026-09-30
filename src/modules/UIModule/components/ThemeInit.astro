@@ -1,4 +1,12 @@
 ---
+/**
+ * Bootstrap vzhledu ještě před vykreslením stránky.
+ *
+ * Skript je vložený inline (`is:inline`) a běží před prvním vykreslením, aby
+ * nedošlo k blikání světlého vzhledu u návštěvníků s tmavým systémem.
+ * Konfigurace se předává přes `define:vars`, protože inline skripty
+ * nezpracovává bundler.
+ */
 import { themeConfig } from "../config/theme";
 ---
 

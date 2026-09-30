@@ -1,9 +1,20 @@
 ---
+/**
+ * Standardní hlavička sekce (nadpis, eyebrow a volitelný úvodní text).
+ *
+ * Opakovaný vzor ve všech sekcích, proto je vytažen do UIModule. Element
+ * `data-reveal` umožňuje odhalení animací `useReveal`; bez podpory pohybu
+ * zůstává obsah běžně čitelný.
+ */
 interface Props {
+  /** Krátký nadřazený popisek (eyebrow) nad nadpisem. */
   tag: string;
+  /** Hlavní nadpis sekce, vykreslený jako `<h2>`. */
   title: string;
+  /** Volitelný úvodní odstavec pod nadpisem. */
   text?: string;
 }
+
 const { tag, title, text } = Astro.props;
 ---
 

@@ -1,9 +1,19 @@
 ---
+/**
+ * Krátký pás technologií na domovské stránce.
+ *
+ * Názvy technologií pocházejí z `src/config/site.ts`, protože se mezi jazyky
+ * nepřekládají; překlad je jen úvodní text.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry pásu technologií. */
 interface Props {
+  /** Jazyk stránky; určuje úvodní text. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 

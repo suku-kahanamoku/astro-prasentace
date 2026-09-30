@@ -1,15 +1,29 @@
 ---
+/**
+ * Mřížka nabízených kapacit.
+ *
+ * Používá se na domovské stránce i jako celý obsah přehledové stránky
+ * kapac. Prop `heading` řídí, zda se vykreslí nadpis sekce: na přehledové
+ * stránce ho už má úvod, proto se vypne a nadpisy karet se zvednou na `h2`.
+ * První karta navíc obsahuje dekorační ilustraci rozhraní.
+ */
 import { dictionary } from "../providers/translations";
 import { type Locale } from "../../LangModule/providers/locale";
 import { url } from "../../../config/routes";
 import Icon from "../../UIModule/components/Icon.astro";
 import SectionHeading from "../../UIModule/components/SectionHeading.astro";
+
+/** Vstupní parametry mřížky kapac. */
 interface Props {
+  /** Jazyk stránky; určuje texty a URL detailů kapac. */
   locale: Locale;
+  /** Zda vykreslit nadpis sekce; výchozí `true`. */
   heading?: boolean;
 }
+
 const { locale, heading = true } = Astro.props;
 const t = dictionary(locale);
+/** Úroveň nadpisu karty: bez nadpisu sekce se karty zvednou o jednu úroveň. */
 const CardHeading = heading ? "h3" : "h2";
 ---
 

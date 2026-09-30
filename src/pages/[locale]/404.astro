@@ -1,12 +1,28 @@
 ---
+/**
+ * Lokalizovaná chybová stránka 404 pro jazykové verze webu.
+ *
+ * Generuje se staticky pro `en` a `de`; česká 404 je kořenová
+ * (`src/pages/404.astro`) a jako výchozí jazyk nemá prefix v URL.
+ * Příznak `noindex` zabraňuje indexaci chybové stránky.
+ */
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import NotFound from "../../modules/SiteModule/components/NotFoundSection.astro";
 import { type Locale } from "../../modules/LangModule/providers/locale";
+
+/**
+ * Statické cesty jazykových verzí 404.
+ * @returns `{ params: { locale }, props: { locale } }` pro `en` a `de`.
+ */
 export const getStaticPaths = () =>
   ["en", "de"].map((locale) => ({ params: { locale }, props: { locale } }));
+
+/** Props předané z `getStaticPaths`. */
 interface Props {
+  /** Jazyk chybové stránky. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 ---
 

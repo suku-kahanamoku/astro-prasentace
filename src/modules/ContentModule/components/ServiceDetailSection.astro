@@ -1,7 +1,15 @@
 ---
+/**
+ * Jedna obsahová podsekce detailu kapacity.
+ *
+ * Prázdné, čistě datové rozdělení: texty dodává slovník, komponenta je
+ * záměrně co nejmenší a funguje i pro právní texty (viz SiteModule).
+ */
 interface Props {
+  /** Obsah podsekce s vlastním nadpisem. */
   section: { title: string; text: string };
 }
+
 const { section } = Astro.props;
 ---
 

@@ -1,4 +1,10 @@
 ---
+/**
+ * Výchozí (česká) chybová stránka 404 bez jazykového prefixu v URL.
+ *
+ * Zbytek jazykových verzí generuje `src/pages/[locale]/404.astro`.
+ * Obsah je statický, protože před `BaseLayout` není potřeba slovník.
+ */
 import BaseLayout from "../layouts/BaseLayout.astro";
 import NotFound from "../modules/SiteModule/components/NotFoundSection.astro";
 ---

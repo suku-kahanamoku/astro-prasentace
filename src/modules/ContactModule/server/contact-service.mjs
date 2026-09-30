@@ -1,3 +1,12 @@
+/**
+ * Transportně nezávislá logika kontaktního endpointu.
+ *
+ * Modul záměrně nezná Astro ani konkrétní poskytovatele služeb: ověření
+ * CAPTCHA i odeslání e-mailu dostává jako vstupní funkce, takže se dají
+ * v testech nahradit bez odeslání skutečné zprávy (viz `handleContact`).
+ */
+
+/** Povolené hodnoty pole `interest`; prázdná hodnota znamená „neuvedeno“. */
 const allowedInterests = new Set([
   "",
   "systems",
@@ -6,12 +15,30 @@ const allowedInterests = new Set([
   "automation",
   "support",
 ]);
+
+/**
+ * Sestaví jednotnou JSON odpověď endpointu.
+ * @param {number} status - HTTP stavový kód.
+ * @param {string} code - Kód, podle kterého klient vybere lokalizovanou hlášku.
+ * @param {string[]} [fields] - Volitelný seznam chybných polí formuláře.
+ * @returns {Response} Odpověď JSON bez ukládání do cache.
+ */
 const reply = (status, code, fields) =>
   Response.json(
     { code, ...(fields ? { fields } : {}) },
     { status, headers: { "Cache-Control": "no-store" } },
   );
 
+/**
+ * Ověří a normalizuje tělo požadavku.
+ *
+ * Kontroluje typy a délky všech polí, formát e-mailu, minimální délku zprávy,
+ * přípustnost zájmu a jazyka. Chyby se sbírají, ne aby se vracely hned,
+ * takže klient může označit všechna neplatná pole najednou.
+ *
+ * @param {object} body - Dekódované tělo požadavku.
+ * @returns {{ fields: string[] } | { data: Record<string, string> }} Seznam chybných polí, nebo oříznutá data.
+ */
 export function validateContact(body) {
   if (!body || typeof body !== "object" || Array.isArray(body))
     return { fields: ["name", "email", "message"] };
@@ -44,6 +71,16 @@ export function validateContact(body) {
   return fields.length ? { fields: [...new Set(fields)] } : { data };
 }
 
+/**
+ * Načte tělo požadavku s pevným limitem velikosti.
+ *
+ * Tělo se čte po částech a průběžně kontroluje součet bajtů, takže nelze
+ * zadáním obrovské hlavičky `content-length` obejít limit.
+ *
+ * @param {Request} request - Příchozí požadavek.
+ * @returns {Promise<object>} Dekódované tělo jako objekt.
+ * @throws {Error} `size` při překročení 20 kB, `body` při chybějícím těle.
+ */
 async function readBounded(request) {
   if (Number(request.headers.get("content-length")) > 20000)
     throw new Error("size");
@@ -74,7 +111,23 @@ async function readBounded(request) {
   return JSON.parse(new TextDecoder().decode(bytes));
 }
 
-/** Dependencies are injected to test failure paths without sending real email. */
+/**
+ * Zpracuje požadavek kontaktního formuláře.
+ *
+ * Pořadí kontrol je záměrně od nejlevnějších: metoda, původ požadavku
+ * (ochrana proti cross-site požadavkům), typ obsahu, velikost a tvar těla,
+ * honeypot, dostupnost konfigurace a teprve potom CAPTCHA a odeslání.
+ * Honeypot vyplněný botem vrací úspěch bez odeslání, aby se neprozradilo,
+ * že automatická kontrola zafungovala.
+ *
+ * Závislosti se injektují, aby bylo možné testovat chybové cesty bez
+ * odesílání skutečného e-mailu.
+ *
+ * @param {Request} request - Příchozí požadavek na `/api/contact/`.
+ * @param {{ configured: boolean, verify: (token: string) => Promise<boolean>, send: (data: Record<string, string>) => Promise<void> }} deps - Konfigurace a vstupní funkce pro ověření CAPTCHA a odeslání.
+ * @returns {Promise<Response>} JSON odpověď s kódem `success`, `invalid`, `captcha`, `unavailable` nebo `error`.
+ * @throws Nevyhazuje; všechny chyby se převádějí na stavový kód odpovědi.
+ */
 export async function handleContact(request, { configured, verify, send }) {
   if (request.method !== "POST") return reply(405, "error");
   if (request.headers.get("origin") !== new URL(request.url).origin)

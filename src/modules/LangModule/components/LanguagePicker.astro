@@ -1,17 +1,39 @@
 ---
+/**
+ * Přepínač jazyka webu.
+ *
+ * Zobrazuje vlajku aktuálního jazyka v `<details>` rozbalovacím prvku
+ * a odkazy na stejnou stránku v ostatních jazycích. Cílové URL si komponenta
+ * neodvozuje sama – prop `href` dostává od volajícího (Header), aby zůstala
+ * zachována lokalizace slugů i u detailů řešení.
+ *
+ * Hook `useDisclosure` doplňuje ovládání klávesnicí (Escape zavírá) a zavírání
+ * kliknutím mimo prvek, které nativní `<details>` neposkytuje.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry přepínače jazyka. */
 interface Props {
+  /** Aktuálně zobrazený jazyk; určuje aktivní volbu a text souhrnu. */
   locale: Locale;
+  /**
+   * Sestaví URL pro cílový jazyk.
+   * @param locale - Jazyk, pro který se link generuje.
+   * @returns URL odpovídající té samé stránce v daném jazyce.
+   */
   href: (locale: Locale) => string;
 }
+
 const { locale, href } = Astro.props;
 const t = dictionary(locale);
 import { locales } from "../config";
 import csFlag from "../assets/flags/cs.svg?url";
 import enFlag from "../assets/flags/en.svg?url";
 import deFlag from "../assets/flags/de.svg?url";
+/** Mapování jazyků na importované vlajky. */
 const flags = { cs: csFlag, en: enFlag, de: deFlag };
+/** Kód země pro přístupnostní popisek souhrnu; čeština používá jiný kód než jazyk. */
 const languageCode = locale === "cs" ? "CZ" : locale.toUpperCase();
 import DisclosureChevron from "../../UIModule/components/DisclosureChevron.astro";
 ---

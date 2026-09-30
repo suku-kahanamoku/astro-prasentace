@@ -1,12 +1,26 @@
 ---
+/**
+ * Kontaktní údaj chráněný proti prosby scraperů.
+ *
+ * Uživatel si text přečte, ale hotový odkaz vzniká až v klientu: cílová
+ * adresa je uložená v base64 v `data-protected-contact` a vytvoří ho
+ * `useProtectedContact`. Bez JavaScriptu zůstane viditelný jen text, nikoli
+ * adresa, takže odkaz zůstává použitelný a zároveň se neda skenovat z HTML.
+ */
 interface Props {
+  /** Typ kontaktu; určuje schéma odkazu (`mailto:` nebo `tel:`). */
   kind: "email" | "phone";
+  /** Samotná hodnota údaje; telefon se pro odkaz normalizuje na číslice. */
   value: string;
+  /** Volitelná třída pro styl kontaktního údaje v dané sekci. */
   class?: string;
 }
+
 const { kind, value, class: className } = Astro.props;
+/** Cílová adresa odkazu; telefon se normalizuje na číslice pro `tel:`. */
 const target =
   kind === "email" ? `mailto:${value}` : `tel:${value.replaceAll(" ", "")}`;
+/** Zakódovaná cílová adresa, kterou v klientu rozšíří `useProtectedContact`. */
 const encoded = btoa(target);
 ---
 

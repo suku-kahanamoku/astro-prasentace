@@ -1,4 +1,14 @@
 ---
+/**
+ * Základní HTML kostra webu.
+ *
+ * Skládá kompletní dokument (doctype, hlavičku s SEO a theme bootstrapem,
+ * hlavičku webu, breadcrumbs, slot s obsahem a patičku) a načítá globální
+ * styly. Všechny lokalizované stránky i 404 jsou skládány touto šablonou,
+ * takže je jediným místem, kde se rozhoduje o lang atributu a meta datech.
+ *
+ * Slot: obsah stránky v jazyce `locale` (sekce skládané z modulů).
+ */
 import ThemeInit from "../modules/UIModule/components/ThemeInit.astro";
 import SeoHead from "../modules/SiteModule/components/SeoHead.astro";
 
@@ -13,15 +23,25 @@ import { type PageId } from "../config/routes";
 
 import Breadcrumbs from "../modules/UIModule/components/Breadcrumbs.astro";
 import { breadcrumbs } from "../modules/SiteModule/providers/breadcrumbs";
+
+/** Vstupní parametry základní šablony stránky. */
 interface Props {
+  /** Jazyk stránky; určuje `lang` atribut, překlady i jazykový přepínač. */
   locale: Locale;
+  /** Identifikátor sekce; používá se pro navigaci, SEO a breadcrumbs. */
   page: PageId;
+  /** Volitelné ID řešení pro detailní stránku řešení. */
   solutionId?: string;
+  /** Název řešení; potřebný pro breadcrumbs, je-li `solutionId` zadáno. */
   solutionTitle?: string;
+  /** Vlastní `<title>`; když chybí, použije se překlad z `seo[page]`. */
   title?: string;
+  /** Vlastní meta description; když chybí, použije se překlad z `seo[page]`. */
   description?: string;
+  /** Příznak pro stránky mimo index (404); potlačí canonical i breadcrumbs. */
   noindex?: boolean;
 }
+
 const { locale, page, solutionId, noindex = false } = Astro.props;
 const t = dictionary(locale);
 const breadcrumbItems = noindex

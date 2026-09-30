@@ -1,14 +1,31 @@
 ---
+/**
+ * Kontaktní formulář s antispamovou ochranou.
+ *
+ * Klíč Turnstile se čte z klientského prostředí (`astro:env/client`), takže
+ * není tajemstvím a může být ve výstupu. Všechny texty formuláře včetně hlášek
+ * stavů jsou v jazyce stránky a předávají se skriptu `useContactForm`
+ * v atributu `data-messages`, aby se nestahovaly dvakrát.
+ *
+ * Vzhledem k tomu, že odeslání závisí na JavaScriptu, tlačítko zůstává
+ * zablokované bez nakonfigurovaného klíče a `noscript` vysvětluje
+ * návštěvníkovi, že formulář potřebuje skripty.
+ */
 import { dictionary } from "../providers/translations";
 import { type Locale } from "../../LangModule/providers/locale";
 import { url } from "../../../config/routes";
 import { TURNSTILE_SITE_KEY } from "astro:env/client";
 import DisclosureChevron from "../../UIModule/components/DisclosureChevron.astro";
 import Icon from "../../UIModule/components/Icon.astro";
+
+/** Vstupní parametry kontaktního formuláře. */
 interface Props {
+  /** Jazyk formuláře; použije se i jako jazyk widgetu Turnstile. */
   locale: Locale;
+  /** Nabídka kapac pro pole „zájem“; prázdná hodnota znamená „neuvedeno“. */
   interests: { id: string; title: string }[];
 }
+
 const { locale, interests } = Astro.props;
 const t = dictionary(locale);
 const siteKey = TURNSTILE_SITE_KEY || "";

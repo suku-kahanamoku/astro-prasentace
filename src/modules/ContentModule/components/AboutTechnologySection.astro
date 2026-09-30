@@ -1,9 +1,19 @@
 ---
+/**
+ * Technologická sekce na stránce „O nás“.
+ *
+ * Zdroj technologií je `src/config/site.ts`, nikoli překlad, protože
+ * názvy technologií se mezi jazyky nepřekládají.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry technologické sekce „O nás“. */
 interface Props {
+  /** Jazyk stránky; určuje nadpis a popis sekce. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 

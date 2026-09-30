@@ -1,12 +1,23 @@
 ---
+/**
+ * Obsah stránky ochrany osobních údajů.
+ *
+ * Jednotlivé podsekce pocházejí ze slovníku a vykresluje se `LegalSection`;
+ * na konci je adresa a chráněný kontaktní údaj správce. Texty se tím dají
+ * měnit bez zásahu do šablony.
+ */
 import LegalSection from "./LegalSection.astro";
 import ProtectedContact from "../../UIModule/components/ProtectedContact.astro";
 import { dictionary } from "../providers/translations";
 import { type Locale } from "../../LangModule/providers/locale";
 import { site } from "../../../config/site";
+
+/** Vstupní parametry stránky ochrany osobních údajů. */
 interface Props {
+  /** Jazyk stránky; určuje všechny texty. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 ---

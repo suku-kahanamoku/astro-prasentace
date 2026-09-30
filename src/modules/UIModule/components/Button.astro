@@ -1,10 +1,23 @@
 ---
+/**
+ * Odkaz ve tvaru tlačítka s doprovodnou šipkou.
+ *
+ * Text tlačítka se předává přes slot, takže komponenta sama nezná jazyk ani
+ * překlady. Vnější třída (`class`) slouží pro doladění rozměrů konkrétní
+ * sekce, vizuální varianta se řídí propem `variant`.
+ */
 import Icon from "./Icon.astro";
+
+/** Vstupní parametry tlačítka. */
 interface Props {
+  /** Cílová URL; tlačítko je vždy odkazem, ne formulářem. */
   href: string;
+  /** Vizuální varianta; výchozí `primary`. */
   variant?: "primary" | "secondary" | "text";
+  /** Volitelná doplňková třída pro specifické rozvržení sekce. */
   class?: string;
 }
+
 const { href, variant = "primary", class: className } = Astro.props;
 ---
 

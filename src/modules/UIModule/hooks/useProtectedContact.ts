@@ -1,3 +1,13 @@
+/**
+ * Oživí kontaktní údaje zakódované v atributech `data-protected-contact`.
+ *
+ * Server vypíše jen znaky jednotlivě a cílovou adresu uloží v base64, aby
+ * se kontaktní údaje neobjevily v surovém HTML. Tento hook je nahradí
+ * funkčním odkazem v klientu. Hodnoty, které nejsou `mailto:` ani `tel:`,
+ * se záměrně ignorují, aby se přes data atribut nedala vložit cizí URL.
+ *
+ * @returns `undefined`; běží jednou po načtení stránky.
+ */
 export function useProtectedContact() {
   document
     .querySelectorAll<HTMLElement>("[data-protected-contact]")

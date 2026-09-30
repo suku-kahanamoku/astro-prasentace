@@ -1,9 +1,19 @@
 ---
+/**
+ * Úzký barevný pás s formulací značky.
+ *
+ * Odděluje hero sekci od dalšího obsahu; obrázek nosorožce je dekorativní
+ * a text pásu slouží jako jediný přístupnostní popis celé oblasti.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry barevného pásu značky. */
 interface Props {
+  /** Jazyk stránky; určuje texty pásu. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 ---

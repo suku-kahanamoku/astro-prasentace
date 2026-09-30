@@ -1,11 +1,25 @@
 ---
+/**
+ * Tlačítko přepínání světlého a tmavého vzhledu.
+ *
+ * Popisek načítá z vlastního slovníku UIModule, protože přepínač vzhledu je
+ * jediná položka, kterou potřebuje samostatně od SiteModule. Tlačítko je
+ * zpočátku skryté (`hidden`) a odhalí ho teprve `useTheme`, aby se neobjevilo
+ * dřív, než je vzhled vypočítaný z uložené volby nebo systému.
+ */
 import cs from "../locales/cs.json";
 import en from "../locales/en.json";
 import de from "../locales/de.json";
+
+/** Vstupní parametry přepínače vzhledu. */
 interface Props {
+  /** Jazyk webu; určuje popisek tlačítka. */
   locale: string;
 }
+
+/** Slovníky UIModule pro jednotlivé jazyky; obsahují jen popisek přepínače. */
 const dictionaries = { cs, en, de };
+/** Popisek tlačítka; při neznámém jazyku se použije český. */
 const label =
   dictionaries[Astro.props.locale as keyof typeof dictionaries]?.themeToggle ??
   cs.themeToggle;

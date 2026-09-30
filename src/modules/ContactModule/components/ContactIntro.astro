@@ -1,9 +1,18 @@
 ---
+/**
+ * Úvodní část kontaktní stránky (nadpis a úvodní odstavec).
+ *
+ * Data-only varianta, která se skládá s `ContactSection` na stránce kontaktu.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry úvodu kontaktní stránky. */
 interface Props {
+  /** Jazyk stránky; určuje všechny texty. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 ---

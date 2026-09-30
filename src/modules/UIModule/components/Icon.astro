@@ -1,10 +1,24 @@
 ---
+/**
+ * Ikona z vnitřní sady obrysových symbolů.
+ *
+ * Cílem je mít jedno místo, kde se definují a kreslí grafické symboly webu:
+ * komponenty si předávají jen název. Neznámý název tiše vede k výchozí šipce,
+ * aby se ikona nikdy nevykreslila prázdná. Všechny ikony jsou dekorativní
+ * a skryté před čtečkami; smysl vždy nese okolní text.
+ */
 interface Props {
+  /** Název ikony ze sady `paths`; výchozí `arrow`. */
   name?: string;
+  /** Délka strany čtvercového SVG v pixelech; výchozí 24. */
   size?: number;
+  /** Volitelná třída pro zarovnání a barvu v konkrétní sekci. */
   class?: string;
 }
+
 const { name = "arrow", size = 24, class: className } = Astro.props;
+
+/** Obrysové cesty jednotlivých ikon ve viewBoxu 24×24. */
 const paths: Record<string, string> = {
   arrow: "M5 12h14m-6-6 6 6-6 6",
   diagonal: "M6 18 18 6M6 6h12v12",

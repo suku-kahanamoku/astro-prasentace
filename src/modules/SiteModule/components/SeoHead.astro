@@ -1,19 +1,39 @@
 ---
+/**
+ * Kompletní hlavička dokumentu: title, description, canonical, hreflang,
+ * Open Graph, Twitter card a strukturovaná data.
+ *
+ * Záměr je mít jediné místo, kde se rozhoduje o meta datech webu.
+ * Standardní hodnoty přebírá ze slovníku (`seo[page]`), ale volající je může
+ * přepsat – například detail kapacity má vlastní `seoTitle` a popis.
+ * Příznak `noindex` potlačí canonical i hreflang (používá se pro 404)
+ * a zároveň vynechá `WebSite` a `BreadcrumbList` ve strukturovaných datech.
+ */
 import { theme } from "../../UIModule/config/theme";
 import { dictionary } from "../providers/translations";
 import { locales, type Locale } from "../../LangModule/providers/locale";
 import { url, type PageId } from "../../../config/routes";
 import { site } from "../../../config/site";
 import { breadcrumbs } from "../providers/breadcrumbs";
+
+/** Vstupní parametry hlavičky dokumentu. */
 interface Props {
+  /** Jazyk stránky; určuje překlady, canonical i `og:locale`. */
   locale: Locale;
+  /** Sekce stránky; zdroj výchozího title a description. */
   page: PageId;
+  /** Volitelné ID kapacity pro canonical a hreflang. */
   solutionId?: string;
+  /** Název kapacity; potřebný pro breadcrumbs ve strukturovaných datech. */
   solutionTitle?: string;
+  /** Vlastní title; přebíjí překlad ze slovníku. */
   title?: string;
+  /** Vlastní description; přebíjí překlad ze slovníku. */
   description?: string;
+  /** Příznak stránek mimo index; potlačí canonical, hreflang a breadcrumbs. */
   noindex?: boolean;
 }
+
 const { locale, page, solutionId, noindex = false } = Astro.props;
 const t = dictionary(locale);
 const title = `${Astro.props.title || t.seo[page].title} | Prasentace`;
@@ -25,6 +45,7 @@ const breadcrumbItems = noindex
 const socialImage = new URL(`/social/og-${locale}.png`, Astro.site);
 const socialImageAlt = `${site.name} — ${t.seo.home.title}`;
 const organizationId = new URL("/#organization", Astro.site).href;
+/** Základní schema.org záznam organizace; sdílený všemi stránkami. */
 const schema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -41,6 +62,11 @@ const schema = {
     addressCountry: site.address.country,
   },
 };
+/**
+ * Pole strukturovaných dat pro JSON-LD.
+ * Kromě organizace zahrnuje i `WebSite` (jen na domovské stránce)
+ * a `BreadcrumbList` (kde existuje cesta).
+ */
 const structuredData = [
   schema,
   ...(!noindex && page === "home"

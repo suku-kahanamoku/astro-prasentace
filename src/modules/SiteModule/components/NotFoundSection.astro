@@ -1,10 +1,22 @@
 ---
+/**
+ * Obsah chybové stránky 404.
+ *
+ * Nabízí návrat na domovskou stránku v každém podporovaném jazyce, takže
+ * návštěvník se neztratí ani na cizojazyčné adrese. Jazyk každého tlačítka
+ * je uveden atributem `lang`, aby se při změně jazyka označil i jazyk cílové
+ * stránky pro čtečky obrazovky.
+ */
 import { dictionary } from "../providers/translations";
 import { locales, type Locale } from "../../LangModule/providers/locale";
 import { url } from "../../../config/routes";
+
+/** Vstupní parametry chybové stránky. */
 interface Props {
+  /** Jazyk, ve kterém je chybová stránka vykreslena. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 ---

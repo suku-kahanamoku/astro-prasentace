@@ -1,18 +1,32 @@
 ---
+/**
+ * Společný úvod vnitřních sekcí (nabídka kapac, proces, o nás).
+ *
+ * Jedna komponenta obsluhuje všechny tři úvody i úvod detailu kapacity –
+ * volí se jen zdroj textů podle stránky a podle toho, zda je předána
+ * konkrétní kapacita.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
 import type { Solution } from "../providers/translations";
+
+/** Vstupní parametry úvodu sekce. */
 interface Props {
+  /** Jazyk stránky; určuje texty a jazyk výzvy k akci. */
   locale: Locale;
+  /** Sekce, pro kterou se úvod vykresluje; určuje zdroj textů. */
   page: PageId;
+  /** Kapacita, pokud jde o úvod detailu; přebíjí texty sekce. */
   solution?: Solution;
 }
+
 const { locale, page, solution } = Astro.props;
 const t = dictionary(locale);
 import Button from "../../UIModule/components/Button.astro";
 
 import { url, type PageId } from "../../../config/routes";
 
+/** Zdroj textů úvodu: sekce proces, sekce o nás, nebo přehled kapac. */
 const content =
   page === "process" ? t.process : page === "about" ? t.about : t.solutions;
 ---

@@ -1,9 +1,19 @@
 ---
+/**
+ * Mřížka hodnot na stránce „O nás“.
+ *
+ * Počítá se automaticky ze slovníku, takže přidání hodnoty stačí udělat jen
+ * v překladech pro všechny jazyky.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry mřížky hodnot. */
 interface Props {
+  /** Jazyk stránky; určuje nadpisy a popisy hodnot. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 ---

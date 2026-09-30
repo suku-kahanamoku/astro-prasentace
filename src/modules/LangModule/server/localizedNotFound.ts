@@ -1,7 +1,15 @@
+/**
+ * Middleware, které lokalizovaným cestám podává 404 ve stejném jazyce.
+ *
+ * Bez zásahu by `/en/nExistujici-stranka` skončilo výchozí (českou) 404
+ * stránkou, protože catch-all routa `[...path]` generuje jen existující cesty.
+ * Přepis na `/<locale>/404/` udrží jazyk, stav 404 i hlavičky originální
+ * odpovědi, takže klient stále vidí kód 404.
+ */
 import { defineMiddleware } from "astro:middleware";
 
-// Static production fallbacks are mirrored in netlify.toml; this covers the
-// Astro development server and server-handled requests without redirecting.
+// Statické produkční fallbacky se zrcadlí v netlify.toml; middleware pokrývá
+// vývojový server Astro a požadavky zpracovávané na serveru bez přesměrování.
 export const localizedNotFound = defineMiddleware(async (context, next) => {
   const response = await next();
   const locale = context.url.pathname.split("/")[1];

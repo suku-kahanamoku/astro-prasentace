@@ -1,9 +1,19 @@
 ---
+/**
+ * Krátký pás číselných důkazů pod hero sekcí.
+ *
+ * Všechna čísla i popisky pocházejí ze slovníku, aby bylo možné je upravit
+ * bez zásahu do šablony.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry pásu důkazů. */
 interface Props {
+  /** Jazyk stránky; určuje hodnoty a popisky. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 ---

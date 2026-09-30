@@ -1,9 +1,20 @@
 ---
+/**
+ * Hlavní (hero) sekce domovské stránky.
+ *
+ * Skládá text, výzvy k akci a ilustraci `Ecosystem`. Odkaz na sekci
+ * kapacit míří na kotvu `#solutions`, kterou vlastní `Solutions`, takže
+ * navigace funguje i bez JavaScriptu.
+ */
 import { dictionary } from "../providers/translations";
 import type { Locale } from "../../LangModule/config";
+
+/** Vstupní parametry hero sekce. */
 interface Props {
+  /** Jazyk stránky; určuje všechny texty a cílové URL. */
   locale: Locale;
 }
+
 const { locale } = Astro.props;
 const t = dictionary(locale);
 import Button from "../../UIModule/components/Button.astro";
