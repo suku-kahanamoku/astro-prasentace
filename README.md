@@ -156,6 +156,12 @@ na tento projekt, pokud je v nadřazeném repozitáři. Build je `corepack pnpm 
 výstup `dist`. PHP mailer a Turnstile proměnné nastavte pro Functions; veřejný Turnstile
 klíč a doménu také pro build. Změna veřejného klíče vyžaduje nový build.
 
+Soubor `public/ads.txt` na kořenové doméně obsahuje vlastní záznam Google
+AdSense `pub-5191551009181826` s typem `DIRECT` a odkazuje na samostatný seznam
+autorizovaných prodejců webu `etymolog.prasentace.cz`. Identifikátory `RESELLER`
+v souboru Etymologu patří partnerům Seznamu. Na tomto firemním webu se reklamní
+skripty nespouštějí.
+
 Před zveřejněním doplňte skutečné jméno provozovatele podnikající fyzické osoby do
 identifikačních údajů; uživatel zatím dodal značku, IČO, sídlo a e-mail. Text
 o soukromí je výchozí obsah a musí odpovídat finálnímu provozovateli, hostingu,
