@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 import { themeConfig } from "../../src/modules/UIModule/config/theme";
 
 test("theme follows the system until explicitly chosen and survives navigation", async ({

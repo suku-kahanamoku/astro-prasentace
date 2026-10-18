@@ -6,10 +6,10 @@
   },
   "hero": {
     "tag": "Digitální řešení. Skutečný posun.",
-    "line1": "Vaše vize.",
-    "line2": "Náš kód.",
-    "line3": "Společný posun.",
-    "text": "Proměňujeme složité procesy v přehledná digitální řešení. Od první myšlenky po software, na který se vaše firma může spolehnout.",
+    "line1": "Firemní systémy,",
+    "line2": "weby a aplikace",
+    "line3": "na míru.",
+    "text": "Propojíme vaše data, zjednodušíme každodenní práci a přeneseme služby na web i do mobilu. Od návrhu po nasazení a další rozvoj.",
     "secondary": "Jak vám pomůžeme",
     "note": "Od prvního návrhu po dlouhodobý rozvoj",
     "visualLabel": "Propojení firemních systémů, aplikací a automatizací",
@@ -21,20 +21,6 @@
     "automationSub": "Méně rutiny. Více prostoru.",
     "coreSub": "V centru řešení"
   },
-  "proof": [
-    {
-      "value": "10+",
-      "label": "let zkušeností s vývojem"
-    },
-    {
-      "value": "Od A do Z",
-      "label": "od analýzy po nasazení"
-    },
-    {
-      "value": "Na míru",
-      "label": "vašim procesům a potřebám"
-    }
-  ],
   "solutions": {
     "tag": "CO SPOLU VYTVOŘÍME",
     "title": "Dobrý software začíná\npochopením vašeho byznysu.",
@@ -191,7 +177,8 @@
           }
         ]
       }
-    ]
+    ],
+    "homeTitle": "S čím vám pomůžeme"
   },
   "process": {
     "tag": "OD MYŠLENKY K VÝSLEDKU",
@@ -241,7 +228,8 @@
       }
     ],
     "technology": "Pevný základ. Správné nástroje.",
-    "technologyText": "Technologie vybíráme podle projektu, jeho potřeb a budoucího provozu."
+    "technologyText": "Technologie vybíráme podle projektu, jeho potřeb a budoucího provozu.",
+    "experienceLabel": "let zkušeností s vývojem"
   },
   "cta": {
     "tag": "DALŠÍ KROK JE JEDNODUCHÝ",
@@ -252,5 +240,26 @@
     "edition": "Digitální studio / Brno & odkudkoli",
     "notebook": "sešit dobrých nápadů / 01",
     "note": "tady to začíná"
+  },
+  "scenarios": {
+    "tag": "TYPICKÉ SITUACE",
+    "title": "Když potřebujete, aby práce lépe navazovala.",
+    "items": [
+      {
+        "solutionId": "systems",
+        "title": "Stejná data v několika tabulkách",
+        "text": "CRM nebo interní systém může sjednotit zákazníky, objednávky a každodenní agendu na jednom místě."
+      },
+      {
+        "solutionId": "automation",
+        "title": "Ruční přepisování mezi nástroji",
+        "text": "Propojení přes API může přenášet data mezi systémy a navázat na ně tvorbu dokumentů nebo upozornění."
+      },
+      {
+        "solutionId": "mobile",
+        "title": "Práce se nezastaví u dveří kanceláře",
+        "text": "Mobilní aplikace může propojit pracovníky v terénu s firemním systémem a usnadnit zadávání údajů přímo na místě."
+      }
+    ]
   }
 }

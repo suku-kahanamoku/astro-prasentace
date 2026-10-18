@@ -15,12 +15,11 @@ import { allRoutes, type PageId } from "../config/routes";
 import { dictionary } from "../modules/ContentModule/providers/translations";
 import type { Locale } from "../modules/LangModule/config";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import BrandStrip from "../modules/SiteModule/components/BrandStrip.astro";
 import PrivacyContent from "../modules/SiteModule/components/PrivacyContent.astro";
 import ContactIntro from "../modules/ContactModule/components/ContactIntro.astro";
 import ContactSection from "../modules/ContactModule/components/ContactSection.astro";
 import HeroSection from "../modules/ContentModule/components/HeroSection.astro";
-import ProofSection from "../modules/ContentModule/components/ProofSection.astro";
+import ScenariosSection from "../modules/ContentModule/components/ScenariosSection.astro";
 import ApproachSection from "../modules/ContentModule/components/ApproachSection.astro";
 import TechnologySection from "../modules/ContentModule/components/TechnologySection.astro";
 import Solutions from "../modules/ContentModule/components/Solutions.astro";
@@ -66,9 +65,8 @@ const solution = t.solutions.items.find((item) => item.id === solutionId);
   {page === "home" ? (
     <>
       <HeroSection {locale} />
-      <ProofSection {locale} />
-      <BrandStrip {locale} />
-      <Solutions {locale} />
+      <Solutions {locale} compact />
+      <ScenariosSection {locale} />
       <ApproachSection {locale} />
       <Process {locale} />
       <TechnologySection {locale} />

@@ -13,6 +13,11 @@ export const site = {
   email: "info@prasentace.cz",
   /** Telefon ve zobrazeném formátu; pro `tel:` odkaz se normalizuje na číslice. */
   phone: "+420 722 767 646",
+  /** Sociální profily; do doplnění adres používají zástupný odkaz. */
+  social: {
+    facebook: "#",
+    linkedin: "#",
+  },
   /** IČO zobrazované v patičce a v právních textech. */
   registrationId: "04473442",
   /** Adresa sídla používaná v kontaktu, patičce a structured data. */
@@ -25,7 +30,20 @@ export const site = {
     postalCode: "616 00",
     /** Kód země ISO 3166-1 alpha-2 pro schema.org `PostalAddress`. */
     country: "CZ",
+    /** Ověřená poloha sídla a iframe vytvořený v dialogu Sdílet na Mapy.com. */
+    map: {
+      embedUrl: "https://mapy.com/s/mosebehoba",
+    },
   },
   /** Přehled technologií, které se vypisují v technologických sekcích. */
-  technologies: ["Astro", "Vue.js", "Nuxt", "React Native", "Angular", "PHP"],
+  technologies: [
+    "Astro",
+    "Nuxt",
+    "React Native",
+    "Angular",
+    "PHP",
+    "Java",
+    "Android",
+    "iOS",
+  ],
 } as const;

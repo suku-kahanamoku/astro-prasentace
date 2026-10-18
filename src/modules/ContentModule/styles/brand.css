@@ -66,24 +66,10 @@
   border: 1px solid var(--theme-line, #dedbce);
   border-radius: 3px 12px 10px 3px;
   transform: rotate(3deg);
-  box-shadow:
-    4px 7px 0 #eee9dd,
-    5px 8px 0 #d8d3c6,
-    10px 18px 38px #352d2110;
+  box-shadow: 0 12px 30px #352d210a;
   z-index: -2;
 }
-.notebook-sheet::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 38%;
-  width: 30%;
-  height: 28px;
-  background: #e8d5bfa6;
-  border-left: 2px dashed var(--theme-line, #fffdf6);
-  border-right: 2px dashed var(--theme-line, #fffdf6);
-  transform: rotate(-5deg);
-}
+
 .notebook-label {
   position: absolute;
   top: 9%;
@@ -165,20 +151,14 @@
   color: var(--theme-muted, #496651);
   background: var(--theme-success-surface, #e8ecdf);
 }
-.proof-strip {
-  border-color: var(--theme-line, #dedbce);
-}
-.proof-strip strong {
-  color: var(--theme-accent, #253da4);
-}
 .solution-card {
-  border-radius: 7px 13px 9px 5px;
+  border-radius: 12px;
   background: var(--theme-surface, #fffdf6);
-  box-shadow: 3px 4px 0 #202b4906;
+  box-shadow: none;
 }
 .solution-card:hover {
   border-color: var(--theme-accent, #253da4);
-  box-shadow: 5px 7px 0 #253da416;
+  box-shadow: 0 8px 24px #202b490a;
 }
 .solution-systems {
   background: var(--theme-cool-surface, #edf0f6);
@@ -299,24 +279,13 @@
 .cta-panel {
   background: var(--theme-warm-surface, #eeeade);
   border-color: var(--theme-line, #d8d3c5);
-  border-radius: 6px 20px 8px 10px;
-}
-.cta-orbits {
-  background: url("/brand/ink.svg") center / contain no-repeat;
-  transform: translateY(-50%) rotate(-8deg);
-}
-.cta-orbits i {
-  display: none;
-}
-.cta-orbits span {
-  color: #fffdf6;
-  background: none;
+  border-radius: 14px;
 }
 .feature-panel,
 .values-grid article,
 .service-detail {
   background: var(--theme-surface, #fffdf6);
-  border-radius: 7px 13px 8px 6px;
+  border-radius: 12px;
 }
 .outcome {
   background: var(--theme-warm-surface, #f1eddf);
@@ -405,4 +374,117 @@
 
 [data-theme-mode="dark"] .hero::before {
   background: radial-gradient(ellipse, #253da422, transparent 70%);
+}
+
+/* Kompaktní homepage: nabídka služeb navazuje přímo na úvod. */
+.hero.container {
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  min-height: 0;
+  padding-block: clamp(36px, 5vw, 64px);
+}
+.hero.container h1 {
+  font-size: clamp(36px, 4.1vw, 58px);
+  line-height: 1.13;
+  letter-spacing: -0.055em;
+}
+.hero.container .hero-tag {
+  font-size: var(--text-caption);
+  margin-bottom: 20px;
+}
+.hero.container .hero-description {
+  max-width: 48ch;
+  margin-top: 22px;
+}
+.hero.container .ecosystem {
+  max-width: 450px;
+  justify-self: end;
+}
+.notebook-label,
+.notebook-ink,
+.notebook-note,
+.deco-spark,
+.deco-dot {
+  display: none;
+}
+.hero h1 > span::after {
+  display: none;
+}
+.solutions-home {
+  padding-block: 32px 72px;
+}
+.solutions-home .section-heading {
+  max-width: none;
+  margin-bottom: 28px;
+}
+.solutions-home .section-heading .eyebrow {
+  margin-bottom: 12px;
+}
+.scenarios-section {
+  background: var(--theme-surface-soft, #f3f0e6);
+}
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.scenario-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--theme-surface, #fffdf6);
+  transition: border-color 180ms;
+}
+.scenario-card:hover {
+  border-color: var(--blue);
+}
+.scenario-card h3 {
+  font-size: 21px;
+}
+.scenario-card p {
+  font-size: var(--text-copy);
+}
+.scenario-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 10px;
+  color: var(--blue);
+  font-size: var(--text-ui);
+  font-weight: 650;
+}
+@media (max-width: 900px) {
+  .hero.container {
+    gap: 24px;
+  }
+  .scenarios-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .scenario-card {
+    padding: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .hero.container {
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: 36px 28px;
+  }
+  .hero.container .ecosystem {
+    display: none;
+  }
+  .hero.container h1 {
+    font-size: clamp(34px, 8.4vw, 54px);
+  }
+  .hero.container .hero-description {
+    max-width: 48ch;
+  }
+  .solutions-home {
+    padding-block: 24px 48px;
+  }
 }

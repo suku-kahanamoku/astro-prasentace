@@ -4,6 +4,29 @@ Vícejazyčný firemní web v Astro. Vlastní světlý i tmavý design, lokáln�
 typografické logo a animace v CSS/SVG. Web nepoužívá fotografie, klientské reference
 ani ukázky interních projektů. Obsah prezentuje dodávku kompletních řešení firmám.
 
+Úvod přímo pojmenovává firemní systémy, weby a aplikace na míru. Nabídka služeb
+navazuje hned za ním; na menších obrazovkách se velká dekorativní ilustrace skrývá.
+Za službami jsou typické firemní situace s odkazy na související řešení. Nejde
+o klientské reference ani o tvrzení o dosažených výsledcích. Motiv zápisníku
+zůstává v ilustracích, formulář používá klidný podklad a ohraničená pole.
+Na mobilním kontaktu následují e-mail a telefon, formulář, potom sídlo a údaje
+provozovatele. Stejné pořadí má HTML pro klávesnici a čtečky; na desktopu se
+kontaktní a firemní údaje skládají vedle formuláře. Zvýraznění klávesnicového
+fokusu používá kontrastní barvu akcentu v obou režimech. Popisky e-mailu, telefonu
+a sídla mají od hodnot odstup 14 px.
+
+Mezi adresou sídla a údaji provozovatele je responzivní vložená mapa Mapy.com
+od Seznamu. Oficiální iframe z dialogu Sdílet je v `site.address.map`
+v `src/config/site.ts`; při změně sídla aktualizujte i mapu. Mapa používá
+`loading="lazy"` a lokalizovaný titulek; samostatný odkaz pod mapou se nezobrazuje.
+Lokální prohlížečové testy nahrazují externí iframe testovací odpovědí, aby
+nezávisely na dostupnosti Mapy.com; skutečné zobrazení se ověřuje zvlášť.
+
+Patička zobrazuje místo textového e-mailu ikony e-mailu, Facebooku a LinkedInu.
+E-mail zachovává ochranu adresy a přístupný lokalizovaný název. Adresy sociálních
+profilů patří do `site.social` v `src/config/site.ts`; do jejich doplnění jsou
+na přání nastavené na `#`. Ikony mají ovládací plochu 44 × 44 px.
+
 ## Spuštění
 
 Vyžaduje Node.js >= 22.12 a Corepack. Autoritativní lockfile je `pnpm-lock.yaml`.
@@ -49,7 +72,7 @@ src/
     UIModule/                tlačítka, ikony, breadcrumb UI, kontaktní odkazy, DOM hooks, theme
     LangModule/              locale helpery, společné texty, vlajky, přepínač, 404 middleware
     SiteModule/              hlavička, patička, značka, slogan, SEO, privacy a 404 obsah
-    ContentModule/           hero, důkazy, služby/detail, proces, přístup, hodnoty, technologie, CTA
+    ContentModule/           hero, služby/detail, typické situace, proces, přístup, hodnoty, technologie, CTA
     ContactModule/           kontaktní sekce/formulář, klientská validace, server a PHP mailer
   layouts/BaseLayout.astro   kompozice dokumentu, společné navigace a obsahu
   pages/                     jediná vrstva rout a skládání sekcí
@@ -183,7 +206,9 @@ symlinků v archivech. Sledujte aktualizace Netlify adapteru. Aplikace žádné 
 nepřijímá ani nerozbaluje.
 
 Veřejný seznam technologií je společný pro všechny jazyky a stránky a spravuje se
-v `src/config/site.ts`: Astro, Vue.js, Nuxt, React Native, Angular a PHP.
+v `src/config/site.ts`: Astro, Nuxt, React Native, Angular, PHP, Java, Android a iOS.
+Závěrečnou výzvu k poptávce doprovází dekorativní SVG webové a mobilní aplikace,
+které přebírá barvy světlého i tmavého motivu.
 
 Telefon Prasentace `+420 722 767 646` je uložený v `src/config/site.ts`. Kontaktní
 stránka jej ve všech jazycích zobrazuje s odkazem `tel:+420722767646`; stejný údaj

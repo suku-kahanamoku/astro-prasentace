@@ -25,11 +25,7 @@ import Ecosystem from "./Ecosystem.astro";
 
 <section class="hero container">
   <div class="hero-copy">
-    <p class="brand-edition">{t.brand.edition}</p>
-    <p class="hero-tag">
-      <span></span>
-      {t.hero.tag}
-    </p>
+    <p class="hero-tag">{t.brand.edition}</p>
     <h1>
       {t.hero.line1}
       <br />
@@ -44,10 +40,6 @@ import Ecosystem from "./Ecosystem.astro";
         {t.hero.secondary}
       </Button>
     </div>
-    <p class="hero-note">
-      <span aria-hidden="true">↳</span>
-      {t.hero.note}
-    </p>
   </div>
   <Ecosystem {t} />
 </section>

@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 import { readTranslations } from "../../scripts/read-translations.mjs";
 const dictionaries = Object.fromEntries(
   ["cs", "en", "de"].map((locale) => [locale, readTranslations(locale)]),
@@ -227,7 +227,9 @@ test("reduced motion and no-JavaScript content remain usable", async ({
   });
   const page = await context.newPage();
   await page.goto("http://127.0.0.1:4331/de/");
-  await expect(page.locator("main h1")).toContainText("Ihre Vision.");
+  await expect(page.locator("main h1")).toContainText(
+    dictionaries.de.hero.line1,
+  );
   await expect(page.locator(".solution-card")).toHaveCount(5);
   expect(
     await page
@@ -320,6 +322,99 @@ test("desktop and mobile visual captures", async ({ page }) => {
     fullPage: true,
     animations: "disabled",
   });
+});
+
+test("mobile visitors reach services early and the form before company details", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  for (const [locale, t] of Object.entries(dictionaries)) {
+    const prefix = locale === "cs" ? "/" : `/${locale}/`;
+    await page.goto(prefix);
+    await page.evaluate(() => document.fonts.ready);
+    const firstService = await page
+      .locator(".solution-card")
+      .first()
+      .boundingBox();
+    // The full restored introduction can extend just beyond the first screen.
+    expect(
+      firstService!.y,
+      `${locale}: services follow the introduction`,
+    ).toBeLessThan(page.viewportSize()!.height * 1.25);
+    await expect(page.locator(".scenario-card")).toHaveCount(3);
+    for (const link of await page.locator(".scenario-card").all()) {
+      const response = await page.request.get(
+        (await link.getAttribute("href"))!,
+      );
+      expect(response.status()).toBe(200);
+    }
+    await page.goto(`${prefix}${t.routes.contact}/`);
+    const contacts = await page.locator(".contact-quick").boundingBox();
+    const form = await page.locator(".contact-form").boundingBox();
+    const business = await page.locator(".contact-business").boundingBox();
+    expect(form!.y).toBeGreaterThanOrEqual(contacts!.y + contacts!.height);
+    expect(business!.y).toBeGreaterThanOrEqual(form!.y + form!.height);
+    expect(
+      await page
+        .locator(".contact-form")
+        .evaluate(
+          (el) =>
+            !!(
+              el.compareDocumentPosition(
+                document.querySelector(".contact-business")!,
+              ) & Node.DOCUMENT_POSITION_FOLLOWING
+            ),
+        ),
+    ).toBe(true);
+  }
+});
+
+test("keyboard focus contrasts with the page and form in both themes", async ({
+  page,
+}) => {
+  for (const colorScheme of ["light", "dark"] as const) {
+    await page.emulateMedia({ colorScheme });
+    for (const [path, selector, background] of [
+      ["/", ".hero-buttons .button-primary", "body"],
+      ["/kontakt/", "#name", ".contact-form"],
+    ]) {
+      await page.goto(path);
+      const target = page.locator(selector);
+      await target.focus();
+      await page.keyboard.press("Shift+Tab");
+      await page.keyboard.press("Tab");
+      await expect(target).toBeFocused();
+      const contrast = await target.evaluate((el, bgSelector) => {
+        const luminance = (color: string) => {
+          const channels = color
+            .match(/[\d.]+/g)!
+            .slice(0, 3)
+            .map(Number)
+            .map((value) => {
+              const c = value / 255;
+              return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4;
+            });
+          return (
+            channels[0] * 0.2126 + channels[1] * 0.7152 + channels[2] * 0.0722
+          );
+        };
+        const style = getComputedStyle(el);
+        if (
+          !el.matches(":focus-visible") ||
+          style.outlineStyle === "none" ||
+          parseFloat(style.outlineWidth) === 0
+        )
+          return 0;
+        const fg = luminance(style.outlineColor);
+        const bg = luminance(
+          getComputedStyle(document.querySelector(bgSelector)!).backgroundColor,
+        );
+        return (Math.max(fg, bg) + 0.05) / (Math.min(fg, bg) + 0.05);
+      }, background);
+      expect(contrast, `${colorScheme}: ${selector}`).toBeGreaterThanOrEqual(3);
+    }
+  }
 });
 
 test("missing pages preserve HTTP 404 and the requested language", async ({

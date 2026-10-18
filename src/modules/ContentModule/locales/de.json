@@ -6,10 +6,10 @@
   },
   "hero": {
     "tag": "Digitale Lösungen. Echter Fortschritt.",
-    "line1": "Ihre Vision.",
-    "line2": "Unser Code.",
-    "line3": "Gemeinsam weiter.",
-    "text": "Wir machen aus komplexen Prozessen klare digitale Lösungen. Von der ersten Idee bis zur Software, auf die sich Ihr Unternehmen verlassen kann.",
+    "line1": "Firmensoftware,",
+    "line2": "Websites und Apps",
+    "line3": "nach Maß.",
+    "text": "Wir verbinden Ihre Daten, vereinfachen den Arbeitsalltag und bringen Ihre Dienste ins Web und aufs Smartphone. Vom Entwurf bis zum Start und zur Weiterentwicklung.",
     "secondary": "Unsere Lösungen entdecken",
     "note": "Vom ersten Entwurf bis zur Weiterentwicklung",
     "visualLabel": "Verbindung von Unternehmenssystemen, mobilen Anwendungen und Automatisierung",
@@ -21,20 +21,6 @@
     "automationSub": "Weniger Routine. Mehr Freiraum.",
     "coreSub": "Im Mittelpunkt der Lösung"
   },
-  "proof": [
-    {
-      "value": "10+",
-      "label": "Jahre Entwicklungserfahrung"
-    },
-    {
-      "value": "Von A bis Z",
-      "label": "von der Analyse bis zum Start"
-    },
-    {
-      "value": "Nach Maß",
-      "label": "für Ihre Prozesse und Anforderungen"
-    }
-  ],
   "solutions": {
     "tag": "WAS WIR GEMEINSAM SCHAFFEN",
     "title": "Gute Software beginnt\nmit Verständnis für Ihr Geschäft.",
@@ -191,7 +177,8 @@
           }
         ]
       }
-    ]
+    ],
+    "homeTitle": "Was braucht Ihr Unternehmen?"
   },
   "process": {
     "tag": "VON DER IDEE ZUM ERGEBNIS",
@@ -241,7 +228,8 @@
       }
     ],
     "technology": "Solide Basis. Passende Werkzeuge.",
-    "technologyText": "Wir wählen Technologien nach dem Projekt, seinen Anforderungen und dem künftigen Betrieb aus."
+    "technologyText": "Wir wählen Technologien nach dem Projekt, seinen Anforderungen und dem künftigen Betrieb aus.",
+    "experienceLabel": "Jahre Entwicklungserfahrung"
   },
   "cta": {
     "tag": "DER NÄCHSTE SCHRITT IST EINFACH",
@@ -252,5 +240,26 @@
     "edition": "Digitalstudio / Brünn & überall",
     "notebook": "ein Heft voller guter Ideen / 01",
     "note": "hier geht’s los"
+  },
+  "scenarios": {
+    "tag": "TYPISCHE SITUATIONEN",
+    "title": "Wenn Arbeit besser ineinandergreifen soll.",
+    "items": [
+      {
+        "solutionId": "systems",
+        "title": "Dieselben Daten in mehreren Tabellen",
+        "text": "Ein CRM oder internes System kann Kunden, Aufträge und tägliche Aufgaben an einem Ort zusammenführen."
+      },
+      {
+        "solutionId": "automation",
+        "title": "Daten von Hand zwischen Werkzeugen übertragen",
+        "text": "API-Anbindungen können Daten zwischen Systemen übertragen und daran die Erstellung von Dokumenten oder Benachrichtigungen anschließen."
+      },
+      {
+        "solutionId": "mobile",
+        "title": "Die Arbeit endet nicht an der Bürotür",
+        "text": "Eine mobile App kann den Außendienst mit dem Unternehmenssystem verbinden und die Datenerfassung vor Ort vereinfachen."
+      }
+    ]
   }
 }

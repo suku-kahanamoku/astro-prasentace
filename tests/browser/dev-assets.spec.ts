@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect } from "./fixtures";
 
 test("regular dev keeps live styles and scripts after changing language", async ({
   page,

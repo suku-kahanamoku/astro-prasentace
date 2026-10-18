@@ -28,10 +28,126 @@ const t = dictionary(locale);
       <p>{t.cta.text}</p>
       <Button href={url(locale, "contact")}>{t.common.cta}</Button>
     </div>
-    <div class="cta-orbits" aria-hidden="true">
-      <i></i>
-      <i></i>
-      <i></i>
-    </div>
+    <svg
+      class="cta-illustration"
+      viewBox="0 0 360 280"
+      fill="none"
+      aria-hidden="true"
+    >
+      <rect
+        x="12"
+        y="28"
+        width="300"
+        height="218"
+        rx="28"
+        fill="var(--theme-cool-surface, #e9eaf4)"
+      />
+      <path
+        d="M190 65h77a32 32 0 0 1 32 32v33M142 221H88a32 32 0 0 1-32-32v-35"
+        stroke="var(--blue)"
+        stroke-width="2"
+        stroke-dasharray="5 7"
+        opacity=".45"
+      />
+      <rect
+        x="28"
+        y="56"
+        width="214"
+        height="150"
+        rx="12"
+        fill="var(--theme-surface, #fffdf6)"
+        stroke="var(--line)"
+        stroke-width="2"
+      />
+      <path d="M29 86h212" stroke="var(--line)" stroke-width="2" />
+      <g fill="var(--blue)" opacity=".5">
+        <circle cx="44" cy="71" r="3" />
+        <circle cx="56" cy="71" r="3" />
+        <circle cx="68" cy="71" r="3" />
+      </g>
+      <rect
+        x="45"
+        y="102"
+        width="52"
+        height="87"
+        rx="6"
+        fill="var(--theme-cool-surface, #e9eaf4)"
+      />
+      <path
+        d="M56 118h28m-28 13h20m-20 13h24"
+        stroke="var(--blue)"
+        stroke-width="3"
+        stroke-linecap="round"
+        opacity=".5"
+      />
+      <rect
+        x="112"
+        y="102"
+        width="112"
+        height="32"
+        rx="6"
+        fill="var(--theme-warm-surface, #f9eee5)"
+      />
+      <path
+        d="M124 118h58"
+        stroke="var(--blue)"
+        stroke-width="4"
+        stroke-linecap="round"
+        opacity=".45"
+      />
+      <path
+        d="M119 182v-24m24 24v-35m24 35v-18m24 18v-44"
+        stroke="var(--blue)"
+        stroke-width="12"
+        stroke-linecap="round"
+        opacity=".7"
+      />
+      <rect
+        x="248"
+        y="112"
+        width="83"
+        height="145"
+        rx="17"
+        fill="var(--theme-surface, #fffdf6)"
+        stroke="var(--blue)"
+        stroke-width="2"
+      />
+      <path
+        d="M278 123h23m-16 123h11"
+        stroke="var(--blue)"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
+      <rect
+        x="260"
+        y="140"
+        width="59"
+        height="49"
+        rx="7"
+        fill="var(--theme-cool-surface, #e9eaf4)"
+      />
+      <path
+        d="m278 164 8 8 16-18"
+        stroke="var(--blue)"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M263 204h48m-48 12h34m-34 12h42"
+        stroke="var(--blue)"
+        stroke-width="3"
+        stroke-linecap="round"
+        opacity=".35"
+      />
+      <circle cx="270" cy="48" r="27" fill="var(--blue)" />
+      <path
+        d="m259 58 21-21m-17 0h17v17"
+        stroke="var(--theme-page-background, #faf7ef)"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
   </div>
 </section>

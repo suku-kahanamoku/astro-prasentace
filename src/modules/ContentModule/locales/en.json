@@ -6,10 +6,10 @@
   },
   "hero": {
     "tag": "Digital solutions. Real progress.",
-    "line1": "Your vision.",
-    "line2": "Our code.",
-    "line3": "Shared progress.",
-    "text": "We turn complex processes into clear digital solutions. From the first idea to software your business can rely on.",
+    "line1": "Business systems,",
+    "line2": "websites and apps,",
+    "line3": "built for you.",
+    "text": "Connect your data, simplify everyday work and bring your services to the web and mobile. From design to launch and ongoing development.",
     "secondary": "Explore our solutions",
     "note": "From the first sketch to ongoing development",
     "visualLabel": "Connecting business systems, mobile applications and automation",
@@ -21,20 +21,6 @@
     "automationSub": "Less routine. More possibilities.",
     "coreSub": "At the heart of it all"
   },
-  "proof": [
-    {
-      "value": "10+",
-      "label": "years of development experience"
-    },
-    {
-      "value": "End to end",
-      "label": "from analysis to launch"
-    },
-    {
-      "value": "Tailor-made",
-      "label": "for your processes and needs"
-    }
-  ],
   "solutions": {
     "tag": "WHAT WE CAN BUILD TOGETHER",
     "title": "Great software starts with\nunderstanding your business.",
@@ -191,7 +177,8 @@
           }
         ]
       }
-    ]
+    ],
+    "homeTitle": "What can we help you build?"
   },
   "process": {
     "tag": "FROM IDEA TO IMPACT",
@@ -241,7 +228,8 @@
       }
     ],
     "technology": "Solid foundations. The right tools.",
-    "technologyText": "We choose technologies around the project, its needs and its future operation."
+    "technologyText": "We choose technologies around the project, its needs and its future operation.",
+    "experienceLabel": "years of development experience"
   },
   "cta": {
     "tag": "THE NEXT STEP IS SIMPLE",
@@ -252,5 +240,26 @@
     "edition": "Digital studio / Brno & beyond",
     "notebook": "a notebook of good ideas / 01",
     "note": "it starts here"
+  },
+  "scenarios": {
+    "tag": "EVERYDAY CHALLENGES",
+    "title": "When you need work to flow between people and tools.",
+    "items": [
+      {
+        "solutionId": "systems",
+        "title": "The same data in several spreadsheets",
+        "text": "A CRM or internal system can bring customers, orders and everyday tasks together in one place."
+      },
+      {
+        "solutionId": "automation",
+        "title": "Copying information between tools",
+        "text": "API integrations can transfer data between systems and trigger document generation or notifications."
+      },
+      {
+        "solutionId": "mobile",
+        "title": "Work continues outside the office",
+        "text": "A mobile app can connect field teams to your business system and make it easier to enter information on site."
+      }
+    ]
   }
 }

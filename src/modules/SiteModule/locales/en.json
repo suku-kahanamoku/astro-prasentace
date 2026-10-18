@@ -11,6 +11,10 @@
     "home": "Home",
     "breadcrumbs": "Breadcrumb navigation"
   },
+  "footer": {
+    "socials": "Contact and social media",
+    "email": "Send an email"
+  },
   "seo": {
     "home": {
       "title": "Software that moves your business forward",
@@ -55,7 +59,7 @@
       },
       {
         "title": "Technical services",
-        "text": "Hosting, an email server and Cloudflare Turnstile support website operation, message delivery and form protection. The website itself does not add marketing or analytics tracking."
+        "text": "Hosting, an email server and Cloudflare Turnstile support website operation, message delivery and form protection. The website itself does not add marketing or analytics tracking. The registered-address map on the contact page is embedded from Mapy.com, operated by Seznam.cz."
       },
       {
         "title": "Your requests",

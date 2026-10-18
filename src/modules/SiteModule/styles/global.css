@@ -40,11 +40,27 @@
   font-size: var(--text-ui);
 }
 .footer-top nav a:hover,
-.footer-email:hover {
+.footer-social-link[href]:hover {
   color: var(--blue);
 }
-.footer-email {
-  font-size: var(--text-small);
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+}
+.footer-social-link[href]:hover {
+  border-color: var(--blue);
 }
 .footer-bottom {
   display: flex;
@@ -97,7 +113,7 @@
   .footer-top nav {
     gap: 25px;
   }
-  .footer-email {
+  .footer-socials {
     width: 100%;
   }
 }

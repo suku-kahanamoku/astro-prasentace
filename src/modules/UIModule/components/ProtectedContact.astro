@@ -7,6 +7,8 @@
  * `useProtectedContact`. Bez JavaScriptu zůstane viditelný jen text, nikoli
  * adresa, takže odkaz zůstává použitelný a zároveň se neda skenovat z HTML.
  */
+import Icon from "./Icon.astro";
+
 interface Props {
   /** Typ kontaktu; určuje schéma odkazu (`mailto:` nebo `tel:`). */
   kind: "email" | "phone";
@@ -14,9 +16,13 @@ interface Props {
   value: string;
   /** Volitelná třída pro styl kontaktního údaje v dané sekci. */
   class?: string;
+  /** Volitelná ikona místo viditelné adresy. */
+  icon?: string;
+  /** Přístupný název při zobrazení samotné ikony. */
+  label?: string;
 }
 
-const { kind, value, class: className } = Astro.props;
+const { kind, value, class: className, icon, label } = Astro.props;
 /** Cílová adresa odkazu; telefon se normalizuje na číslice pro `tel:`. */
 const target =
   kind === "email" ? `mailto:${value}` : `tel:${value.replaceAll(" ", "")}`;
@@ -24,10 +30,17 @@ const target =
 const encoded = btoa(target);
 ---
 
-<span class={className} data-protected-contact={encoded}>
-  {Array.from(value).map((character) => (
-    <span>{character}</span>
-  ))}
+<span
+  class={className}
+  data-protected-contact={encoded}
+  aria-label={label}
+  title={label}
+>
+  {icon ? (
+    <Icon name={icon} size={22} />
+  ) : (
+    Array.from(value).map((character) => <span>{character}</span>)
+  )}
 </span>
 <script>
   import { useProtectedContact } from "../hooks/useProtectedContact";

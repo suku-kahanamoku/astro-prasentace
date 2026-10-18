@@ -45,7 +45,7 @@ svg {
   flex-shrink: 0;
 }
 :focus-visible {
-  outline: 3px solid var(--theme-line, #759afa);
+  outline: 3px solid var(--blue);
   outline-offset: 5px;
 }
 h1,

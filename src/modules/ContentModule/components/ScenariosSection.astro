@@ -1,0 +1,48 @@
+---
+/**
+ * Typické potřeby firem a návazné služby. Nejde o klientské reference
+ * ani tvrzení o dosažených výsledcích.
+ */
+import { dictionary } from "../providers/translations";
+import type { Locale } from "../../LangModule/config";
+import SectionHeading from "../../UIModule/components/SectionHeading.astro";
+import { url } from "../../../config/routes";
+
+/** Vstupní parametry sekce typických situací. */
+interface Props {
+  /** Jazyk stránky; určuje hodnoty a popisky. */
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = dictionary(locale);
+---
+
+<section class="section scenarios-section">
+  <div class="container">
+    <SectionHeading tag={t.scenarios.tag} title={t.scenarios.title} />
+    <div class="scenarios-grid">
+      {t.scenarios.items.map((item) => {
+        const solution = t.solutions.items.find(
+          (s) => s.id === item.solutionId,
+        );
+        return (
+          solution && (
+            <a
+              class="scenario-card"
+              href={url(locale, "solutions", solution.id)}
+              data-reveal
+            >
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+              <span class="scenario-link">
+                {solution.title}
+                <span aria-hidden="true">↗</span>
+              </span>
+            </a>
+          )
+        );
+      })}
+    </div>
+  </div>
+</section>

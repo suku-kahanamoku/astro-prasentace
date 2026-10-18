@@ -29,7 +29,7 @@ import ContactForm from "./ContactForm.astro";
 ---
 
 <section class="container contact-grid">
-  <div class="contact-details">
+  <div class="contact-details contact-quick">
     <p class="eyebrow contact-label">
       <Icon name="mail" size={20} />
       {t.contact.emailLabel}
@@ -40,6 +40,9 @@ import ContactForm from "./ContactForm.astro";
       {t.contact.phoneLabel}
     </p>
     <ProtectedContact kind="phone" value={site.phone} class="contact-link" />
+  </div>
+  <ContactForm {locale} {interests} />
+  <div class="contact-details contact-business">
     <p class="eyebrow contact-label">
       <Icon name="globe" size={20} />
       {t.common.address}
@@ -49,6 +52,16 @@ import ContactForm from "./ContactForm.astro";
       <br />
       {site.address.postalCode} {site.address.city}
     </address>
+    <div class="contact-map">
+      <iframe
+        src={site.address.map.embedUrl}
+        title={t.contact.mapTitle}
+        width="400"
+        height="280"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    </div>
     <div class="business-details">
       <p>
         {site.name} · {t.common.entity}
@@ -58,5 +71,4 @@ import ContactForm from "./ContactForm.astro";
       </p>
     </div>
   </div>
-  <ContactForm {locale} {interests} />
 </section>

@@ -11,6 +11,10 @@
     "home": "Startseite",
     "breadcrumbs": "Brotkrumennavigation"
   },
+  "footer": {
+    "socials": "Kontakt und soziale Netzwerke",
+    "email": "E-Mail schreiben"
+  },
   "seo": {
     "home": {
       "title": "Software, die Ihr Unternehmen voranbringt",
@@ -55,7 +59,7 @@
       },
       {
         "title": "Technische Dienste",
-        "text": "Hosting, E-Mail-Server und Cloudflare Turnstile dienen dem Betrieb, dem Nachrichtenversand und dem Schutz des Formulars. Die Website selbst setzt kein Marketing- oder Analyse-Tracking ein."
+        "text": "Hosting, E-Mail-Server und Cloudflare Turnstile dienen dem Betrieb, dem Nachrichtenversand und dem Schutz des Formulars. Die Website selbst setzt kein Marketing- oder Analyse-Tracking ein. Die Karte des Geschäftssitzes auf der Kontaktseite wird von Mapy.com, einem Dienst von Seznam.cz, eingebettet."
       },
       {
         "title": "Ihre Anliegen",

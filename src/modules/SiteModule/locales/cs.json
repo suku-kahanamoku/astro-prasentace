@@ -11,6 +11,10 @@
     "home": "Úvod",
     "breadcrumbs": "Drobečková navigace"
   },
+  "footer": {
+    "socials": "Kontakt a sociální sítě",
+    "email": "Napsat e-mail"
+  },
   "seo": {
     "home": {
       "title": "Vývoj softwaru pro vaše podnikání",
@@ -55,7 +59,7 @@
       },
       {
         "title": "Technické služby",
-        "text": "K provozu webu, doručení zprávy a ochraně formuláře slouží hosting, e-mailový server a Cloudflare Turnstile. Web sám nepřidává marketingové ani analytické sledování."
+        "text": "K provozu webu, doručení zprávy a ochraně formuláře slouží hosting, e-mailový server a Cloudflare Turnstile. Web sám nepřidává marketingové ani analytické sledování. Mapa sídla na kontaktní stránce je vložená ze služby Mapy.com provozované Seznam.cz."
       },
       {
         "title": "Vaše požadavky",

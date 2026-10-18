@@ -17,7 +17,11 @@ export function useProtectedContact() {
       const link = document.createElement("a");
       link.href = href;
       link.className = element.className;
-      link.textContent = element.textContent?.trim() || "";
+      for (const attribute of ["aria-label", "title"]) {
+        const value = element.getAttribute(attribute);
+        if (value) link.setAttribute(attribute, value);
+      }
+      link.append(...Array.from(element.childNodes));
       element.replaceWith(link);
     });
 }
